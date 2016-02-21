@@ -92,6 +92,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
     }
   })
   
+  .state('app.inviteFriends', {
+    url: '/inviteFriends',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/inviteFriends.html',
+        controller:'InviteFriendsCtrl'
+      }
+    }
+  })
+  
   .state('app.signUp', {
     url: '/signUp',
     views: {

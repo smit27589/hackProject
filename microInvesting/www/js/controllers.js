@@ -52,6 +52,27 @@ angular.module('starter.controllers', [])
 .controller('SummaryCtrl', function($scope, $stateParams) {
 })
 
+.controller('SubscriptionsCtrl', function($scope, $stateParams) {
+})
+
+.controller('TransactionsCtrl', function($scope, $stateParams) {
+})
+
+.controller('TransferCtrl', function($scope, $stateParams) {
+})
+
+.controller('SettingsCtrl', function($scope, $stateParams) {
+})
+
+.controller('PerformanceCtrl', function($scope, $stateParams) {
+})
+
+.controller('SignUpCtrl', function($scope, $stateParams) {
+})
+
+.controller('InviteFriendsCtrl', function($scope, $stateParams) {
+})
+
 .controller('LoginCtrl', function($scope,LoginService, $ionicPopup, $state) {
 	$scope.data = {};
 	 
