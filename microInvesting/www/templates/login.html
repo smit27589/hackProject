@@ -6,7 +6,7 @@
     </div>
   </ion-header-bar>
   <ion-content>
-    <form ng-submit="login()">
+    <form >
       <div class="list">
         <label class="item item-input">
           <span class="input-label">Email</span>
@@ -17,7 +17,7 @@
           <input type="password" ng-model="data.password">
         </label>
         <label class="item">
-          <button class="button button-block button-positive" type="submit">Log in</button>
+          <button class="button button-block button-positive" ng-click="login()">Log in</button>
         </label>
         <p>Or</p>
         <label class="item">
