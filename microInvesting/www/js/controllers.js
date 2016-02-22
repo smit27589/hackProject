@@ -49,28 +49,43 @@ angular.module('starter.controllers', [])
 //  };
 })
 
-.controller('SummaryCtrl', function($scope, $stateParams) {
+.controller('SummaryCtrl', function($scope, $stateParams,$state) {
 })
 
-.controller('SubscriptionsCtrl', function($scope, $stateParams) {
+.controller('SubscriptionsCtrl', function($scope, $stateParams,$state) {
 })
 
-.controller('TransactionsCtrl', function($scope, $stateParams) {
+.controller('TransactionsCtrl', function($scope, $stateParams,$state) {
 })
 
-.controller('TransferCtrl', function($scope, $stateParams) {
+.controller('TransferCtrl', function($scope, $stateParams,$state) {
 })
 
-.controller('SettingsCtrl', function($scope, $stateParams) {
+.controller('SettingsCtrl', function($scope, $stateParams,$state) {
 })
 
-.controller('PerformanceCtrl', function($scope, $stateParams) {
+.controller('PerformanceCtrl', function($scope, $stateParams,$state) {
 })
 
-.controller('SignUpCtrl', function($scope, $stateParams) {
+.controller('SignUpCtrl', function($scope, $stateParams,$state) {
+	$scope.goToStep1 = function(){
+		$state.go('app.userInfo');
+	};
+	
+	$scope.goToSignUp = function(){
+		$state.go('app.signUp');
+	};
+	
+	
+	$scope.goToStep2 = function(){
+		$state.go('app.investmentStrategy');
+	};
+	$scope.goToAgreementPage = function(){
+		$state.go('app.agreement');
+	};
 })
 
-.controller('InviteFriendsCtrl', function($scope, $stateParams) {
+.controller('InviteFriendsCtrl', function($scope, $stateParams,$state) {
 })
 
 .controller('LoginCtrl', function($scope,LoginService, $ionicPopup, $state) {

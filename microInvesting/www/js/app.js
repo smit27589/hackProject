@@ -111,6 +111,26 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
       }
     }
   })
+  
+  .state('app.userInfo', {
+    url: '/userInfo',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/userInfo.html',
+        controller:'SignUpCtrl'
+      }
+    }
+  })
+  
+  .state('app.investmentStrategy', {
+    url: '/investmentStrategy',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/investmentStrategy.html',
+        controller:'SignUpCtrl'
+      }
+    }
+  })
     .state('app.playlists', {
       url: '/playlists',
       views: {
