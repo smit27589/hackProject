@@ -1,0 +1,40 @@
+<ion-view view-title="User Details" hide-back-button="false">
+     
+  <ion-content>
+    <form >
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">First Name</span>
+          <input type="text" ng-model="data.firstName">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Last Name</span>
+          <input type="text" ng-model="data.lastName">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Email</span>
+          <input type="email" ng-model="data.email">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Confirm Email</span>
+          <input type="email" ng-model="data.confirmEmail">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Date of Birth</span>
+          <input type="date" ng-model="data.dob">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password" ng-model="data.password">
+        </label>
+        <label class="item">
+        <div class="buttons">
+      		<button class="button button-assertive" style="float:left;" ng-click="goToSignUp()">Back</button>
+      		<button class="button button-positive" style="float:right;" ng-click="goToStep2()">Next</button>
+    	</div>
+    	</label>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>
+<!--   </ion-view> -->

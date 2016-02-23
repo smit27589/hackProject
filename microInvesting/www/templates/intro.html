@@ -1,0 +1,54 @@
+<ion-view view-title="Intro">
+        <ion-nav-buttons side="left">
+          <button class="button button-positive button-clear no-animation"
+                  ng-click="startApp()" ng-show="!slideIndex">
+            Skip Intro
+          </button>
+          <button class="button button-positive button-clear no-animation"
+                  ng-click="previous()" ng-show="slideIndex > 0">
+            Previous Slide
+          </button>
+        </ion-nav-buttons>
+        <ion-nav-buttons side="right"> 
+          <button class="button button-positive button-clear no-animation"
+                  ng-click="next()" ng-show="slideIndex != 2">
+            Next
+          </button>
+          <button class="button button-positive button-clear no-animation"
+                  ng-click="startApp()" ng-show="slideIndex == 2">
+            Start using MyApp
+          </button>
+        </ion-nav-buttons>
+        <ion-slide-box on-slide-changed="slideChanged(index)">
+          <ion-slide>
+            <h3>Thank you for choosing the MicroInvesting App!</h3>
+            <div id="logo">
+              <img src="http://code.ionicframework.com/assets/img/app_icon.png">
+            </div>
+            <p>
+              We've worked super hard to make you happy.
+            </p>
+            <p>
+              But if you are angry, too bad.
+            </p>
+          </ion-slide>
+          <ion-slide>
+            <h3>Using MicroInvesting</h3>
+            
+            <div id="list">
+              <h5>Just three steps:</h5>
+              <ol>
+                <li>Give your Details</li>
+                <li>Choose your Investment Strategy</li>
+                <li>Enter your Bank Account Details</li>
+              </ol>
+            </div>
+          </ion-slide>
+          <ion-slide>
+            <h3>Leverage the power of BlackRock and iShares</h3>
+            <p>
+              Benefit from the risk models developed by professionals at one of the biggest financial Institution
+            </p>
+          </ion-slide>
+        </ion-slide-box>
+      </ion-view>
