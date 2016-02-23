@@ -13,11 +13,11 @@ angular.module('starter.controllers', [])
   // Form data for the login modal
   $scope.loginData = {};
   $scope.userName = LoginService.getUserName();
-  
+
   var updateSideMenuVisibility = function(){
 	  $scope.showSideMenu = LoginService.getSideMenuVisibility();
   }
-  
+
 //  LoginService.registerObserverCallback(updateSideMenuVisibility);
 
 //  // Create the login modal that we will use later
@@ -50,7 +50,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('IntroCtrl', function($scope, $state, $ionicSlideBoxDelegate) {
- 
+
   // Called to navigate to the main app
   $scope.startApp = function() {
     $state.go('app.login');
@@ -68,8 +68,7 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('SummaryCtrl', function($scope, $stateParams,$state) {
-})
+
 
 .controller('SubscriptionsCtrl', function($scope, $stateParams,$state) {
 })
@@ -83,11 +82,8 @@ angular.module('starter.controllers', [])
 .controller('SettingsCtrl', function($scope, $stateParams,$state) {
 })
 
-.controller('PerformanceCtrl', function($scope, $stateParams,$state) {
-})
-
 .controller('SignUpCtrl', function($scope, $state, $ionicSlideBoxDelegate) {
- 
+
   // need to change it to agreement page
   $scope.startApp = function() {
     $state.go('app.summary');
@@ -110,7 +106,7 @@ angular.module('starter.controllers', [])
 
 .controller('LoginCtrl', function($scope,LoginService, $ionicPopup, $state) {
 	$scope.data = {};
-	 
+
     $scope.login = function() {
         LoginService.loginUser($scope.data.username, $scope.data.password).success(function(data) {
             $state.go('app.summary');
@@ -122,11 +118,11 @@ angular.module('starter.controllers', [])
             });
         });
     }
-    
+
     $scope.signUp = function(){
     	$state.go('app.signUpSlide');
     }
-	
+
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
