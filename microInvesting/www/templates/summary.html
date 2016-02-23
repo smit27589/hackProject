@@ -1,7 +1,41 @@
 <ion-view view-title="Summary">
 
   <ion-content>
-    <h1>Summary</h1>
+  <br/>
+  <br/>
+  <br/>
+    <div style="text-align:center;">
+    	Account Value
+    </div>
+    <br/>
+    <div style="text-align:center;font-size:38px;margin-bottom:3%;">$126.83</div>
+    <div>
+    <ion-slide-box on-slide-changed="slideChanged(index)">
+          <ion-slide>
+          <div style="text-align:center;">
+    			$ Invested
+    	</div>
+             <div class="list">
+          <a class="item" ng-repeat=" item in investmentStartegyDollarData" ng-class="$odd ? 'stripLine' : ''">
+            <span style="float: left">{{item.categoryName}}</span>
+            <span style="float: right">{{item.value}}</span>
+          </a>
+        </div>
+          </ion-slide>
+          <ion-slide>
+          <div style="text-align:center;">
+    			% Invested
+    	  </div>
+           <div class="list">
+          <a class="item" ng-repeat=" item in investmentStartegyPercentageData" ng-class="$odd ? 'stripLine' : ''">
+            <span style="float: left">{{item.categoryName}}</span>
+            <span style="float: right">{{item.value}}</span>
+          </a>
+        </div>
+          </ion-slide>
+        </ion-slide-box>
+    
+    </div>
   </ion-content>
 
 

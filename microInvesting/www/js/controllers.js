@@ -105,7 +105,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('LoginCtrl', function($scope,LoginService, $ionicPopup, $state) {
-	$scope.data = {};
+	$scope.data = {username:'user@gmail.com',password:'secret'};
 
     $scope.login = function() {
         LoginService.loginUser($scope.data.username, $scope.data.password).success(function(data) {
