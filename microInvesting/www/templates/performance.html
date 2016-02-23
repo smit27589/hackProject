@@ -1,8 +1,28 @@
-<ion-view view-title="Performance">
+<ion-view view-title="Performance" ng-controller="PerformanceCtrl">
 
-  <ion-content>
-    <h1>Performance</h1>
-  </ion-content>
+  <ion-slide-box on-slide-changed="slideHasChanged($index)" does-continue="false">
+    <ion-slide>
+      <ion-content>
 
+        <div style="padding:2%;">
+          <canvas id="pie" class="chart chart-pie" chart-data="pieData" chart-labels="pieLabels"
+                  chart-options="pieOptions">
+          </canvas>
+        </div>
+
+        <div class="list">
+          <a class="item" ng-repeat=" item in composite" ng-class="$odd ? 'stripLine' : ''">
+            <span style="float: left">{{item.title}}</span>
+            <span style="float: right">{{item.percentage}}</span>
+          </a>
+        </div>
+
+      </ion-content>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="box yellow"><h1>YELLOW</h1></div>
+    </ion-slide>
+  </ion-slide-box>
 
 </ion-view>
