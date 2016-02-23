@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','ngCordova'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','ngCordova','chart.js'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -31,7 +31,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
   })
-  
+
     .state('app.login', {
     url: '/login',
     views: {
@@ -41,7 +41,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
       }
     }
   })
-  
+
   .state('app.intro', {
     url: '/intro',
     views: {
@@ -51,7 +51,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
       }
     }
   })
-  
+
   .state('app.signUpSlide', {
     url: '/signUpSlide',
     views: {
@@ -61,7 +61,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
       }
     }
   })
-  
+
    .state('app.summary', {
     url: '/summary',
     views: {
@@ -81,7 +81,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
       }
     }
   })
-  
+
    .state('app.settings', {
     url: '/settings',
     views: {
@@ -91,7 +91,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
       }
     }
   })
-  
+
   .state('app.performance', {
     url: '/performance',
     views: {
@@ -101,7 +101,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
       }
     }
   })
-  
+
    .state('app.transactions', {
     url: '/transactions',
     views: {
@@ -111,7 +111,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
       }
     }
   })
-  
+
   .state('app.inviteFriends', {
     url: '/inviteFriends',
     views: {
@@ -121,7 +121,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
       }
     }
   })
-  
+
   .state('app.userInfo', {
     url: '/userInfo',
     views: {
@@ -131,7 +131,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
       }
     }
   })
-  
+
   .state('app.investmentStrategy', {
     url: '/investmentStrategy',
     views: {
