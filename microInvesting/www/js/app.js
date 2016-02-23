@@ -52,6 +52,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
     }
   })
   
+  .state('app.signUpSlide', {
+    url: '/signUpSlide',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/signUpSlide.html',
+        controller:'SignUpCtrl'
+      }
+    }
+  })
+  
    .state('app.summary', {
     url: '/summary',
     views: {
@@ -108,16 +118,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
       'menuContent': {
         templateUrl: 'templates/inviteFriends.html',
         controller:'InviteFriendsCtrl'
-      }
-    }
-  })
-  
-  .state('app.signUp', {
-    url: '/signUp',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/signUp.html',
-        controller:'SignUpCtrl'
       }
     }
   })

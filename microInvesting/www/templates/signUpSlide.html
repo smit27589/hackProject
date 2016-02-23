@@ -1,0 +1,94 @@
+<ion-view view-title="Get Started">
+        <ion-nav-buttons side="left">
+          <button class="button button-positive button-clear no-animation"
+                  ng-click="startApp()" ng-show="!slideIndex">
+            Go to Login
+          </button>
+          <button class="button button-positive button-clear no-animation"
+                  ng-click="previous()" ng-show="slideIndex > 0">
+            Back
+          </button>
+        </ion-nav-buttons>
+        <ion-nav-buttons side="right"> 
+          <button class="button button-positive button-clear no-animation"
+                  ng-click="next()" ng-show="slideIndex != 2">
+            Next
+          </button>
+          <button class="button button-positive button-clear no-animation"
+                  ng-click="startApp()" ng-show="slideIndex == 2">
+            Finish
+          </button>
+        </ion-nav-buttons>
+        <ion-slide-box on-slide-changed="slideChanged(index)">
+          <ion-slide>
+           <div class="list">
+        <label class="item ">
+          <h2 class="title">Follow these steps to become a Micro Investor.It will take a few minutes</h2>
+        </label>
+        <label class="item">
+          <span class="input-label">Step 1 - Create your Profile</span>
+        </label>
+        <label class="item">
+          <span class="input-label">Step 2 - Choose your Investment Strategy</span>
+        </label>
+<!--         <label class="item"> -->
+<!--           <button class="button button-block button-positive" ng-click="goToStep1()">Continue</button> -->
+<!--         </label> -->
+      </div>
+          </ion-slide>
+          <ion-slide>
+             <h3>User Details</h3>
+           <div class="list">
+        <label class="item item-input">
+          <span class="input-label">First Name</span>
+          <input type="text" ng-model="data.firstName">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Last Name</span>
+          <input type="text" ng-model="data.lastName">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Email</span>
+          <input type="email" ng-model="data.email">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Confirm Email</span>
+          <input type="email" ng-model="data.confirmEmail">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Date of Birth</span>
+          <input type="date" ng-model="data.dob">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password" ng-model="data.password">
+        </label>
+<!--         <label class="item"> -->
+<!--         <div class="buttons"> -->
+<!--       		<button class="button button-assertive" style="float:left;" ng-click="goToSignUp()">Back</button> -->
+<!--       		<button class="button button-positive" style="float:right;" ng-click="goToStep2()">Next</button> -->
+<!--     	</div> -->
+<!--     	</label> -->
+      </div>
+          </ion-slide>
+          <ion-slide>
+             <div class="list">
+        <label class="item">
+          <h2 class="title">Conservative</h2>
+        </label>
+        <label class="item ">
+          <h2 class="title">Moderately Conservative</h2>
+        </label>
+        <label class="item">
+          <h2 class="title">Moderate</h2>
+        </label>
+        <label class="item">
+          <h2 class="title">Moderately Aggresive</h2>
+        </label>
+        <label class="item">
+          <h2 class="title">Aggresive</h2>
+        </label>
+      </div>
+          </ion-slide>
+        </ion-slide-box>
+      </ion-view>

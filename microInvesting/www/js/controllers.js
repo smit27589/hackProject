@@ -86,22 +86,23 @@ angular.module('starter.controllers', [])
 .controller('PerformanceCtrl', function($scope, $stateParams,$state) {
 })
 
-.controller('SignUpCtrl', function($scope, $stateParams,$state) {
-	$scope.goToStep1 = function(){
-		$state.go('app.userInfo');
-	};
-	
-	$scope.goToSignUp = function(){
-		$state.go('app.signUp');
-	};
-	
-	
-	$scope.goToStep2 = function(){
-		$state.go('app.investmentStrategy');
-	};
-	$scope.goToAgreementPage = function(){
-		$state.go('app.agreement');
-	};
+.controller('SignUpCtrl', function($scope, $state, $ionicSlideBoxDelegate) {
+ 
+  // need to change it to agreement page
+  $scope.startApp = function() {
+    $state.go('app.summary');
+  };
+  $scope.next = function() {
+    $ionicSlideBoxDelegate.next();
+  };
+  $scope.previous = function() {
+    $ionicSlideBoxDelegate.previous();
+  };
+
+  // Called each time the slide changes
+  $scope.slideChanged = function(index) {
+    $scope.slideIndex = index;
+  };
 })
 
 .controller('InviteFriendsCtrl', function($scope, $stateParams,$state) {
@@ -123,7 +124,7 @@ angular.module('starter.controllers', [])
     }
     
     $scope.signUp = function(){
-    	$state.go('app.signUp');
+    	$state.go('app.signUpSlide');
     }
 	
 })
