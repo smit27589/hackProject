@@ -1,0 +1,18 @@
+<ion-view view-title="What if" ng-controller="WhatIfCtrl">
+
+  <ion-content>
+  <div class="list">
+          <ion-item class="item" ng-repeat=" item in transactionData" ng-class="$odd ? 'stripLine' : ''">
+            <div style="width:100%;">
+            <span style="float: left;font-size:38px;width:100%;">+{{item.spareChange}}</span>
+<!--             <span style="float: right">{{item.value}}</span> -->
+            </div>
+            <div>
+            <span style="float: left;font-size:38px;margin-top:4%;width:100%;">{{item.amount}} {{item.description}}</span>
+            </div>
+          </ion-item>
+        </div>
+  </ion-content>
+
+
+</ion-view>

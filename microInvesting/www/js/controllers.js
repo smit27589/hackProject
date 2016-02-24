@@ -76,9 +76,6 @@ angular.module('starter.controllers', [])
 .controller('TransferCtrl', function($scope, $stateParams,$state) {
 })
 
-.controller('SettingsCtrl', function($scope, $stateParams,$state) {
-})
-
 .controller('SignUpCtrl', function($scope, $state, $ionicSlideBoxDelegate) {
 
   // need to change it to agreement page
@@ -106,7 +103,7 @@ angular.module('starter.controllers', [])
 
     $scope.login = function() {
         LoginService.loginUser($scope.data.username, $scope.data.password).success(function(data) {
-            $state.go('app.performance');
+            $state.go('app.settings');
             LoginService.setSideMenuVisibility(true);
         }).error(function(data) {
             var alertPopup = $ionicPopup.alert({
@@ -136,5 +133,4 @@ angular.module('starter.controllers', [])
   ];
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
-});
+;

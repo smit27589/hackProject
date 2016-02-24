@@ -121,6 +121,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
       }
     }
   })
+  
+  .state('app.whatIf', {
+    url: '/whatIf',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/whatIf.html',
+        controller:'WhatIfCtrl'
+      }
+    }
+  })
 
     .state('app.playlists', {
       url: '/playlists',
