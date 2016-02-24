@@ -3,7 +3,7 @@
  */
 angular.module('starter.controllers').controller('SubscriptionsCtrl', function ($scope, $stateParams, $state) {
 
-  $scope.money = {value: 10};
+  $scope.money = {value: 25};
 
   $scope.add = function () {
     $scope.money.value += 1;
