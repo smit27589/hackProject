@@ -1,5 +1,62 @@
-<ion-view view-title="Subscriptions">
-  <ion-content>
-    <h1>Subscriptions</h1>
-  </ion-content>
+<ion-view view-title="Subscriptions" ng-controller="SubscriptionsCtrl">
+
+  <ion-tabs class="tabs-positive tabs-icon-top">
+
+    <ion-tab title="Onetime" icon-on="ion-ios-pricetag" icon-off="ion-ios-pricetag-outline">
+
+      <div style="height: 65%;">
+        <button class="button button-balanced  button-block button-outline" style="margin-bottom:50px;margin-top: 70px;padding-top: 25px;
+      padding-bottom: 25px; width: 50%;margin-left:25%;">
+          <span style="text-align:center;font-size:38px;">${{money.value}}</span>
+        </button>
+
+        <div class="button-bar" style="border-radius: 5px;width: 94%; margin-left: 3%;">
+          <a class="button button-outline button-stable" ng-click="add()">
+          <span class="ion-plus-round"
+                style="color:#373737;"></span></a>
+          <a class="button button-outline button-stable" ng-click="sub()">
+          <span class="ion-minus-round"
+                style="color:#373737;"></span></a>
+        </div>
+      </div>
+
+      <button class="button button-block button-positive" style="width:94%;margin-left: 3%;">
+        Submit
+      </button>
+
+    </ion-tab>
+
+    <!--tab 2-->
+    <ion-tab title="Recurring" icon-on="ion-ios-pricetags" icon-off="ion-ios-pricetags-outline">
+
+      <div style="height: 65%;">
+        <button class="button button-balanced  button-block button-outline" style="margin-bottom:50px;margin-top: 70px;padding-top: 25px;
+      padding-bottom: 25px; width: 50%;margin-left:25%;">
+          <span style="text-align:center;font-size:38px;">${{money.value}}</span>
+        </button>
+
+        <div class="button-bar" style="border-radius: 5px;width: 94%; margin-left: 3%;">
+          <a class="button button-outline button-stable" ng-click="add()">
+          <span class="ion-plus-round"
+                style="color:#373737;"></span></a>
+          <a class="button button-outline button-stable" ng-click="sub()">
+          <span class="ion-minus-round"
+                style="color:#373737;"></span></a>
+        </div>
+
+        <div class="button-bar" style="margin-top: 20px;width: 94%; margin-left: 3%;">
+          <a class="button button-small button-outline button-positive" ng-repeat="type in subTypes"
+             ng-class="{'active':type.active}" ng-click="clickType(type)">{{type.title}}</a>
+        </div>
+      </div>
+
+      <button class="button button-block button-positive" style="width:94%; margin-left: 3%;">
+        Submit
+      </button>
+
+
+    </ion-tab>
+
+  </ion-tabs>
+
 </ion-view>

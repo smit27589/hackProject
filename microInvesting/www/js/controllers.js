@@ -68,11 +68,6 @@ angular.module('starter.controllers', [])
   };
 })
 
-
-
-.controller('SubscriptionsCtrl', function($scope, $stateParams,$state) {
-})
-
 .controller('TransferCtrl', function($scope, $stateParams,$state) {
 })
 
@@ -195,7 +190,7 @@ angular.module('starter.controllers', [])
                 template: 'Please check your credentials!'
             });
         });
-    }
+    };
 
     $scope.signUp = function(){
     	$state.go('app.signUpSlide');
