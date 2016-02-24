@@ -5,9 +5,10 @@
       <ion-content>
 
         <div style="padding:2%;">
-          <canvas id="pie" class="chart chart-pie" chart-data="pieData" chart-labels="pieLabels" chart-legend="true"
-                  chart-options="pieOptions">
-          </canvas>
+          <!--<canvas id="pie" class="chart chart-pie" chart-data="pieData" chart-labels="pieLabels" chart-legend="true"-->
+                  <!--chart-options="pieOptions">-->
+          <!--</canvas>-->
+          <nvd3 options="vmoptions" data="vmdata"></nvd3>
         </div>
 
         <div class="list">
@@ -24,8 +25,9 @@
       <!--slide 2-->
       <ion-content>
         <div style="padding:2%; ">
-          <canvas class="chart chart-base" chart-type="type" chart-data="balanceData" chart-legend="true"
-                  chart-labels="balancedLabels"></canvas>
+          <!--<canvas class="chart chart-base" chart-type="type" chart-data="balanceData" chart-legend="true"-->
+                  <!--chart-labels="balancedLabels"></canvas>-->
+          <nvd3 options="balancedOptions" data="balanceD3Data"></nvd3>
         </div>
 
         <div class="list">
