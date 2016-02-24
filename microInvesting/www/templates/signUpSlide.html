@@ -72,48 +72,6 @@
       </div>
           </ion-slide>
           <ion-slide>
-<!--              <div class="list"> -->
-<!--         <label class="item"> -->
-<!--           <h2 class="title">Conservative</h2> -->
-<!--         </label> -->
-<!--         <label class="item "> -->
-<!--           <h2 class="title">Moderately Conservative</h2> -->
-<!--         </label> -->
-<!--         <label class="item"> -->
-<!--           <h2 class="title">Moderate</h2> -->
-<!--         </label> -->
-<!--         <label class="item"> -->
-<!--           <h2 class="title">Moderately Aggresive</h2> -->
-<!--         </label> -->
-<!--         <label class="item"> -->
-<!--           <h2 class="title">Aggresive</h2> -->
-<!--         </label> -->
-<!--       </div> -->
-<!--       <ion-tabs class="tabs-striped tabs-icon-top tabs-positive"> -->
-
-<!--         <ion-tab title="Performance" icon="ion-home" > -->
-<!--           <ion-content> -->
-<!--         <div class="list"> -->
-<!--           <a class="item" ng-repeat=" item in categoryPerformance" ng-class="$odd ? 'stripLine' : ''"> -->
-<!--             <span style="float: left">{{item.period}}</span> -->
-<!--             <span style="float: right">{{item.percentage}}</span> -->
-<!--           </a> -->
-<!--         </div> -->
-<!--   </ion-content> -->
-<!--         </ion-tab> -->
-
-<!--         <ion-tab title="Composition" icon="ion-ios-information" > -->
-<!--           <ion-content> -->
-<!--   <div class="list"> -->
-<!--           <a class="item" ng-repeat=" item in categoryComposition" ng-class="$odd ? 'stripLine' : ''"> -->
-<!--             <span style="float: left">{{item.category}}</span> -->
-<!--             <span style="float: right">{{item.percentage}}</span> -->
-<!--           </a> -->
-<!--         </div> -->
-<!--   </ion-content> -->
-<!--         </ion-tab> -->
-
-<!--       </ion-tabs> -->
       
       <div class="bar bar-subheader" >
         <div class="button-bar">
@@ -123,7 +81,7 @@
             <a class="button" ng-class="{'button-positive': isSelected('aggresive')}" ng-click="setSelected('aggresive')">Aggresive</a>
         </div>
     </div>
-    
+    <ion-content>
       <div ng-show="active == 'performance'">
       <div class="list">
           <a class="item" ng-repeat=" item in categoryPerformanceMap[selectedCategory]" ng-class="$odd ? 'stripLine' : ''">
@@ -141,7 +99,7 @@
           </a>
         </div>
       </div>
-      
+      </ion-content>
       
       
       <div class="bar bar-subfooter" style="width:40%;left:30%;">
