@@ -68,11 +68,6 @@ angular.module('starter.controllers', [])
   };
 })
 
-
-
-.controller('SubscriptionsCtrl', function($scope, $stateParams,$state) {
-})
-
 .controller('TransferCtrl', function($scope, $stateParams,$state) {
 })
 
@@ -106,7 +101,7 @@ angular.module('starter.controllers', [])
 
     $scope.login = function() {
         LoginService.loginUser($scope.data.username, $scope.data.password).success(function(data) {
-            $state.go('app.performance');
+            $state.go('app.subscriptions');
             LoginService.setSideMenuVisibility(true);
         }).error(function(data) {
             var alertPopup = $ionicPopup.alert({
@@ -114,10 +109,10 @@ angular.module('starter.controllers', [])
                 template: 'Please check your credentials!'
             });
         });
-    }
+    };
 
     $scope.signUp = function(){
-    	$state.go('app.subscriptions');
+    	$state.go('app.signUpSlide');
     }
 
 })
