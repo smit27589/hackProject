@@ -93,7 +93,7 @@ angular.module('starter.controllers', [])
 	            	            	            	                                                 {title:'1 Year',value :'-4.36'},
 	            	            	            	                                                 {title:'2 Year',value :'3.22'},
 	            	            	            	                                                 {title:'3 Year',value :'15.28'}]};
-	
+
 	$scope.compositeMap = {'conservative':[{title:'Fixed Income',value :'80.42'},
 	                                                 {title:'Financials',value :'3.88'},
 	                                                 {title:'Info Tech',value :'3.23'},
@@ -138,8 +138,8 @@ angular.module('starter.controllers', [])
 	                                                 {title:'Materials',value :'3.80'},
 	                                                 {title:'Telecom',value :'2.68'},
 	                                                 {title:'Utilities',value :'2.39'}]};
-	
-	
+
+
 	$scope.selectedCategory = "conservative";
 	$scope.setSelected = function(type) {
         $scope.selectedCategory = type;
@@ -147,8 +147,8 @@ angular.module('starter.controllers', [])
     $scope.isSelected = function(type) {
         return type === $scope.selectedCategory;
     };
-	
-	
+
+
 	$scope.active = 'performance';
     $scope.setActive = function(type) {
         $scope.active = type;
@@ -156,7 +156,7 @@ angular.module('starter.controllers', [])
     $scope.isActive = function(type) {
         return type === $scope.active;
     };
-	
+
   // need to change it to agreement page
   $scope.startApp = function() {
     $state.go('app.summary');
