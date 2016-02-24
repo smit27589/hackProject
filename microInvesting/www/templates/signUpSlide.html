@@ -72,23 +72,86 @@
       </div>
           </ion-slide>
           <ion-slide>
-             <div class="list">
-        <label class="item">
-          <h2 class="title">Conservative</h2>
-        </label>
-        <label class="item ">
-          <h2 class="title">Moderately Conservative</h2>
-        </label>
-        <label class="item">
-          <h2 class="title">Moderate</h2>
-        </label>
-        <label class="item">
-          <h2 class="title">Moderately Aggresive</h2>
-        </label>
-        <label class="item">
-          <h2 class="title">Aggresive</h2>
-        </label>
+<!--              <div class="list"> -->
+<!--         <label class="item"> -->
+<!--           <h2 class="title">Conservative</h2> -->
+<!--         </label> -->
+<!--         <label class="item "> -->
+<!--           <h2 class="title">Moderately Conservative</h2> -->
+<!--         </label> -->
+<!--         <label class="item"> -->
+<!--           <h2 class="title">Moderate</h2> -->
+<!--         </label> -->
+<!--         <label class="item"> -->
+<!--           <h2 class="title">Moderately Aggresive</h2> -->
+<!--         </label> -->
+<!--         <label class="item"> -->
+<!--           <h2 class="title">Aggresive</h2> -->
+<!--         </label> -->
+<!--       </div> -->
+<!--       <ion-tabs class="tabs-striped tabs-icon-top tabs-positive"> -->
+
+<!--         <ion-tab title="Performance" icon="ion-home" > -->
+<!--           <ion-content> -->
+<!--         <div class="list"> -->
+<!--           <a class="item" ng-repeat=" item in categoryPerformance" ng-class="$odd ? 'stripLine' : ''"> -->
+<!--             <span style="float: left">{{item.period}}</span> -->
+<!--             <span style="float: right">{{item.percentage}}</span> -->
+<!--           </a> -->
+<!--         </div> -->
+<!--   </ion-content> -->
+<!--         </ion-tab> -->
+
+<!--         <ion-tab title="Composition" icon="ion-ios-information" > -->
+<!--           <ion-content> -->
+<!--   <div class="list"> -->
+<!--           <a class="item" ng-repeat=" item in categoryComposition" ng-class="$odd ? 'stripLine' : ''"> -->
+<!--             <span style="float: left">{{item.category}}</span> -->
+<!--             <span style="float: right">{{item.percentage}}</span> -->
+<!--           </a> -->
+<!--         </div> -->
+<!--   </ion-content> -->
+<!--         </ion-tab> -->
+
+<!--       </ion-tabs> -->
+      
+      <div class="bar bar-subheader" >
+        <div class="button-bar">
+            <a class="button" ng-class="{'button-positive': isSelected('conservative')}" ng-click="setSelected('conservative')">Conservative</a>
+            <a class="button" ng-class="{'button-positive': isSelected('moderate')}" ng-click="setSelected('moderate')">Moderate</a>
+            <a class="button" ng-class="{'button-positive': isSelected('growth')}" ng-click="setSelected('growth')">Growth</a>
+            <a class="button" ng-class="{'button-positive': isSelected('aggresive')}" ng-click="setSelected('aggresive')">Aggresive</a>
+        </div>
+    </div>
+    
+      <div ng-show="active == 'performance'">
+      <div class="list">
+          <a class="item" ng-repeat=" item in categoryPerformanceMap[selectedCategory]" ng-class="$odd ? 'stripLine' : ''">
+            <span style="float: left">{{item.title}}</span>
+            <span style="float: right">{{item.value}}%</span>
+          </a>
+        </div>
       </div>
+      
+      <div ng-show="active == 'composition'">
+      <div class="list">
+          <a class="item" ng-repeat=" item in compositeMap[selectedCategory]" ng-class="$odd ? 'stripLine' : ''">
+            <span style="float: left">{{item.title}}</span>
+            <span style="float: right">{{item.value}}%</span>
+          </a>
+        </div>
+      </div>
+      
+      
+      
+      <div class="bar bar-subfooter" style="bottom:0;position:absolute;">
+        <div class="button-bar">
+            <a class="button" ng-class="{'button-positive': isActive('performance')}" ng-click="setActive('performance')">Performance</a>
+            <a class="button" ng-class="{'button-positive': isActive('composition')}" ng-click="setActive('composition')">Composition</a>
+        </div>
+    </div>
+      
+      
           </ion-slide>
         </ion-slide-box>
       </ion-view>
