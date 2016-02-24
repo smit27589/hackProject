@@ -2,13 +2,12 @@
 
   <ion-slide-box on-slide-changed="slideHasChanged($index)" does-continue="false">
     <ion-slide>
-  <ion-content>
+      <ion-content>
 
         <div style="padding:2%;">
-          <canvas id="pie" class="chart chart-pie" chart-data="pieData" chart-labels="pieLabels"
+          <canvas id="pie" class="chart chart-pie" chart-data="pieData" chart-labels="pieLabels" chart-legend="true"
                   chart-options="pieOptions">
           </canvas>
-          <!-- <canvas class="chart chart-base" chart-type="type" chart-data="data" chart-labels="labels"></canvas> -->
         </div>
 
         <div class="list">
@@ -18,13 +17,15 @@
           </a>
         </div>
 
-  </ion-content>
+      </ion-content>
     </ion-slide>
 
     <ion-slide>
+      <!--slide 2-->
       <ion-content>
         <div style="padding:2%; ">
-          <canvas class="chart chart-base" chart-type="type" chart-data="data" chart-labels="labels"></canvas>
+          <canvas class="chart chart-base" chart-type="type" chart-data="balanceData" chart-legend="true"
+                  chart-labels="balancedLabels"></canvas>
         </div>
 
         <div class="list">

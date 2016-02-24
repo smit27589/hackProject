@@ -9,20 +9,14 @@ angular.module('starter.controllers').controller('PerformanceCtrl', function ($s
     segmentStrokeWidth: 2
   };
 
-  $scope.labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+  $scope.balancedLabels = ['Oct', 'Nov', 'Dec', 'Jan', 'Feb'];
   $scope.type = 'StackedBar';
 
-  $scope.data = [
-    [65, 59, 90, 81, 56, 55, 40],
-    [28, 48, 40, 19, 96, 27, 100]
-  ];
-
-  $scope.labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-  $scope.type = 'StackedBar';
-
-  $scope.data = [
-    [65, 59, 90, 81, 56, 55, 40],
-    [28, 48, 40, 19, 96, 27, 100]
+  //balance
+  $scope.balanceData = [
+    [0, 20, 0, 0, 30],
+    [10, 15, 15, 19, 17],
+    [65, 60, 77, 95, 85]
   ];
 
   $scope.composite = [
