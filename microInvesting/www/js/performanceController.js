@@ -9,6 +9,7 @@ angular.module('starter.controllers').controller('PerformanceCtrl', function ($s
     segmentStrokeWidth: 2
   };
 
+
   $scope.labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
   $scope.type = 'StackedBar';
 
