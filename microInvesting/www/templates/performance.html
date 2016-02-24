@@ -8,6 +8,7 @@
           <canvas id="pie" class="chart chart-pie" chart-data="pieData" chart-labels="pieLabels"
                   chart-options="pieOptions">
           </canvas>
+          <!-- <canvas class="chart chart-base" chart-type="type" chart-data="data" chart-labels="labels"></canvas> -->
         </div>
 
         <div class="list">
@@ -21,7 +22,19 @@
     </ion-slide>
 
     <ion-slide>
-      <div class="box yellow"><h1>YELLOW</h1></div>
+      <ion-content>
+        <div style="padding:2%; ">
+          <canvas class="chart chart-base" chart-type="type" chart-data="data" chart-labels="labels"></canvas>
+        </div>
+
+        <div class="list">
+          <a class="item" ng-repeat=" item in composite" ng-class="$odd ? 'stripLine' : ''">
+            <span style="float: left">{{item.title}}</span>
+            <span style="float: right">{{item.percentage}}</span>
+          </a>
+        </div>
+
+      </ion-content>
     </ion-slide>
   </ion-slide-box>
 

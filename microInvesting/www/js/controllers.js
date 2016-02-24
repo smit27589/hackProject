@@ -114,7 +114,7 @@ angular.module('starter.controllers', [])
     }
 
     $scope.signUp = function(){
-    	$state.go('app.signUpSlide');
+    	$state.go('app.subscriptions');
     }
 
 })
