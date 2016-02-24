@@ -103,7 +103,7 @@ angular.module('starter.controllers', [])
 
     $scope.login = function() {
         LoginService.loginUser($scope.data.username, $scope.data.password).success(function(data) {
-            $state.go('app.settings');
+            $state.go('app.summary');
             LoginService.setSideMenuVisibility(true);
         }).error(function(data) {
             var alertPopup = $ionicPopup.alert({
@@ -114,7 +114,7 @@ angular.module('starter.controllers', [])
     }
 
     $scope.signUp = function(){
-    	$state.go('app.subscriptions');
+    	$state.go('app.signUpSlide');
     }
 
 })
