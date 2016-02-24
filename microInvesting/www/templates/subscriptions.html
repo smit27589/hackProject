@@ -3,20 +3,14 @@
   <ion-tabs class="tabs-positive tabs-icon-top">
 
     <ion-tab title="Onetime" icon-on="ion-ios-pricetag" icon-off="ion-ios-pricetag-outline">
-
-      <!--<div class="card" style="margin-top: 10%;">-->
-      <!--<label class="item item-input item-floating-label">-->
-      <!--<input placeholder="money" ng-model="money.value" type="number" style="font-size: 38px;text-align: center;"/>-->
-      <!--</label>-->
-
       <button class="button button-balanced  button-block button-outline" style="margin-bottom:50px;margin-top: 100px;padding-top: 25px;
       padding-bottom: 25px; width: 50%;margin-left:25%;">
         <span style="text-align:center;font-size:38px;">${{money.value}}</span>
       </button>
 
       <div class="button-bar" style="border-radius: 5px;width: 94%; margin-left: 3%;">
-        <a class="button icon-left " ng-click="add()"><span class="ion-plus-round"></span></a>
-        <a class="button icon-right " ng-click="sub()"><span class="ion-minus-round"></span></a>
+        <a class="button button-outline" ng-click="add()"><span class="ion-plus-round"></span></a>
+        <a class="button button-outline" ng-click="sub()"><span class="ion-minus-round"></span></a>
       </div>
       <button class="button button-block button-positive" style="width:94%; margin-top: 30px;margin-left: 3%;">
         Submit
@@ -33,14 +27,13 @@
       </button>
 
       <div class="button-bar" style="border-radius: 5px;width: 94%; margin-left: 3%;">
-        <a class="button icon-left " ng-click="add()"><span class="ion-plus-round"></span></a>
-        <a class="button icon-right " ng-click="sub()"><span class="ion-minus-round"></span></a>
+        <a class="button button-outline" ng-click="add()"><span class="ion-plus-round"></span></a>
+        <a class="button button-outline" ng-click="sub()"><span class="ion-minus-round"></span></a>
       </div>
 
       <div class="button-bar" style="margin-top: 20px;width: 94%; margin-left: 3%;">
-        <a class="button button-small button-outline button-positive active ">Weekly</a>
-        <a class="button button-small button-outline button-positive ">Monthly</a>
-        <a class="button button-small button-outline button-positive">Quaterly</a>
+        <a class="button button-small button-outline button-positive" ng-repeat="type in subTypes"
+           ng-class="{'active':type.active}" ng-click="clickType(type)">{{type.title}}</a>
       </div>
 
       <button class="button button-block button-positive" style="width:94%; margin-top: 30px;margin-left: 3%;">
