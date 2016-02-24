@@ -73,9 +73,6 @@ angular.module('starter.controllers', [])
 .controller('SubscriptionsCtrl', function($scope, $stateParams,$state) {
 })
 
-.controller('TransactionsCtrl', function($scope, $stateParams,$state) {
-})
-
 .controller('TransferCtrl', function($scope, $stateParams,$state) {
 })
 
