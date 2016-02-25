@@ -1,17 +1,27 @@
-<ion-view view-title="Transactions" ng-controller="TransactionsCtrl">
+<ion-view view-title="Transactions" ng-controller="TransactionsCtrl" ng-init="init()">
 
   <ion-content>
-  <div class="list">
-          <ion-item class="item" ng-repeat=" item in transactionData" ng-class="$odd ? 'stripLine' : ''">
-            <div style="width:100%;">
-            <span style="float: left;font-size:38px;width:100%;">+{{item.spareChange}}</span>
-<!--             <span style="float: right">{{item.value}}</span> -->
-            </div>
-            <div>
-            <span style="float: left;font-size:38px;margin-top:4%;width:100%;">{{item.amount}} {{item.description}}</span>
-            </div>
-          </ion-item>
+
+    <div class="button-bar" style="margin-top: 20px;width: 94%; margin-left: 3%;">
+      <a class="button button-small button-outline button-positive" ng-repeat="type in subTypes"
+         ng-class="{'active':type.active}" ng-click="clickType(type)">{{type.title}}</a>
+    </div>
+
+    <div class="list">
+      <div ng-repeat=" (date, list) in  dateData">
+        <div class="item item-divider">
+          {{date}}
         </div>
+        <a class="item item-icon-left item-icon-right" ng-repeat="tran in list">
+          <i class="icon ion-email"></i>
+          <h2>{{tran.description}}</h2>
+
+          <p>${{tran.amount}}</p>
+          <i class="icon"> ${{tran.remainder}}</i>
+        </a>
+      </div>
+    </div>
+
   </ion-content>
 
 
