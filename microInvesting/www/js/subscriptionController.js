@@ -26,6 +26,10 @@ angular.module('starter.controllers').controller('SubscriptionsCtrl', function (
     });
 
     type.active = true;
+  };
+
+  $scope.submit = function () {
+    $state.go('app.summary');
   }
 
 
