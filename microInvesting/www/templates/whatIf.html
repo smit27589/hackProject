@@ -1,16 +1,34 @@
 <ion-view view-title="What if" ng-controller="WhatIfCtrl">
 
   <ion-content>
-  <div class="list">
-          <ion-item class="item" ng-repeat=" item in transactionData" ng-class="$odd ? 'stripLine' : ''">
-            <div style="width:100%;">
-            <span style="float: left;font-size:38px;width:100%;">+{{item.spareChange}}</span>
-<!--             <span style="float: right">{{item.value}}</span> -->
-            </div>
-            <div>
-            <span style="float: left;font-size:38px;margin-top:4%;width:100%;">{{item.amount}} {{item.description}}</span>
-            </div>
-          </ion-item>
+ 	<div class="list">
+        <label class="item item-input">
+          <span class="input-label">Age</span>
+          <input type="text" ng-model="data.age">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Monthly Amount</span>
+          <input type="text" ng-model="data.monthly">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Conservative</span>
+          <input type="number" ng-model="data.conservative">
+        </label><label class="item item-input">
+          <span class="input-label">Moderate</span>
+          <input type="number" ng-model="data.moderate">
+        </label><label class="item item-input">
+          <span class="input-label">Growth</span>
+          <input type="number" ng-model="data.growth">
+        </label><label class="item item-input">
+          <span class="input-label">Aggresive</span>
+          <input type="number" ng-model="data.aggresive">
+        </label>
+        
+        
+        <label class="item">
+          <button class="button button-block button-assertive" ng-click="go()">Go</button>
+        </label>
+        
         </div>
   </ion-content>
 
