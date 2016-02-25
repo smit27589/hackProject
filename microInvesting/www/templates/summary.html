@@ -5,37 +5,64 @@
   <br/>
   <br/>
     <div style="text-align:center;">
-    	Account Value
+      Account Value
     </div>
     <br/>
-    <div style="text-align:center;font-size:38px;margin-bottom:3%;">$126.83</div>
+    <div style="text-align:center;font-size:38px;margin-bottom:3%;">$390</div>
     <div>
-    <ion-slide-box on-slide-changed="slideChanged(index)">
-          <ion-slide>
-          <div style="text-align:center;">
-    			$ Invested
-    	</div>
-             <div class="list">
+<!--     <div class="bar " > -->
+        <div class="button-bar" style="width:40%;margin-left:30%;margin-bottom:3%;">
+            <a class="button" ng-class="{'button-positive': isSelected('dollar')}" ng-click="setSelected('dollar')">$</a>
+            <a class="button" ng-class="{'button-positive': isSelected('percentage')}" ng-click="setSelected('percentage')">%</a>
+        </div>
+<!--     </div> -->
+    </div>
+    <div ng-show="selected == 'dollar'" style="">
+    
+      <div class="list">
           <a class="item" ng-repeat=" item in investmentStartegyDollarData" ng-class="$odd ? 'stripLine' : ''">
             <span style="float: left">{{item.categoryName}}</span>
-            <span style="float: right">{{item.value}}</span>
+            <span style="float: right">${{item.value}}</span>
           </a>
         </div>
-          </ion-slide>
-          <ion-slide>
-          <div style="text-align:center;">
-    			% Invested
-    	  </div>
-           <div class="list">
+    
+    </div>
+    
+    <div ng-show="selected == 'percentage'">
+      <div class="list">
           <a class="item" ng-repeat=" item in investmentStartegyPercentageData" ng-class="$odd ? 'stripLine' : ''">
             <span style="float: left">{{item.categoryName}}</span>
-            <span style="float: right">{{item.value}}</span>
+            <span style="float: right">{{item.value}}%</span>
           </a>
         </div>
-          </ion-slide>
-        </ion-slide-box>
-
+    
     </div>
+    
+<!--     <ion-slide-box on-slide-changed="slideChanged(index)"> -->
+<!--           <ion-slide> -->
+<!--           <div style="text-align:center;"> -->
+<!--          $ Invested -->
+<!--      </div> -->
+<!--              <div class="list"> -->
+<!--           <a class="item" ng-repeat=" item in investmentStartegyDollarData" ng-class="$odd ? 'stripLine' : ''"> -->
+<!--             <span style="float: left">{{item.categoryName}}</span> -->
+<!--             <span style="float: right">${{item.value}}</span> -->
+<!--           </a> -->
+<!--         </div> -->
+<!--           </ion-slide> -->
+<!--           <ion-slide> -->
+<!--           <div style="text-align:center;"> -->
+<!--          % Invested -->
+<!--        </div> -->
+<!--            <div class="list"> -->
+<!--           <a class="item" ng-repeat=" item in investmentStartegyPercentageData" ng-class="$odd ? 'stripLine' : ''"> -->
+<!--             <span style="float: left">{{item.categoryName}}</span> -->
+<!--             <span style="float: right">{{item.value}}%</span> -->
+<!--           </a> -->
+<!--         </div> -->
+<!--           </ion-slide> -->
+<!--         </ion-slide-box> -->
+    
   </ion-content>
 
 
