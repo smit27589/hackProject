@@ -138,7 +138,27 @@ angular.module('starter.controllers', [])
 	                                                 {title:'Materials',value :'3.80'},
 	                                                 {title:'Telecom',value :'2.68'},
 	                                                 {title:'Utilities',value :'2.39'}]};
-
+	
+	
+	$scope.textMap = {'conservative':'conservative',
+			'moderate':'moderate',
+			'growth':'growth',
+			'aggresive':'aggresive'};
+	
+	$scope.etfMap = {'conservative':['conservative'],
+			'moderate':['moderate'],
+			'growth':['growth'],
+			'aggresive':['aggresive']};
+	
+	$scope.data = {conservative:10,moderate:25,growth:50,aggresive:15}
+	
+	$scope.agree = function(){
+		$state.go('app.summary');
+	};
+	
+	$scope.disagree = function(){
+		$state.go('app.login');
+	};
 
 	$scope.selectedCategory = "conservative";
 	$scope.setSelected = function(type) {
@@ -196,20 +216,6 @@ angular.module('starter.controllers', [])
     	$state.go('app.signUpSlide');
     }
 
-})
-
-.controller('PlaylistCtrl', function($scope, $stateParams) {
-})
-
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
 })
 
 ;
