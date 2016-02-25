@@ -49,11 +49,12 @@ angular.module('starter.controllers', [])
 //  };
 })
 
-.controller('IntroCtrl', function($scope, $state, $ionicSlideBoxDelegate) {
+.controller('IntroCtrl', function($scope, $state, $ionicSlideBoxDelegate,$location) {
 
   // Called to navigate to the main app
   $scope.startApp = function() {
     $state.go('app.login');
+//	  $location.url('/app/summary');
   };
   $scope.next = function() {
     $ionicSlideBoxDelegate.next();
@@ -202,7 +203,7 @@ angular.module('starter.controllers', [])
 
     $scope.login = function() {
         LoginService.loginUser($scope.data.username, $scope.data.password).success(function(data) {
-            $state.go('app.summary');
+            $state.go('app.transactions');
             LoginService.setSideMenuVisibility(true);
         }).error(function(data) {
             var alertPopup = $ionicPopup.alert({
