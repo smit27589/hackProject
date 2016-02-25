@@ -63,10 +63,14 @@ angular.module('starter.controllers', [])
   .controller('IntroCtrl', function ($scope, $state, $ionicSlideBoxDelegate, $location) {
 
     // Called to navigate to the main app
-    $scope.startApp = function () {
+    $scope.login = function () {
       $state.go('app.login');
-//	  $location.url('/app/summary');
     };
+
+    $scope.signup = function () {
+      $state.go('app.signUpSlide');
+    };
+
     $scope.next = function () {
       $ionicSlideBoxDelegate.next();
     };
