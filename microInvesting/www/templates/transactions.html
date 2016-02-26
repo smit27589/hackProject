@@ -3,33 +3,34 @@
   <ion-content style="background: linear-gradient(#3293b0, #5586d7);">
 
     <div class="button-bar" style="margin-top: 5px; margin-bottom:10px; width: 40%; margin-left: 30%;">
-      <a class="button button-small button-outline button-positive" ng-repeat="type in subTypes"
-         ng-class="{'active':type.active}" ng-click="clickType(type)">{{type.title}}</a>
+      <a class="button button-small button-outline button-light" ng-repeat="type in subTypes"
+         ng-class="{'active':type.active}" ng-click="clickType(type)">
+        <span ng-class="{'button-clicked':type.active,'button-no-clicked':!type.active}">{{type.title}}</span></a>
     </div>
 
     <div class="list" ng-show="subTypes[0].active" style="color:white;">
       <div ng-repeat=" (date, list) in  dateData">
-        <div class="item item-divider">
+        <div style="color:white;" class="item item-divider">
           {{date}}
         </div>
         <a class="item item-icon-left item-icon-right" ng-repeat="tran in list">
-          <i class="icon ion-email"></i>
-          <h2>{{tran.merchantName}}</h2>
-          <p>${{tran.amount}}</p>
+          <i class="icon fa " ng-class="tran.icon"></i>
+          <h2 style="color: white;">{{tran.merchantName}}</h2>
+          <p style="color:white;">${{tran.amount}}</p>
           <i class="icon"> ${{tran.remainder}}</i>
         </a>
       </div>
     </div>
 
-    <div class="list" ng-show="subTypes[1].active">
+    <div class="list" ng-show="subTypes[1].active" style="color:white;">
       <div ng-repeat=" (date2, list2) in  subData">
-        <div class="item item-divider">
+        <div class="item item-divider" style="color:white;">
           {{date2}}
         </div>
         <a class="item item-icon-left item-icon-right" ng-repeat="tran in list2">
-          <i class="icon ion-email"></i>
-          <h2>{{tran.type}}</h2>
-          <p>{{tran.subType}}</p>
+          <i class="icon fa fa-money"></i>
+          <h2 style="color:white;">{{tran.type}}</h2>
+          <p style="color:white;">{{tran.subType}}</p>
           <i class="icon"> ${{tran.amount}}</i>
         </a>
       </div>
