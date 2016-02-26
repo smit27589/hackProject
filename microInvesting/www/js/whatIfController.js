@@ -33,12 +33,12 @@ angular.module('starter.controllers').controller('WhatIfCtrl', function($scope, 
 	 $scope.options = {
 			    chart: {
 			      type: 'lineChart',
-			      height: 350,
+			      height: 250,
 			      margin: {
-			          top: 15,
-			          right: 5,
-			          bottom: 15,
-			          left: 10
+			          top: 10,
+			          right: 20,
+			          bottom: 30,
+			          left: 29
 			        },
 			      x: function(d){ return d.x; },
 	              y: function(d){ return d.y; },
