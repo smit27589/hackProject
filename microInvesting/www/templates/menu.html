@@ -12,40 +12,40 @@
     <ion-nav-view name="menuContent"></ion-nav-view>
   </ion-side-menu-content>
 
-  <ion-side-menu side="left" >
+  <ion-side-menu side="left">
     <ion-header-bar class="bar-stable">
       <h1 class="title">{{userName}}</h1>
     </ion-header-bar>
     <ion-content>
       <ion-list>
         <ion-item menu-close href="#/app/summary">
-          Summary
-        </ion-item>
-        <ion-item menu-close href="#/app/inviteFriends">
-          Invite Friends
-        </ion-item>
-        <ion-item menu-close href="#/app/transfer">
-          Transfer to Bank
+          <i class="fa fa-university fa-fw"></i> &nbsp;Home
         </ion-item>
         <ion-item menu-close href="#/app/performance">
-          Performance
-        </ion-item>
-        <ion-item menu-close href="#/app/transactions">
-          Transactions
+          <i class="fa fa-bar-chart fa-fw"></i> &nbsp;Performance
         </ion-item>
         <ion-item menu-close href="#/app/subscriptions">
-          Subscription
+          <i class="fa fa-exchange fa-fw"></i> &nbsp;Deposit
+        </ion-item>
+        <ion-item menu-close href="#/app/transactions">
+          <i class="fa fa-money fa-fw"></i> &nbsp;Transactions
         </ion-item>
         <ion-item menu-close href="#/app/whatIf">
-          iRetire
+          <i class="fa fa-calculator fa-fw"></i> &nbsp;iRetire
         </ion-item>
+        <ion-item menu-close href="#/app/inviteFriends">
+          <i class="fa fa-users fa-fw"></i> &nbsp;Invite Friends
+        </ion-item>
+<!--         <ion-item menu-close href="#/app/transfer">
+          Transfer to Bank
+        </ion-item> -->
         <ion-item menu-close href="#/app/settings">
-          Settings
+          <i class="fa fa-cog fa-fw"></i> &nbsp;Settings
         </ion-item>
-        <ion-item menu-close ng-click="logout()">
+<!--         <ion-item menu-close ng-click="logout()">
           Sign out
-        </ion-item>
+        </ion-item> -->
       </ion-list>
     </ion-content>
-  </ion-side-menu>
+  </ion-side-menu>  
 </ion-side-menus>

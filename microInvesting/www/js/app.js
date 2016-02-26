@@ -66,8 +66,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
     url: '/summary',
     views: {
       'menuContent': {
-        templateUrl: 'templates/summary.html',
-        controller:'SummaryCtrl'
+        templateUrl: 'templates/summary.html'
       }
     }
   })
