@@ -1,11 +1,11 @@
-<ion-view view-title="Summary">
+<ion-view view-title="Summary" ng-controller="SummaryCtrl" ng-init="init()">
 
   <ion-nav-buttons side="left">
     <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
     </button>
   </ion-nav-buttons>
 
-  <ion-content>
+  <ion-content style="background: linear-gradient(#3293b0, #5586d7);">
   <br/>
   <br/>
   <br/>
@@ -23,16 +23,16 @@
 <!--     </div> -->
     </div>
     <div ng-show="selected == 'dollar'" style="">
-    
+
       <div class="list">
           <a class="item" ng-repeat=" item in investmentStartegyDollarData" ng-class="$odd ? 'stripLine' : ''">
             <span style="float: left">{{item.categoryName}}</span>
             <span style="float: right">${{item.value}}</span>
           </a>
         </div>
-    
+
     </div>
-    
+
     <div ng-show="selected == 'percentage'">
       <div class="list">
           <a class="item" ng-repeat=" item in investmentStartegyPercentageData" ng-class="$odd ? 'stripLine' : ''">
@@ -40,9 +40,9 @@
             <span style="float: right">{{item.value}}%</span>
           </a>
         </div>
-    
+
     </div>
-    
+
 <!--     <ion-slide-box on-slide-changed="slideChanged(index)"> -->
 <!--           <ion-slide> -->
 <!--           <div style="text-align:center;"> -->
@@ -67,7 +67,7 @@
 <!--         </div> -->
 <!--           </ion-slide> -->
 <!--         </ion-slide-box> -->
-    
+
   </ion-content>
 
 
