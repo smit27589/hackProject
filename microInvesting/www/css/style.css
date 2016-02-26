@@ -60,6 +60,14 @@ body {
   color: #fff;
 }
 
+.button-clicked-dark{
+  color:#3293b0
+}
+
+.button-no-clicked-dark{
+  color: #a6a6a6;
+}
+
 .bg-color{
   background: linear-gradient(#21c5f4, #5586d7);
 }
