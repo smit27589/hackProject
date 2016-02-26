@@ -72,6 +72,9 @@ body {
   background: linear-gradient(#21c5f4, #5586d7);
 }
 
+.bg-nav-color{
+  background: #21c5f4;
+}
 
 .ionic .item-text-wrap { /* negate the nowrap CSS from .ionic .item */
     overflow: visible;

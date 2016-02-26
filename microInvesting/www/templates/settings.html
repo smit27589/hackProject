@@ -1,11 +1,14 @@
-<ion-view view-title="Settings" ng-controller="SettingsCtrl">
+<ion-view ng-controller="SettingsCtrl">
+  <ion-nav-title>
+  <span style="color:white; font-size:20px;font-weight: 500;">Settings</span>
+  </ion-nav-title>
 
- <ion-content>
+ <ion-content class="bg-color">
   <div class="list">
-          <ion-item ng-click="signOut()" class="item" ng-repeat=" item in settingsData" ng-class="$odd ? 'stripLine' : ''">
+          <ion-item ng-click="signOut()" class="item no-border" ng-repeat=" item in settingsData" ng-class="$odd ? 'stripLine' : ''">
             <div style="width:100%;">
-            <span style="float: left;font-size:24px;">{{item.settingDescription}}</span>
-            <span style="float: right;font-size:28px;"> > </span>
+            <span style="color:white; float: left;font-size:20px;font-weight: 500;">{{item.settingDescription}}</span>
+            <span style="color:white; float: right;font-size:24px;font-weight: 500;"> > </span>
             </div>
           </ion-item>
         </div>
