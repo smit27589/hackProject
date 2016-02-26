@@ -9,25 +9,34 @@
   <br/>
   <br/>
   <br/>
-    <div style="text-align:center;">
+    <div style="text-align:center;color:white;">
       Account Value
     </div>
     <br/>
-    <div style="text-align:center;font-size:38px;margin-bottom:3%;">$390</div>
+    <div style="text-align:center;font-size:38px;margin-bottom:3%;color:white;">$390</div>
     <div>
-<!--     <div class="bar " > -->
-        <div class="button-bar" style="width:40%;margin-left:30%;margin-bottom:3%;">
-            <a class="button" ng-class="{'button-positive': isSelected('dollar')}" ng-click="setSelected('dollar')">$</a>
-            <a class="button" ng-class="{'button-positive': isSelected('percentage')}" ng-click="setSelected('percentage')">%</a>
-        </div>
-<!--     </div> -->
+<!--         <div class="button-bar" style="width:40%;margin-left:30%;margin-bottom:3%;"> -->
+<!--             <a class="button" ng-class="{'button-positive': isSelected('dollar')}" ng-click="setSelected('dollar')">$</a> -->
+<!--             <a class="button" ng-class="{'button-positive': isSelected('percentage')}" ng-click="setSelected('percentage')">%</a> -->
+<!--         </div> -->
+        
+        <div class="button-bar" style="margin-top: 5px; margin-bottom:10px; width: 40%; margin-left: 30%;">
+      <a class="button button-small button-outline button-light"
+         ng-class="{'active':isSelected('dollar')}" ng-click="setSelected('dollar')">
+        <span ng-class="{'button-clicked':isSelected('dollar'),'button-no-clicked':!isSelected('dollar')}">$</span></a>
+        
+         <a class="button button-small button-outline button-light"
+         ng-class="{'active':isSelected('percentage')}" ng-click="setSelected('percentage')">
+        <span ng-class="{'button-clicked':isSelected('percentage'),'button-no-clicked':!isSelected('percentage')}">#</span></a>
+    </div>
+        
     </div>
     <div ng-show="selected == 'dollar'" style="">
 
       <div class="list">
           <a class="item" ng-repeat=" item in investmentStartegyDollarData" ng-class="$odd ? 'stripLine' : ''">
-            <span style="float: left">{{item.categoryName}}</span>
-            <span style="float: right">${{item.value}}</span>
+            <span style="float: left;color:white;">{{item.categoryName}}</span>
+            <span style="float: right;color:white;">${{item.value}}</span>
           </a>
         </div>
 
@@ -36,8 +45,8 @@
     <div ng-show="selected == 'percentage'">
       <div class="list">
           <a class="item" ng-repeat=" item in investmentStartegyPercentageData" ng-class="$odd ? 'stripLine' : ''">
-            <span style="float: left">{{item.categoryName}}</span>
-            <span style="float: right">{{item.value}}%</span>
+            <span style="float: left;color:white;">{{item.categoryName}}</span>
+            <span style="float: right;color:white;">{{item.value}}%</span>
           </a>
         </div>
 
