@@ -20,6 +20,8 @@
           </button>
         </ion-nav-buttons>
         <ion-slide-box on-slide-changed="slideChanged(index)">
+        
+<!--         slide1 -->
           <ion-slide>
            <div class="list">
         <label class="item ">
@@ -36,6 +38,8 @@
 <!--         </label> -->
       </div>
           </ion-slide>
+          
+<!--           slide2 -->
           <ion-slide>
              <h3>User Details</h3>
            <div class="list">
@@ -71,6 +75,55 @@
 <!--     	</label> -->
       </div>
           </ion-slide>
+          
+          
+<!--           slide3 -->
+                <ion-slide>
+                
+                <label class="item">
+          <h2 class="title">What kind of an Investor are you?</h2>
+        </label>
+           <div class="list">
+        
+        <label class="item" ng-click="next()">
+          <h3 class="title">Stingy</h3>
+        </label>
+         <label class="item" ng-click="next()">
+          <h3 class="title">Average Joe</h3>
+        </label>
+         <label class="item" ng-click="next()">
+          <h3 class="title">Opportunist</h3>
+        </label>
+         <label class="item" ng-click="next()">
+          <h3 class="title">Adrenaline Junkie</h3>
+        </label>
+
+      </div>
+          </ion-slide>
+          
+          
+          <!--           slide4 -->
+                <ion-slide>
+                
+                <label class="item">
+          <h2 class="title">What is your Investment horizon?</h2>
+        </label>
+           <div class="list">
+        
+        <label class="item" ng-click="next()">
+          <h3 class="title">6 months</h3>
+        </label>
+         <label class="item" ng-click="next()">
+          <h3 class="title">1-2 Years</h3>
+        </label>
+         <label class="item" ng-click="next()">
+          <h3 class="title">2+ Years</h3>
+        </label>
+
+      </div>
+          </ion-slide>
+          
+<!--           slide5 -->
           <ion-slide>
       
       <div class="bar bar-subheader" >
@@ -82,6 +135,22 @@
         </div>
     </div>
     <ion-content>
+    	<div>
+    	<span >{{textMap[selectedCategory]}}</span>
+    	
+    	</div>
+    
+    <div>
+    	<h2>Underlying ETF's are - </h2>
+    	<div class="list">
+          <a class="item" ng-repeat=" item in etfMap[selectedCategory]" ng-class="$odd ? 'stripLine' : ''">
+            <span style="float: left">{{item}}</span>
+          </a>
+        </div>
+    	
+    </div>
+    
+    
       <div ng-show="active == 'performance'">
       <div class="list">
           <a class="item" ng-repeat=" item in categoryPerformanceMap[selectedCategory]" ng-class="$odd ? 'stripLine' : ''">
@@ -91,25 +160,74 @@
         </div>
       </div>
       
-      <div ng-show="active == 'composition'">
-      <div class="list">
-          <a class="item" ng-repeat=" item in compositeMap[selectedCategory]" ng-class="$odd ? 'stripLine' : ''">
-            <span style="float: left">{{item.title}}</span>
-            <span style="float: right">{{item.value}}%</span>
-          </a>
-        </div>
-      </div>
+<!--       <div ng-show="active == 'composition'"> -->
+<!--       <div class="list"> -->
+<!--           <a class="item" ng-repeat=" item in compositeMap[selectedCategory]" ng-class="$odd ? 'stripLine' : ''"> -->
+<!--             <span style="float: left">{{item.title}}</span> -->
+<!--             <span style="float: right">{{item.value}}%</span> -->
+<!--           </a> -->
+<!--         </div> -->
+<!--       </div> -->
       </ion-content>
       
       
-      <div class="bar bar-subfooter" style="width:40%;left:30%;">
-        <div class="button-bar">
-            <a class="button" ng-class="{'button-positive': isActive('performance')}" ng-click="setActive('performance')">Performance</a>
-            <a class="button" ng-class="{'button-positive': isActive('composition')}" ng-click="setActive('composition')">Composition</a>
-        </div>
-    </div>
+<!--       <div class="bar bar-subfooter" style="width:40%;left:30%;"> -->
+<!--         <div class="button-bar"> -->
+<!--             <a class="button" ng-class="{'button-positive': isActive('performance')}" ng-click="setActive('performance')">Performance</a> -->
+<!--             <a class="button" ng-class="{'button-positive': isActive('composition')}" ng-click="setActive('composition')">Composition</a> -->
+<!--         </div> -->
+<!--     </div> -->
       
       
           </ion-slide>
+          
+          <!--           slide6 -->
+         <ion-slide>
+                
+                <label class="item">
+          <h2 class="title">Recommended Strategy</h2>
+        </label>
+           <div class="list">
+        
+        <label class="item item-input">
+          <span class="input-label">Conservative</span>
+          <input type="number" ng-model="data.conservative">
+        </label><label class="item item-input">
+          <span class="input-label">Moderate</span>
+          <input type="number" ng-model="data.moderate">
+        </label><label class="item item-input">
+          <span class="input-label">Growth</span>
+          <input type="number" ng-model="data.growth">
+        </label><label class="item item-input">
+          <span class="input-label">Aggresive</span>
+          <input type="number" ng-model="data.aggresive">
+        </label>
+      </div>
+      
+       <button class="button button-block button-positive" style="width:50%;margin-left: 25%%;" ng-click="next()">
+        Go
+      </button>
+          </ion-slide>
+          
+          
+          <!--           slide7 -->
+         <ion-slide>
+                
+                <label class="item">
+          <h2 class="title">Terms and Conditions Apply</h2>
+        </label>
+           <div>
+        		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+      	   </div>
+      
+       <button class="button button-block button-positive" style="width:50%;margin-left: 25%%;" ng-click="agree()">
+        I Agree
+      </button>
+      
+      <button class="button button-block button-positive" style="width:50%;margin-left: 25%%;" ng-click="disagree()">
+        I Disagree
+      </button>
+          </ion-slide>
+          
         </ion-slide-box>
       </ion-view>

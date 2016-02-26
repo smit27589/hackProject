@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout,LoginService) {
+  .controller('AppCtrl', function ($scope, $ionicModal, $timeout, LoginService, $state) {
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -16,7 +16,18 @@ angular.module('starter.controllers', [])
 
   var updateSideMenuVisibility = function(){
 	  $scope.showSideMenu = LoginService.getSideMenuVisibility();
-  }
+    };
+
+
+    $scope.showHeaderBar = false;
+    $scope.$on('$stateChangeSuccess',
+      function (event, toState, toParams, fromState, fromParams) {
+        if ($state.$current.name === 'app.intro') {
+          $scope.showHeaderBar = false;
+        }else{
+          $scope.showHeaderBar = true;
+  		}
+      });
 
 //  LoginService.registerObserverCallback(updateSideMenuVisibility);
 
@@ -47,15 +58,19 @@ angular.module('starter.controllers', [])
 //      $scope.closeLogin();
 //    }, 1000);
 //  };
-})
+  })
 
-.controller('IntroCtrl', function($scope, $state, $ionicSlideBoxDelegate,$location) {
+  .controller('IntroCtrl', function($scope, $state, $ionicSlideBoxDelegate,$location) {
 
-  // Called to navigate to the main app
-  $scope.startApp = function() {
-    $state.go('app.login');
-//	  $location.url('/app/summary');
+    // Called to navigate to the main app
+    $scope.login = function () {
+      $state.go('app.login');
   };
+
+    $scope.signup = function () {
+      $state.go('app.signUpSlide');
+    };
+
   $scope.next = function() {
     $ionicSlideBoxDelegate.next();
   };
@@ -94,7 +109,8 @@ angular.module('starter.controllers', [])
 	            	            	            	                                                 {title:'6 Month',value :'-8.29'},
 	            	            	            	                                                 {title:'1 Year',value :'-4.36'},
 	            	            	            	                                                 {title:'2 Year',value :'3.22'},
-	            	            	            	                                                 {title:'3 Year',value :'15.28'}]};
+	            	            	            	                                                 {title:'3 Year',value :'15.28'}]
+	            	            	            	                                                 					};
 
 	$scope.compositeMap = {'conservative':[{title:'Fixed Income',value :'80.42'},
 	                                                 {title:'Financials',value :'3.88'},
@@ -139,8 +155,33 @@ angular.module('starter.controllers', [])
 	                                                 {title:'Energy',value :'4.82'},
 	                                                 {title:'Materials',value :'3.80'},
 	                                                 {title:'Telecom',value :'2.68'},
-	                                                 {title:'Utilities',value :'2.39'}]};
+        {title: 'Utilities', value: '2.39'}]
+    };
 
+
+    $scope.textMap = {
+      'conservative': 'conservative',
+      'moderate': 'moderate',
+      'growth': 'growth',
+      'aggresive': 'aggresive'
+    };
+
+    $scope.etfMap = {
+      'conservative': ['conservative'],
+      'moderate': ['moderate'],
+      'growth': ['growth'],
+      'aggresive': ['aggresive']
+    };
+
+    $scope.data = {conservative: 10, moderate: 25, growth: 50, aggresive: 15}
+
+    $scope.agree = function () {
+      $state.go('app.summary');
+    };
+
+    $scope.disagree = function () {
+      $state.go('app.login');
+    };
 
 	$scope.selectedCategory = "conservative";
 	$scope.setSelected = function(type) {
@@ -184,7 +225,7 @@ angular.module('starter.controllers', [])
 	LoginService.setNewUser(false);
     $scope.login = function() {
         LoginService.loginUser($scope.data.username, $scope.data.password).success(function(data) {
-            $state.go('app.transactions');
+        $state.go('app.summary');
             LoginService.setSideMenuVisibility(true);
         }).error(function(data) {
             var alertPopup = $ionicPopup.alert({
@@ -198,20 +239,6 @@ angular.module('starter.controllers', [])
     	$state.go('app.signUpSlide');
     }
 
-})
-
-.controller('PlaylistCtrl', function($scope, $stateParams) {
-})
-
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
 })
 
 ;

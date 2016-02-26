@@ -40,3 +40,7 @@ body {
 .stripLine{
   background-color: #f5f5f5;
 }
+
+.list .item{
+  background: transparent !important;
+}
