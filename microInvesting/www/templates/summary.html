@@ -1,48 +1,24 @@
-<ion-view view-title="Summary">
+<ion-view view-title="Home" ng-controller="SummaryCtrl" ng-init="init()">
 
   <ion-nav-buttons side="left">
     <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
     </button>
   </ion-nav-buttons>
 
-  <ion-content>
+  <ion-content class="bg-color">
   <br/>
   <br/>
   <br/>
-    <div style="text-align:center;">
-      Account Value
+    <div >
+      <h3 style="text-align:center;color:white;">Account Balance</h3>
     </div>
+    <div style="text-align:center;font-size:38px;margin-bottom:3%;color:white;font-weight: 500;">$ 329.53</div>
     <br/>
-    <div style="text-align:center;font-size:38px;margin-bottom:3%;">$390</div>
-    <div>
-<!--     <div class="bar " > -->
-        <div class="button-bar" style="width:40%;margin-left:30%;margin-bottom:3%;">
-            <a class="button" ng-class="{'button-positive': isSelected('dollar')}" ng-click="setSelected('dollar')">$</a>
-            <a class="button" ng-class="{'button-positive': isSelected('percentage')}" ng-click="setSelected('percentage')">%</a>
-        </div>
-<!--     </div> -->
-    </div>
-    <div ng-show="selected == 'dollar'" style="">
-    
-      <div class="list">
-          <a class="item" ng-repeat=" item in investmentStartegyDollarData" ng-class="$odd ? 'stripLine' : ''">
-            <span style="float: left">{{item.categoryName}}</span>
-            <span style="float: right">${{item.value}}</span>
-          </a>
-        </div>
-    
-    </div>
-    
-    <div ng-show="selected == 'percentage'">
-      <div class="list">
-          <a class="item" ng-repeat=" item in investmentStartegyPercentageData" ng-class="$odd ? 'stripLine' : ''">
-            <span style="float: left">{{item.categoryName}}</span>
-            <span style="float: right">{{item.value}}%</span>
-          </a>
-        </div>
-    
-    </div>
-    
+    <h4 style="text-align:center;color:white;font-weight: 500;">Invested Last Month</h4>
+    <div style="text-align:center;font-size:28px;margin-bottom:3%;color:white;font-weight: 500;">$ 58.38</div>
+    <br/>
+    <h4 style="text-align:center;color:white;font-weight: 500;">Total Gain Since Inception</h4>
+    <div style="text-align:center;font-size:28px;margin-bottom:3%;color:white;font-weight: 500;">+ 4.2%</div>
 <!--     <ion-slide-box on-slide-changed="slideChanged(index)"> -->
 <!--           <ion-slide> -->
 <!--           <div style="text-align:center;"> -->
@@ -67,7 +43,7 @@
 <!--         </div> -->
 <!--           </ion-slide> -->
 <!--         </ion-slide-box> -->
-    
+
   </ion-content>
 
 

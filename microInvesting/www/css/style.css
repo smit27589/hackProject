@@ -41,14 +41,33 @@ body {
   background-color: #f5f5f5;
 }
 
-.list .item{
+.list .item {
   background: transparent !important;
 }
 
+.tran-menu, .tran-menu > a{
+  background: transparent !important;
+  border: 0;
+}
+.no-border{
+  border: 0;
+}
 .button-clicked{
   color:#3293b0
 }
 
 .button-no-clicked{
   color: #fff;
+}
+
+.button-clicked-dark{
+  color:#3293b0
+}
+
+.button-no-clicked-dark{
+  color: #a6a6a6;
+}
+
+.bg-color{
+  background: linear-gradient(#21c5f4, #5586d7);
 }
