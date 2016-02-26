@@ -4,15 +4,15 @@
   </ion-nav-title>
   <ion-slide-box on-slide-changed="slideHasChanged($index)" does-continue="false">
     <ion-slide>
-    <ion-content>
+    <ion-content class="bg-color">
         <div>
         <div class="button-bar" style="margin-top: 5px; margin-bottom:10px; width: 40%; margin-left: 30%;">
          <a class="button button-small button-outline button-light"
          ng-class="{'active':isSelected('percentage')}" ng-click="setSelected('percentage')">
-        <span ng-class="{'button-clicked-dark':isSelected('percentage'),'button-no-clicked-dark':!isSelected('percentage')}">%</span></a>
+        <span ng-class="{'button-clicked':isSelected('percentage'),'button-no-clicked':!isSelected('percentage')}">%</span></a>
       <a class="button button-small button-outline button-light"
          ng-class="{'active':isSelected('dollar')}" ng-click="setSelected('dollar')">
-        <span ng-class="{'button-clicked-dark':isSelected('dollar'),'button-no-clicked-dark':!isSelected('dollar')}">$</span></a>
+        <span ng-class="{'button-clicked':isSelected('dollar'),'button-no-clicked':!isSelected('dollar')}">$</span></a>
 
     </div>
 
@@ -21,8 +21,8 @@
 
       <div class="list">
           <a class="item" ng-repeat=" item in investmentStartegyDollarData" ng-class="$odd ? 'stripLine' : ''">
-            <span style="float: left;">{{item.categoryName}}</span>
-            <span style="float: right;">${{item.value}}</span>
+            <span style="color:white;font-size:20px;font-weight: 500;float: left;">{{item.categoryName}}</span>
+            <span style="color:white;font-size:20px;font-weight: 500;float: right;">${{item.value}}</span>
           </a>
         </div>
 
@@ -31,8 +31,8 @@
     <div ng-show="selected == 'percentage'">
       <div class="list">
           <a class="item" ng-repeat=" item in investmentStartegyPercentageData" ng-class="$odd ? 'stripLine' : ''">
-            <span style="float: left;">{{item.categoryName}}</span>
-            <span style="float: right;">{{item.value}}%</span>
+            <span style="color:white;font-size:20px;font-weight: 500;float: left;">{{item.categoryName}}</span>
+            <span style="color:white;font-size:20px;font-weight: 500;float: right;">{{item.value}}%</span>
           </a>
         </div>
 
@@ -41,7 +41,7 @@
     </ion-content>
     </ion-slide>
    <ion-slide>
-  <ion-content>
+  <ion-content class="bg-color">
 
         <div style="padding:2%;">
           <!--<canvas id="pie" class="chart chart-pie" chart-data="pieData" chart-labels="pieLabels" chart-legend="true"-->
@@ -52,8 +52,8 @@
 
         <div class="list">
           <a class="item" ng-repeat=" item in composite" ng-class="$odd ? 'stripLine' : ''">
-            <span style="float: left">{{item.title}}</span>
-            <span style="float: right">{{item.percentage}}</span>
+            <span style="color:white;font-size:20px;font-weight: 500;float: left">{{item.title}}</span>
+            <span style="color:white;font-size:20px;font-weight: 500;float: right">{{item.percentage}}</span>
           </a>
         </div>
 
@@ -62,7 +62,7 @@
 
     <ion-slide>
       <!--slide 2-->
-      <ion-content>
+      <ion-content class="bg-color">
         <div style="padding:2%; ">
           <!--<canvas class="chart chart-base" chart-type="type" chart-data="balanceData" chart-legend="true"-->
           <!--chart-labels="balancedLabels"></canvas>-->
@@ -71,8 +71,8 @@
 
         <div class="list">
           <a class="item" ng-repeat=" item in composite2" ng-class="$odd ? 'stripLine' : ''">
-            <span style="float: left">{{item.title}}</span>
-            <span style="float: right">{{item.percentage}}</span>
+            <span style="color:white;font-size:20px;font-weight: 500;float: left">{{item.title}}</span>
+            <span style="color:white;font-size:20px;font-weight: 500;float: right">{{item.percentage}}</span>
           </a>
         </div>
 
