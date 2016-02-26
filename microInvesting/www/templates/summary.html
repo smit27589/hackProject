@@ -1,4 +1,4 @@
-<ion-view view-title="Summary" ng-controller="SummaryCtrl" ng-init="init()">
+<ion-view view-title="Summary">
 
   <ion-nav-buttons side="left">
     <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
@@ -13,54 +13,35 @@
       Account Value
     </div>
     <br/>
-    <div ng-show="isNewUser() == false" style="">
-       <div style="text-align:center;font-size:38px;margin-bottom:3%;">$390</div>
-       <div>
-       <div class="button-bar" style="width:40%;margin-left:30%;margin-bottom:3%;">
-           <a class="button" ng-class="{'button-positive': isSelected('dollar')}" ng-click="setSelected('dollar')">$</a>
-           <a class="button" ng-class="{'button-positive': isSelected('percentage')}" ng-click="setSelected('percentage')">%</a>
-       </div>
-       </div>
-   
-	    <div ng-show="selected == 'dollar'" style="">
-	      <div class="list">
-	          <a class="item" ng-repeat=" item in investmentStartegyDollarData" ng-class="$odd ? 'stripLine' : ''">
-	            <span style="float: left">{{item.categoryName}}</span>
-	            <span style="float: right">${{item.value}}</span>
-	          </a>
-	        </div>
-	    </div>
-	    
-	    <div ng-show="selected == 'percentage'">
-	      <div class="list">
-	          <a class="item" ng-repeat=" item in investmentStartegyPercentageData" ng-class="$odd ? 'stripLine' : ''">
-	            <span style="float: left">{{item.categoryName}}</span>
-	            <span style="float: right">{{item.value}}%</span>
-	          </a>
-	        </div>
-	    </div>
+    <div style="text-align:center;font-size:38px;margin-bottom:3%;">$390</div>
+    <div>
+<!--     <div class="bar " > -->
+        <div class="button-bar" style="width:40%;margin-left:30%;margin-bottom:3%;">
+            <a class="button" ng-class="{'button-positive': isSelected('dollar')}" ng-click="setSelected('dollar')">$</a>
+            <a class="button" ng-class="{'button-positive': isSelected('percentage')}" ng-click="setSelected('percentage')">%</a>
+        </div>
+<!--     </div> -->
+    </div>
+    <div ng-show="selected == 'dollar'" style="">
+    
+      <div class="list">
+          <a class="item" ng-repeat=" item in investmentStartegyDollarData" ng-class="$odd ? 'stripLine' : ''">
+            <span style="float: left">{{item.categoryName}}</span>
+            <span style="float: right">${{item.value}}</span>
+          </a>
+        </div>
+    
     </div>
     
-    <div ng-show="isNewUser() == true" style="">
-      <div style="text-align:center;font-size:38px;margin-bottom:3%;">$0</div>
-      <div class="button-bar" style="width:40%;margin-left:30%;margin-bottom:3%;">
-        <a class="button" ng-class="button-positive" ng-click="loadiFrame()">Link Bank Account/Credit Card</a>
-      </div>
+    <div ng-show="selected == 'percentage'">
+      <div class="list">
+          <a class="item" ng-repeat=" item in investmentStartegyPercentageData" ng-class="$odd ? 'stripLine' : ''">
+            <span style="float: left">{{item.categoryName}}</span>
+            <span style="float: right">{{item.value}}%</span>
+          </a>
+        </div>
     
-      <div ng-model="fastLinkURL">
-	    <form action='https://node.developer.yodlee.com/authenticate/restserver/' method='post' id='rsessionPost'> 
-		    RSession : <input type='text' name='rsession' placeholder='rsession' value='{{fastLinkURL.rsession}}' id='rsession'/>
-		    <br/> 
-		    FinappId : <input type='text' name='app' placeholder='FinappId' value='{{fastLinkURL.finAppId}}' id='finappId'/>
-		    <br/> 
-		    Redirect : <input type='text' name='redirectReq' placeholder='true/false' value='{{fastLinkURL.redirectReq}}' /><br/> 
-		    Token : <input type='text' name='token' placeholder='token' value='{{fastLinkURL.token}}' id='token'/>
-		    <br/> 
-		    Extra Params : <input type='text' name='extraParams' placeholer='Extra Params' value="" id='extraParams'/>
-		    <br/>
-	    </form>
-      </div>
-    </div> 
+    </div>
     
 <!--     <ion-slide-box on-slide-changed="slideChanged(index)"> -->
 <!--           <ion-slide> -->

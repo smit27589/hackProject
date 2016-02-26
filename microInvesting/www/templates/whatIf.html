@@ -1,4 +1,4 @@
-<ion-view view-title="What if" ng-controller="WhatIfCtrl">
+<ion-view view-title="iRetire" ng-controller="WhatIfCtrl">
 
   <ion-content>
  	<div class="list" ng-show="!chartReady">
@@ -31,10 +31,11 @@
         
         </div>
         
-        <div ng-show = "chartReady" style="width:100%;">
+        <div ng-show = "chartReady" >
         
         	<nvd3 options="options" data="amountData"></nvd3>
         </div>
+        
   </ion-content>
 
 
