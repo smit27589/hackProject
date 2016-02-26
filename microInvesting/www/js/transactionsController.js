@@ -25,6 +25,23 @@ angular.module('starter.controllers').controller('TransactionsCtrl', function ($
       var dateStr = month + '-' + date + '-' + year;
 
       var list = $scope.dateData[dateStr] || [];
+
+      switch (item.category) {
+        case "Groceries":
+          item.icon = 'fa-shopping-cart';
+          break;
+        case "Credit Card Payments":
+          item.icon = 'fa-credit-card';
+          break;
+        case "Restaurants/Dining":
+          item.icon = 'fa-cutlery';
+          break;
+        case "Travel":
+          item.icon = 'fa-plane';
+          break;
+
+      }
+
       list.push(item);
       $scope.dateData[dateStr] = list;
     })

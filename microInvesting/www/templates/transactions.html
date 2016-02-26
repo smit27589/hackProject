@@ -14,7 +14,7 @@
           {{date}}
         </div>
         <a class="item item-icon-left item-icon-right" ng-repeat="tran in list">
-          <i class="icon ion-email"></i>
+          <i class="icon fa " ng-class="tran.icon"></i>
           <h2 style="color: white;">{{tran.merchantName}}</h2>
           <p style="color:white;">${{tran.amount}}</p>
           <i class="icon"> ${{tran.remainder}}</i>
@@ -28,7 +28,7 @@
           {{date2}}
         </div>
         <a class="item item-icon-left item-icon-right" ng-repeat="tran in list2">
-          <i class="icon ion-email"></i>
+          <i class="icon fa fa-money"></i>
           <h2 style="color:white;">{{tran.type}}</h2>
           <p style="color:white;">{{tran.subType}}</p>
           <i class="icon"> ${{tran.amount}}</i>
