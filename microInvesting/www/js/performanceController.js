@@ -1,5 +1,27 @@
 angular.module('starter.controllers').controller('PerformanceCtrl', function ($scope, $stateParams, $state) {
 
+	$scope.investmentStartegyDollarData = [
+	                               		{categoryName:'Conservative',value:'25.25'},
+	                               	{categoryName:'Moderate',value:'115.25'},
+	                               	{categoryName:'Growth',value:'124.50'},
+	                               	{categoryName:'Aggresive',value:'64.53'}		
+	                               	];
+	                               	
+	                               	$scope.investmentStartegyPercentageData = [
+	                               	                               		{categoryName:'Conservative',value:'7.7'},
+	                               	                               	{categoryName:'Moderate',value:'35'},
+	                               	                               	{categoryName:'Growth',value:'37.8'},
+	                               	                               	{categoryName:'Aggresive',value:'19.5'}		
+	                               	                               	];
+	                               	
+	                               	$scope.selected = "percentage";
+	                               	$scope.setSelected = function(type) {
+	                                       $scope.selected = type;
+	                                   };
+	                                   $scope.isSelected = function(type) {
+	                                       return type === $scope.selected;
+	                                   };
+
   $scope.pieLabels = ["Download Sales", "In-Store Sales", "Mail-Order Sales", "test 1", "test 2"];
   $scope.pieData = [300, 100, 200, 400, 150];
   $scope.pieOptions = {
@@ -45,11 +67,11 @@ angular.module('starter.controllers').controller('PerformanceCtrl', function ($s
   $scope.composite2 = [
     {
       title: 'Balance From Last Month',
-      percentage: '$105'
+      percentage: '$271'
     },
     {
       title: 'Deposit',
-      percentage: '$25'
+      percentage: '$58'
     },
     {
       title: 'Withdrawal',
@@ -167,7 +189,7 @@ angular.module('starter.controllers').controller('PerformanceCtrl', function ($s
 
   $scope.balanceD3Data = [
     {
-      key: 'balance',
+      key: 'Balance',
       values: [
         {
           x: 0,
@@ -179,77 +201,77 @@ angular.module('starter.controllers').controller('PerformanceCtrl', function ($s
         },
         {
           x: 2,
-          y: 77
+          y: 130
         },
         {
           x: 3,
-          y: 95
+          y: 160
         },
         {
           x: 4,
-          y: 100
+          y: 170
         },
         {
           x: 5,
-          y: 120
+          y: 220
         },
         {
           x: 6,
-          y: 50
+          y: 180
         },
         {
           x: 7,
-          y: 85
+          y: 270
         },
         {
           x: 8,
-          y: 105
+          y: 330
         }
       ]
     },
     {
-      key: 'deposit',
+      key: 'Deposit',
       values: [
         {
           x: 0,
-          y: 10
+          y: 60
         },
         {
           x: 1,
-          y: 15
+          y: 20
         },
         {
           x: 2,
-          y: 15
+          y: 70
         },
         {
           x: 3,
-          y: 19
-        },
-        {
-          x: 4,
-          y: 20
-        },
-        {
-          x: 5,
-          y: 20
-        },
-        {
-          x: 6,
           y: 30
         },
         {
+          x: 4,
+          y: 20
+        },
+        {
+          x: 5,
+          y: 50
+        },
+        {
+          x: 6,
+          y: 20
+        },
+        {
           x: 7,
-          y: 15
+          y: 90
         },
         {
           x: 8,
-          y: 25
+          y: 60
         }
       ]
     },
     {
-      key: 'withdrawal',
+      key: 'Withdrawal',
       values: [
         {
           x: 0,
@@ -269,7 +291,7 @@ angular.module('starter.controllers').controller('PerformanceCtrl', function ($s
         },
         {
           x: 4,
-          y: 50
+          y: 10
         },
         {
           x: 5,
@@ -277,7 +299,7 @@ angular.module('starter.controllers').controller('PerformanceCtrl', function ($s
         },
         {
           x: 6,
-          y: 100
+          y: 60
         },
         {
           x: 7,
