@@ -86,15 +86,15 @@ angular.module('starter.controllers').controller('PerformanceCtrl', function ($s
 
   $scope.vmdata = [
     {
-      key: "One",
+      key: "Fixed Income",
       y: 5
     },
     {
-      key: 'Two',
+      key: 'Mega Cap',
       y: 2
     },
     {
-      key: 'Three',
+      key: 'Large Cap',
       y: 9
     },
     {
