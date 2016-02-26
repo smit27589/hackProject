@@ -1,31 +1,13 @@
 <ion-view view-title="Get Started">
-<!--         <ion-nav-buttons side="left"> -->
-<!--           <button class="button button-positive button-clear no-animation" -->
-<!--                   ng-click="startApp()" ng-show="!slideIndex"> -->
-<!--             Go to Login -->
-<!--           </button> -->
-<!--           <button class="button button-positive button-clear no-animation" -->
-<!--                   ng-click="previous()" ng-show="slideIndex > 0"> -->
-<!--             Back -->
-<!--           </button> -->
-<!--         </ion-nav-buttons> -->
-<!--         <ion-nav-buttons side="right">  -->
-<!--           <button class="button button-positive button-clear no-animation" -->
-<!--                   ng-click="next()" ng-show="slideIndex != 2"> -->
-<!--             Next -->
-<!--           </button> -->
-<!--           <button class="button button-positive button-clear no-animation" -->
-<!--                   ng-click="startApp()" ng-show="slideIndex == 2"> -->
-<!--             Finish -->
-<!--           </button> -->
-<!--         </ion-nav-buttons> -->
-        <ion-slide-box on-slide-changed="slideChanged(index)" style="background: linear-gradient(#3293b0, #5586d7);">
+
+        <ion-slide-box on-slide-changed="slideChanged(index)" class="bg-color">
         
 <!--         slide1 -->
-          <ion-slide style="background: linear-gradient(#3293b0, #5586d7);">
+          <ion-slide class="bg-color">
+          <ion-content>
            <div class="list" style="color:white;">
         <label class="item ">
-          <h2 class="title" style="color:white;">Follow these steps to open a Nest account.It will take a few minutes</h2>
+          <h2 class="title" style="color:white;float:left;">Follow these steps to open a Nest account.</h2>
         </label>
         <label class="item">
           <span class="input-label" style="color:white;">Step 1 - Create your Profile</span>
@@ -37,10 +19,11 @@
 <!--           <button class="button button-block button-positive" ng-click="goToStep1()">Continue</button> -->
 <!--         </label> -->
       </div>
-          </ion-slide>
+      <ion-content>
+          </ion-slide class="bg-color">
           
 <!--           slide2 -->
-          <ion-slide style="background: linear-gradient(#3293b0, #5586d7);">
+          <ion-slide class="bg-color">
              <h3 style="color:white;">User Details</h3>
            <div class="list">
         <label class="item item-input">
@@ -78,7 +61,7 @@
           
           
 <!--           slide3 -->
-                <ion-slide style="background: linear-gradient(#3293b0, #5586d7);">
+                <ion-slide class="bg-color">
                 
                 
            <div class="list">
@@ -103,7 +86,7 @@
           
           
           <!--           slide4 -->
-                <ion-slide style="background: linear-gradient(#3293b0, #5586d7);">
+                <ion-slide class="bg-color">
                 
                 
            <div class="list">
@@ -124,9 +107,9 @@
           </ion-slide>
           
 <!--           slide5 -->
-          <ion-slide style="background: linear-gradient(#3293b0, #5586d7);">
-      
-     <div class="button-bar" style="margin-top: 5px; margin-bottom:10px; width: 80%; margin-left: 10%;">
+          <ion-slide class="bg-color">
+      <ion-content>
+     <div class="button-bar" style="margin-top: 5px; margin-bottom:10px; width: 90%; margin-left: 5%;">
       <a class="button button-small button-outline button-light"
          ng-class="{'active':isSelected('conservative')}" ng-click="setSelected('conservative')">
         <span ng-class="{'button-clicked':isSelected('conservative'),'button-no-clicked':!isSelected('conservative')}">Conservative</span></a>
@@ -146,15 +129,15 @@
     
     
     <div class="list" style="margin-top:4%;">
-    	<div class="item" >
-    	<p style="float:left;color:white;">{{textMap[selectedCategory]}}</p>
+    	<div class="item no-border item-text-wrap" >
+    	<span style="float:left;color:white;">{{textMap[selectedCategory]}}</span>
     	
     	</div>
     
-    <div class="item">
-    	<h2 style="float:left;color:white;">Underlying ETF's are - </h2>
-    	<div class="list">
-          <a class="item" ng-repeat=" item in etfMap[selectedCategory]" ng-class="$odd ? 'stripLine' : ''">
+    <div class="item no-border">
+    	<h2 style="float:left;color:white;">Underlying ETF's are  </h2>
+    	<div class="list ">
+          <a class="item no-border" ng-repeat=" item in etfMap[selectedCategory]" ng-class="$odd ? 'stripLine' : ''">
             <span style="float: left;color:white;">{{item}}</span>
           </a>
         </div>
@@ -170,43 +153,43 @@
           </a>
         </div>
       </div>
-      
+      </ion-content>
       
           </ion-slide>
           
           <!--           slide6 -->
-         <ion-slide style="background: linear-gradient(#3293b0, #5586d7);">
+         <ion-slide class="bg-color">
                 
-                <label class="item">
-          <h2 class="title">Recommended Strategy</h2>
-        </label>
+       
            <div class="list">
-        
+         <label class="item no-border">
+          	<h2 class="title" style="color:white;">Recommended Strategy</h2>
+        </label>
         <label class="item item-input">
-          <span class="input-label">Conservative</span>
-          <input type="number" ng-model="data.conservative">
+          <span class="input-label" style="color:white;">Conservative</span>
+          <input type="text" ng-model="data.conservative">
         </label><label class="item item-input">
-          <span class="input-label">Moderate</span>
-          <input type="number" ng-model="data.moderate">
+          <span class="input-label" style="color:white;">Moderate</span>
+          <input type="text" ng-model="data.moderate">
         </label><label class="item item-input">
-          <span class="input-label">Growth</span>
-          <input type="number" ng-model="data.growth">
+          <span class="input-label" style="color:white;">Growth</span>
+          <input type="text" ng-model="data.growth">
         </label><label class="item item-input">
-          <span class="input-label">Aggresive</span>
-          <input type="number" ng-model="data.aggresive">
+          <span class="input-label" style="color:white;">Aggresive</span>
+          <input type="text" ng-model="data.aggresive">
         </label>
       </div>
       
        <button class="button button-block button-positive" style="width:50%;margin-left: 25%%;" ng-click="next()">
-        Go
+        Start Investing
       </button>
           </ion-slide >
           
           
           <!--           slide7 -->
-         <ion-slide style="background: linear-gradient(#3293b0, #5586d7);"> 
+         <ion-slide class="bg-color"> 
                 
-                <label class="item">
+                <label class="item no-border">
           <h2 class="title">Terms and Conditions Apply</h2>
         </label>
            <div>

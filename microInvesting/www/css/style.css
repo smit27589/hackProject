@@ -63,3 +63,10 @@ body {
 .bg-color{
   background: linear-gradient(#21c5f4, #5586d7);
 }
+
+
+.ionic .item-text-wrap { /* negate the nowrap CSS from .ionic .item */
+    overflow: visible;
+    text-overflow: initial;
+    white-space: initial;
+}
