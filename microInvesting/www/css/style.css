@@ -44,3 +44,11 @@ body {
 .list .item{
   background: transparent !important;
 }
+
+.button-clicked{
+  color:#3293b0
+}
+
+.button-no-clicked{
+  color: #fff;
+}
