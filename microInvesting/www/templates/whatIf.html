@@ -1,7 +1,7 @@
 <ion-view view-title="What if" ng-controller="WhatIfCtrl">
 
   <ion-content>
- 	<div class="list">
+ 	<div class="list" ng-show="!chartReady">
         <label class="item item-input">
           <span class="input-label">Age</span>
           <input type="text" ng-model="data.age">
@@ -29,6 +29,11 @@
           <button class="button button-block button-assertive" ng-click="go()">Go</button>
         </label>
         
+        </div>
+        
+        <div ng-show = "chartReady" style="width:100%;">
+        
+        	<nvd3 options="options" data="amountData"></nvd3>
         </div>
   </ion-content>
 
