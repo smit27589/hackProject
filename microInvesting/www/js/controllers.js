@@ -160,10 +160,10 @@ angular.module('starter.controllers', [])
 
 
     $scope.textMap = {
-      'conservative': 'conservative',
-      'moderate': 'moderate',
-      'growth': 'growth',
-      'aggresive': 'aggresive'
+      'conservative': 'Low risk Investors - Conservative Investors have a preference for lower risk investments with the focus on being able to earn return while taking a minimal risk.',
+      'moderate': 'Moderate Investors have a preference for a higher level of income than a conservative investor deos.Moderate Investors are low to medium risk investors.',
+      'growth': 'Growth Investors have a preference towards a slightlymore aggresive balance of investments. Theyemphasize growth over income.Growth Investors are medium to high risk investors.',
+      'aggresive': 'Aggresive Investors are willing to take greater risks for the potential of making greater returns in the long run.Their focus is on wealth creation.High risk Investors'
     };
 
     $scope.etfMap = {

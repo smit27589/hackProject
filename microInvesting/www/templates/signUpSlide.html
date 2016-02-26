@@ -19,19 +19,19 @@
 <!--             Finish -->
 <!--           </button> -->
 <!--         </ion-nav-buttons> -->
-        <ion-slide-box on-slide-changed="slideChanged(index)">
+        <ion-slide-box on-slide-changed="slideChanged(index)" style="background: linear-gradient(#3293b0, #5586d7);">
         
 <!--         slide1 -->
-          <ion-slide>
-           <div class="list">
+          <ion-slide style="background: linear-gradient(#3293b0, #5586d7);">
+           <div class="list" style="color:white;">
         <label class="item ">
-          <h2 class="title">Follow these steps to become a Micro Investor.It will take a few minutes</h2>
+          <h2 class="title" style="color:white;">Follow these steps to open a Nest account.It will take a few minutes</h2>
         </label>
         <label class="item">
-          <span class="input-label">Step 1 - Create your Profile</span>
+          <span class="input-label" style="color:white;">Step 1 - Create your Profile</span>
         </label>
         <label class="item">
-          <span class="input-label">Step 2 - Choose your Investment Strategy</span>
+          <span class="input-label" style="color:white;">Step 2 - Choose your Investment Strategy</span>
         </label>
 <!--         <label class="item"> -->
 <!--           <button class="button button-block button-positive" ng-click="goToStep1()">Continue</button> -->
@@ -40,31 +40,31 @@
           </ion-slide>
           
 <!--           slide2 -->
-          <ion-slide>
-             <h3>User Details</h3>
+          <ion-slide style="background: linear-gradient(#3293b0, #5586d7);">
+             <h3 style="color:white;">User Details</h3>
            <div class="list">
         <label class="item item-input">
-          <span class="input-label">First Name</span>
+          <span class="input-label" style="color:white;">First Name</span>
           <input type="text" ng-model="data.firstName">
         </label>
         <label class="item item-input">
-          <span class="input-label">Last Name</span>
+          <span class="input-label" style="color:white;">Last Name</span>
           <input type="text" ng-model="data.lastName">
         </label>
         <label class="item item-input">
-          <span class="input-label">Email</span>
+          <span class="input-label" style="color:white;">Email</span>
           <input type="email" ng-model="data.email">
         </label>
         <label class="item item-input">
-          <span class="input-label">Confirm Email</span>
+          <span class="input-label" style="color:white;">Confirm Email</span>
           <input type="email" ng-model="data.confirmEmail">
         </label>
         <label class="item item-input">
-          <span class="input-label">Date of Birth</span>
+          <span class="input-label" style="color:white;">Date of Birth</span>
           <input type="date" ng-model="data.dob">
         </label>
         <label class="item item-input">
-          <span class="input-label">Password</span>
+          <span class="input-label" style="color:white;">Password</span>
           <input type="password" ng-model="data.password">
         </label>
 <!--         <label class="item"> -->
@@ -74,28 +74,28 @@
 <!--     	</div> -->
 <!--     	</label> -->
       </div>
-          </ion-slide>
+          </ion-slide >
           
           
 <!--           slide3 -->
-                <ion-slide>
+                <ion-slide style="background: linear-gradient(#3293b0, #5586d7);">
                 
-                <label class="item">
-          <h2 class="title">What kind of an Investor are you?</h2>
-        </label>
+                
            <div class="list">
-        
+        <label class="item">
+          <h2 class="title;" style="color:white;">What kind of an Investor are you?</h2>
+        </label>
         <label class="item" ng-click="next()">
-          <h3 class="title">Stingy</h3>
+          <h3 class="title" style="color:white;">Stingy</h3>
         </label>
          <label class="item" ng-click="next()">
-          <h3 class="title">Average Joe</h3>
+          <h3 class="title" style="color:white;">Average Joe</h3>
         </label>
          <label class="item" ng-click="next()">
-          <h3 class="title">Opportunist</h3>
+          <h3 class="title" style="color:white;">Opportunist</h3>
         </label>
          <label class="item" ng-click="next()">
-          <h3 class="title">Adrenaline Junkie</h3>
+          <h3 class="title" style="color:white;">Adrenaline Junkie</h3>
         </label>
 
       </div>
@@ -103,48 +103,66 @@
           
           
           <!--           slide4 -->
-                <ion-slide>
+                <ion-slide style="background: linear-gradient(#3293b0, #5586d7);">
                 
-                <label class="item">
-          <h2 class="title">What is your Investment horizon?</h2>
-        </label>
+                
            <div class="list">
-        
+        <label class="item">
+          <h2 class="title;" style="color:white;">What is your Investment horizon?</h2>
+        </label>
         <label class="item" ng-click="next()">
-          <h3 class="title">6 months</h3>
+          <h3 class="title" style="color:white;">6 months</h3>
         </label>
          <label class="item" ng-click="next()">
-          <h3 class="title">1-2 Years</h3>
+          <h3 class="title" style="color:white;">1-2 Years</h3>
         </label>
          <label class="item" ng-click="next()">
-          <h3 class="title">2+ Years</h3>
+          <h3 class="title" style="color:white;">2+ Years</h3>
         </label>
 
       </div>
           </ion-slide>
           
 <!--           slide5 -->
-          <ion-slide>
+          <ion-slide style="background: linear-gradient(#3293b0, #5586d7);">
       
       <div class="bar bar-subheader" >
         <div class="button-bar">
-            <a class="button" ng-class="{'button-positive': isSelected('conservative')}" ng-click="setSelected('conservative')">Conservative</a>
-            <a class="button" ng-class="{'button-positive': isSelected('moderate')}" ng-click="setSelected('moderate')">Moderate</a>
-            <a class="button" ng-class="{'button-positive': isSelected('growth')}" ng-click="setSelected('growth')">Growth</a>
-            <a class="button" ng-class="{'button-positive': isSelected('aggresive')}" ng-click="setSelected('aggresive')">Aggresive</a>
+            <a class="button" ng-class="{'button-positive': isSelected('conservative')}" ng-click="setSelected('conservative')" style="color:white;">Conservative</a>
+            <a class="button" ng-class="{'button-positive': isSelected('moderate')}" ng-click="setSelected('moderate')" style="color:white;">Moderate</a>
+            <a class="button" ng-class="{'button-positive': isSelected('growth')}" ng-click="setSelected('growth')" style="color:white;">Growth</a>
+            <a class="button" ng-class="{'button-positive': isSelected('aggresive')}" ng-click="setSelected('aggresive')" style="color:white;">Aggresive</a>
         </div>
     </div>
+     <div class="button-bar" style="margin-top: 5px; margin-bottom:10px; width: 40%; margin-left: 30%;">
+      <a class="button button-small button-outline button-light"
+         ng-class="{'active':isSelected('conservative')}" ng-click="setSelected('conservative')">
+        <span ng-class="{'button-clicked':isSelected('conservative'),'button-no-clicked':!isSelected('conservative')}">Conservative</span></a>
+        
+         <a class="button button-small button-outline button-light"
+         ng-class="{'active':isSelected('moderate')}" ng-click="setSelected('moderate')">
+        <span ng-class="{'button-clicked':isSelected('moderate'),'button-no-clicked':!isSelected('moderate')}">Moderate</span></a>
+        
+        <a class="button button-small button-outline button-light"
+         ng-class="{'active':isSelected('growth')}" ng-click="setSelected('growth')">
+        <span ng-class="{'button-clicked':isSelected('growth'),'button-no-clicked':!isSelected('growth')}">Growth</span></a>
+        
+        <a class="button button-small button-outline button-light"
+         ng-class="{'active':isSelected('percentage')}" ng-click="setSelected('percentage')">
+        <span ng-class="{'button-clicked':isSelected('percentage'),'button-no-clicked':!isSelected('percentage')}">#</span></a>
+    </div>
+    
     <ion-content>
-    	<div>
-    	<span >{{textMap[selectedCategory]}}</span>
+    	<div class="item" style="margin-top:5%;">
+    	<p style="float:left;">{{textMap[selectedCategory]}}</p>
     	
     	</div>
     
     <div>
-    	<h2>Underlying ETF's are - </h2>
+    	<h2 >Underlying ETF's are - </h2>
     	<div class="list">
           <a class="item" ng-repeat=" item in etfMap[selectedCategory]" ng-class="$odd ? 'stripLine' : ''">
-            <span style="float: left">{{item}}</span>
+            <span style="float: left;color:white;">{{item}}</span>
           </a>
         </div>
     	
@@ -154,35 +172,17 @@
       <div ng-show="active == 'performance'">
       <div class="list">
           <a class="item" ng-repeat=" item in categoryPerformanceMap[selectedCategory]" ng-class="$odd ? 'stripLine' : ''">
-            <span style="float: left">{{item.title}}</span>
-            <span style="float: right">{{item.value}}%</span>
+            <span style="float: left;color:white;">{{item.title}}</span>
+            <span style="float: right;color:white;">{{item.value}}%</span>
           </a>
         </div>
       </div>
-      
-<!--       <div ng-show="active == 'composition'"> -->
-<!--       <div class="list"> -->
-<!--           <a class="item" ng-repeat=" item in compositeMap[selectedCategory]" ng-class="$odd ? 'stripLine' : ''"> -->
-<!--             <span style="float: left">{{item.title}}</span> -->
-<!--             <span style="float: right">{{item.value}}%</span> -->
-<!--           </a> -->
-<!--         </div> -->
-<!--       </div> -->
-      </ion-content>
-      
-      
-<!--       <div class="bar bar-subfooter" style="width:40%;left:30%;"> -->
-<!--         <div class="button-bar"> -->
-<!--             <a class="button" ng-class="{'button-positive': isActive('performance')}" ng-click="setActive('performance')">Performance</a> -->
-<!--             <a class="button" ng-class="{'button-positive': isActive('composition')}" ng-click="setActive('composition')">Composition</a> -->
-<!--         </div> -->
-<!--     </div> -->
       
       
           </ion-slide>
           
           <!--           slide6 -->
-         <ion-slide>
+         <ion-slide style="background: linear-gradient(#3293b0, #5586d7);">
                 
                 <label class="item">
           <h2 class="title">Recommended Strategy</h2>
@@ -207,11 +207,11 @@
        <button class="button button-block button-positive" style="width:50%;margin-left: 25%%;" ng-click="next()">
         Go
       </button>
-          </ion-slide>
+          </ion-slide >
           
           
           <!--           slide7 -->
-         <ion-slide>
+         <ion-slide style="background: linear-gradient(#3293b0, #5586d7);"> 
                 
                 <label class="item">
           <h2 class="title">Terms and Conditions Apply</h2>
