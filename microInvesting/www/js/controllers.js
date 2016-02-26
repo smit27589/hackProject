@@ -187,7 +187,7 @@ angular.module('starter.controllers', [])
     };
 
     $scope.disagree = function () {
-      $state.go('app.login');
+      $state.go('app.intro');
     };
 
 	$scope.selectedCategory = "conservative";

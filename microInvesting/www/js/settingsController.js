@@ -9,6 +9,11 @@ angular.module('starter.controllers').controller('SettingsCtrl', function($scope
 	                       {settingDescription:'Terms & Privacy'},
 	                       {settingDescription:'Customer Agreement'},
 	                       {settingDescription:'Disclosures'},
-	                       {settingDescription:'Fees'}];
+	                       {settingDescription:'Fees'},
+	                       {settingDescription:'Sign Out'}];
+	
+	$scope.signOut = function(){
+		$state.go('app.intro');
+	};
 
 });
