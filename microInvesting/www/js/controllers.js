@@ -166,14 +166,21 @@ angular.module('starter.controllers', [])
       'aggresive': 'Aggresive Investors are willing to take greater risks for the potential of making greater returns in the long run.Their focus is on wealth creation.High risk Investors'
     };
 
+//    var etfs =['iShares Core MSCI Total International Stock ETF',
+//               'iShares J.P Morgan USD Emerging Markets Bond ETF',
+//               'iShares Core S&P Total U.S Stock Market ETF',
+//               'iShares Core U.S Aggregate Bond ETF'];
+    
+      var etfs = ['IXUS','EMB','ITOT','AGG'];
+    
     $scope.etfMap = {
-      'conservative': ['conservative'],
-      'moderate': ['moderate'],
-      'growth': ['growth'],
-      'aggresive': ['aggresive']
+      'conservative': etfs,
+      'moderate': etfs,
+      'growth': etfs,
+      'aggresive': etfs
     };
 
-    $scope.data = {conservative: 10, moderate: 25, growth: 50, aggresive: 15}
+    $scope.data = {firstName:'John',lastName:'Doe',email:'john.doe@gmail.com',confirmEmail:'john.doe@gmail.com',dob:'01/01/1983',password:'manchesterUnited',conservative: '10%', moderate: '25%', growth: '50%', aggresive: '15%'}
 
     $scope.agree = function () {
       $state.go('app.summary');
