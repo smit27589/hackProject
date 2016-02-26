@@ -21,29 +21,41 @@ angular.module('starter.controllers').controller('PerformanceCtrl', function ($s
 
   $scope.composite = [
     {
-      title: 'Large Company Stocks',
-      percentage: '17%'
+      title: 'Fixed Income',
+      percentage: '20%'
     },
     {
-      title: 'Small Company Stocks',
-      percentage: '15%'
+      title: 'Mega Cap',
+      percentage: '8%'
     },
     {
-      title: 'Corporate Bonds',
-      percentage: '21%'
+      title: 'Large Cap',
+      percentage: '30%'
     },
     {
-      title: 'Government Bonds',
+      title: 'Mid Cap',
+      percentage: '30%'
+    },
+    {
+      title: 'Small Cap',
       percentage: '12%'
-    },
-    {
-      title: 'Large Company Stocks',
-      percentage: '25%'
-    },
-    {
-      title: 'Large Company Stocks',
-      percentage: '25%'
     }
+  ];
+
+  $scope.composite2 = [
+    {
+      title: 'Balance From Last Month',
+      percentage: '$105'
+    },
+    {
+      title: 'Deposit',
+      percentage: '$25'
+    },
+    {
+      title: 'Withdrawal',
+      percentage: '$0'
+    }
+
   ];
 
   var color = ["#009A3D", "#0079C1", "#6C207E", "#E31B23",
@@ -87,23 +99,23 @@ angular.module('starter.controllers').controller('PerformanceCtrl', function ($s
   $scope.vmdata = [
     {
       key: "Fixed Income",
-      y: 5
+      y: 20
     },
     {
       key: 'Mega Cap',
-      y: 2
+      y: 8
     },
     {
       key: 'Large Cap',
-      y: 9
+      y: 30
     },
     {
-      key: 'Four',
-      y: 7
+      key: 'Mid Cap',
+      y: 30
     },
     {
-      key: 'Five',
-      y: 4
+      key: 'Small Cap',
+      y: 12
     }
   ];
 
