@@ -1,22 +1,37 @@
 angular.module('starter.controllers').controller('TransactionsCtrl', function ($scope, $http) {
 
   $scope.init = function () {
-    $http.get('http://localhost:8080/getTransactions')
-    	.success(function(data) {
-        $scope.dateData = {};
-        var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', "Oct", 'Nov', 'Dec'];
-        data.forEach(function (item) {
-          var dateTime = new Date(item.postDate);
-          var month = months[dateTime.getMonth()];
-          var date = dateTime.getDate();
-          var year = dateTime.getFullYear();
-          var dateStr = month + '-' + date + '-' + year;
+    $scope.dateData = {};
+    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', "Oct", 'Nov', 'Dec'];
+    $scope.data.forEach(function (item) {
+      var dateTime = new Date(item.postDate);
+      var month = months[dateTime.getMonth()];
+      var date = dateTime.getDate();
+      var year = dateTime.getFullYear();
+      var dateStr = month + '-' + date + '-' + year;
 
-          var list = $scope.dateData[dateStr] || [];
-          list.push(item);
-          $scope.dateData[dateStr] = list;
-        })
-    });
+      var list = $scope.dateData[dateStr] || [];
+
+      switch (item.category) {
+        case "Groceries":
+          item.icon = 'fa-shopping-cart';
+          break;
+        case "Credit Card Payments":
+          item.icon = 'fa-credit-card';
+          break;
+        case "Restaurants/Dining":
+          item.icon = 'fa-cutlery';
+          break;
+        case "Travel":
+          item.icon = 'fa-plane';
+          break;
+
+      }
+
+      list.push(item);
+      $scope.dateData[dateStr] = list;
+    })
+  };
 
    $scope.clickType = function (type) {
     $scope.subTypes.forEach(function (itype) {
@@ -41,4 +56,4 @@ angular.module('starter.controllers').controller('TransactionsCtrl', function ($
     'Aug-20-2015': [{type: 'Recurring', subType: 'monthly', amount: 20}],
     'Jul-20-2015': [{type: 'Recurring', subType: 'monthly', amount: 20}]
   };
-  }});
+  });
