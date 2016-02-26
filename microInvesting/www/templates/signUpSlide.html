@@ -126,15 +126,7 @@
 <!--           slide5 -->
           <ion-slide style="background: linear-gradient(#3293b0, #5586d7);">
       
-      <div class="bar bar-subheader" >
-        <div class="button-bar">
-            <a class="button" ng-class="{'button-positive': isSelected('conservative')}" ng-click="setSelected('conservative')" style="color:white;">Conservative</a>
-            <a class="button" ng-class="{'button-positive': isSelected('moderate')}" ng-click="setSelected('moderate')" style="color:white;">Moderate</a>
-            <a class="button" ng-class="{'button-positive': isSelected('growth')}" ng-click="setSelected('growth')" style="color:white;">Growth</a>
-            <a class="button" ng-class="{'button-positive': isSelected('aggresive')}" ng-click="setSelected('aggresive')" style="color:white;">Aggresive</a>
-        </div>
-    </div>
-     <div class="button-bar" style="margin-top: 5px; margin-bottom:10px; width: 40%; margin-left: 30%;">
+     <div class="button-bar" style="margin-top: 5px; margin-bottom:10px; width: 80%; margin-left: 10%;">
       <a class="button button-small button-outline button-light"
          ng-class="{'active':isSelected('conservative')}" ng-click="setSelected('conservative')">
         <span ng-class="{'button-clicked':isSelected('conservative'),'button-no-clicked':!isSelected('conservative')}">Conservative</span></a>
@@ -148,18 +140,19 @@
         <span ng-class="{'button-clicked':isSelected('growth'),'button-no-clicked':!isSelected('growth')}">Growth</span></a>
         
         <a class="button button-small button-outline button-light"
-         ng-class="{'active':isSelected('percentage')}" ng-click="setSelected('percentage')">
-        <span ng-class="{'button-clicked':isSelected('percentage'),'button-no-clicked':!isSelected('percentage')}">#</span></a>
+         ng-class="{'active':isSelected('aggresive')}" ng-click="setSelected('aggresive')">
+        <span ng-class="{'button-clicked':isSelected('aggresive'),'button-no-clicked':!isSelected('aggresive')}">Aggresive</span></a>
     </div>
     
-    <ion-content>
-    	<div class="item" style="margin-top:5%;">
-    	<p style="float:left;">{{textMap[selectedCategory]}}</p>
+    
+    <div class="list" style="margin-top:4%;">
+    	<div class="item" >
+    	<p style="float:left;color:white;">{{textMap[selectedCategory]}}</p>
     	
     	</div>
     
-    <div>
-    	<h2 >Underlying ETF's are - </h2>
+    <div class="item">
+    	<h2 style="float:left;color:white;">Underlying ETF's are - </h2>
     	<div class="list">
           <a class="item" ng-repeat=" item in etfMap[selectedCategory]" ng-class="$odd ? 'stripLine' : ''">
             <span style="float: left;color:white;">{{item}}</span>
@@ -168,7 +161,7 @@
     	
     </div>
     
-    
+    </div>
       <div ng-show="active == 'performance'">
       <div class="list">
           <a class="item" ng-repeat=" item in categoryPerformanceMap[selectedCategory]" ng-class="$odd ? 'stripLine' : ''">
