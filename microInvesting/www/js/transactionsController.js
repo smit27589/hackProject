@@ -39,8 +39,8 @@ angular.module('starter.controllers').controller('TransactionsCtrl', function ($
         case "Travel":
           item.icon = 'fa-plane';
           break;
-
       }
+
       list.push(item);
       $scope.dateData[dateStr] = list;
     })
