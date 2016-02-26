@@ -72,8 +72,9 @@ angular.module('starter.controllers', [])
 .controller('TransferCtrl', function($scope, $stateParams,$state) {
 })
 
-.controller('SignUpCtrl', function($scope, $state, $ionicSlideBoxDelegate) {
+.controller('SignUpCtrl', function($scope, $state, $ionicSlideBoxDelegate, LoginService) {
 
+	LoginService.setNewUser(true);
 	$scope.categoryPerformanceMap = {'conservative':[{title:'Year to Date',value :'-0.27'},
 	                                                 {title:'6 Month',value :'-1.37'},
 	                                                 {title:'1 Year',value :'-1.33'},
@@ -180,7 +181,7 @@ angular.module('starter.controllers', [])
 
 .controller('LoginCtrl', function($scope,LoginService, $ionicPopup, $state) {
 	$scope.data = {username:'user@gmail.com',password:'secret'};
-
+	LoginService.setNewUser(false);
     $scope.login = function() {
         LoginService.loginUser($scope.data.username, $scope.data.password).success(function(data) {
             $state.go('app.transactions');

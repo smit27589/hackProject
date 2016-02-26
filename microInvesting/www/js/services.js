@@ -4,7 +4,7 @@ angular.module('starter.services', [])
 
 	var user = "Smit Gujarathi";
 	var sideMenuVisibility = false;
-	
+	var newUser = false;
 //	 var observerCallbacks = [];
 
 	  //register an observer
@@ -50,6 +50,12 @@ angular.module('starter.services', [])
 	        },
 	        getSideMenuVisibility:function(){
 	        	return sideMenuVisibility;
+	        },
+	        setNewUser : function(value) {
+	        	newUser = value;
+	        },
+	        getNewUser: function() {
+	        	return newUser;
 	        }
 //	        ,
 //	        registerObserverCallback : function(callback){
