@@ -5,7 +5,7 @@
     </button>
   </ion-nav-buttons>
 
-  <ion-content style="background: linear-gradient(#3293b0, #5586d7);">
+  <ion-content class="bg-color">
   <br/>
   <br/>
   <br/>
@@ -19,17 +19,17 @@
 <!--             <a class="button" ng-class="{'button-positive': isSelected('dollar')}" ng-click="setSelected('dollar')">$</a> -->
 <!--             <a class="button" ng-class="{'button-positive': isSelected('percentage')}" ng-click="setSelected('percentage')">%</a> -->
 <!--         </div> -->
-        
+
         <div class="button-bar" style="margin-top: 5px; margin-bottom:10px; width: 40%; margin-left: 30%;">
       <a class="button button-small button-outline button-light"
          ng-class="{'active':isSelected('dollar')}" ng-click="setSelected('dollar')">
         <span ng-class="{'button-clicked':isSelected('dollar'),'button-no-clicked':!isSelected('dollar')}">$</span></a>
-        
+
          <a class="button button-small button-outline button-light"
          ng-class="{'active':isSelected('percentage')}" ng-click="setSelected('percentage')">
         <span ng-class="{'button-clicked':isSelected('percentage'),'button-no-clicked':!isSelected('percentage')}">#</span></a>
     </div>
-        
+
     </div>
     <div ng-show="selected == 'dollar'" style="">
 
