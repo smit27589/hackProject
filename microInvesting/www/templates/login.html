@@ -1,20 +1,23 @@
-<ion-view view-title="Sign in with your Micro Investing account">
+<ion-view >
+<ion-nav-title>
+<span style="color:white;font-size:20px;font-weight:500;">Sign in with your Nest account</span>
+</ion-nav-title>
 <!--   <ion-header-bar> -->
 <!--     <h1 class="title">Login</h1> -->
 <!--     <div class="buttons"> -->
 <!--       <button class="button button-clear" ng-click="closeLogin()">Close</button> -->
 <!--     </div> -->
 <!--   </ion-header-bar> -->
-  <ion-content>
+  <ion-content class="bg-color">
     <form >
       <div class="list">
-        <label class="item item-input">
-          <span class="input-label">Email</span>
-          <input type="email" ng-model="data.username">
+        <label class="item item-input no-border">
+          <span class="input-label" style="color:white;">Email</span>
+          <input type="email" style="color:white;"ng-model="data.username">
         </label>
-        <label class="item item-input">
-          <span class="input-label">Password</span>
-          <input type="password" ng-model="data.password">
+        <label class="item item-input no-border">
+          <span class="input-label" style="color:white;">Password</span>
+          <input type="password" style="color:white;" ng-model="data.password">
         </label>
         <label class="item">
           <button class="button button-block button-positive" ng-click="login()">Log in</button>
