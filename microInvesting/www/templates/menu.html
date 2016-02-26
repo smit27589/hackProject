@@ -12,40 +12,44 @@
     <ion-nav-view name="menuContent"></ion-nav-view>
   </ion-side-menu-content>
 
-  <ion-side-menu side="left">
-    <ion-header-bar class="bar-stable">
-      <h1 class="title">{{userName}}</h1>
+  <ion-side-menu side="left" style="background: linear-gradient(#5685d8, #717cf6,#8677f6)">
+    <ion-header-bar class="bar-stable tran-menu">
+      <h1  style="color: white;" class="title">{{userName}}</h1>
     </ion-header-bar>
     <ion-content>
-      <ion-list>
-        <ion-item menu-close href="#/app/summary">
-          <i class="fa fa-university fa-fw"></i> &nbsp;Home
+      <ion-list >
+        <ion-item class="tran-menu" menu-close href="#/app/summary" style="color: white;font-weight: 500;">
+          <i class="fa fa-university fa-fw fa-inverse"></i> &nbsp;Home
         </ion-item>
-        <ion-item menu-close href="#/app/performance">
-          <i class="fa fa-bar-chart fa-fw"></i> &nbsp;Performance
+        <ion-item class="tran-menu"  menu-close href="#/app/performance" style="color: white;font-weight: 500;">
+          <i class="fa fa-bar-chart fa-fw fa-inverse"></i> &nbsp;Performance
         </ion-item>
-        <ion-item menu-close href="#/app/subscriptions">
-          <i class="fa fa-exchange fa-fw"></i> &nbsp;Deposit
+        <ion-item class="tran-menu"  menu-close href="#/app/subscriptions" style="color: white;font-weight: 500;">
+          <i class="fa fa-exchange fa-fw fa-inverse"></i> &nbsp;Deposit
         </ion-item>
-        <ion-item menu-close href="#/app/transactions">
-          <i class="fa fa-money fa-fw"></i> &nbsp;Transactions
+        <ion-item class="tran-menu"  menu-close href="#/app/transactions" style="color: white;font-weight: 500;">
+          <i class="fa fa-money fa-fw fa-inverse"></i> &nbsp;Transactions
         </ion-item>
-        <ion-item menu-close href="#/app/whatIf">
-          <i class="fa fa-calculator fa-fw"></i> &nbsp;iRetire
+        <ion-item class="tran-menu"  menu-close href="#/app/whatIf" style="color: white; font-weight: 500;">
+          <i class="fa fa-calculator fa-fw fa-inverse"></i> &nbsp;iRetire
         </ion-item>
-        <ion-item menu-close href="#/app/inviteFriends">
-          <i class="fa fa-users fa-fw"></i> &nbsp;Invite Friends
+        <ion-item class="tran-menu"  menu-close href="#/app/inviteFriends" style="color: white; font-weight: 500;">
+          <i class="fa fa-users fa-fw fa-inverse" ></i> &nbsp;Invite Friends
         </ion-item>
 <!--         <ion-item menu-close href="#/app/transfer">
           Transfer to Bank
         </ion-item> -->
-        <ion-item menu-close href="#/app/settings">
-          <i class="fa fa-cog fa-fw"></i> &nbsp;Settings
+        <ion-item class="tran-menu"  menu-close href="#/app/settings" style="color: white; font-weight: 500;">
+          <i class="fa fa-cog fa-fw fa-inverse"></i> &nbsp;Settings
         </ion-item>
 <!--         <ion-item menu-close ng-click="logout()">
           Sign out
         </ion-item> -->
       </ion-list>
+
+      <div style="margin-top:100px; margin-left: 30px;">
+        <img src="img/blkPower.png" style="width: 111px;height: 30px;">
+      </div>
     </ion-content>
-  </ion-side-menu>  
+  </ion-side-menu>
 </ion-side-menus>
