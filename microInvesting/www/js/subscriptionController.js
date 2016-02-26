@@ -32,5 +32,18 @@ angular.module('starter.controllers').controller('SubscriptionsCtrl', function (
     $state.go('app.summary');
   }
 
+  $scope.clickTypett = function (type) {
+    $scope.subTypeArr.forEach(function (itype) {
+      itype.active = false;
+    });
+
+    type.active = true;
+  };
+
+  $scope.subTypeArr = [
+    {title: 'Onetime', active: true},
+    {title: 'Recurring', active: false}
+  ];
+
 
 });

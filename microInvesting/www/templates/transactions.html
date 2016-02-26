@@ -1,6 +1,6 @@
 <ion-view view-title="Transactions" ng-controller="TransactionsCtrl" ng-init="init()">
 
-  <ion-content style="background: linear-gradient(#3293b0, #5586d7);">
+  <ion-content class="bg-color">
 
     <div class="button-bar" style="margin-top: 5px; margin-bottom:10px; width: 40%; margin-left: 30%;">
       <a class="button button-small button-outline button-light" ng-repeat="type in subTypes"
@@ -16,7 +16,7 @@
         <a class="item item-icon-left item-icon-right no-border" ng-repeat="tran in list">
           <i class="icon fa " ng-class="tran.icon"></i>
           <h2 style="color: white;">{{tran.merchantName}}</h2>
-          <p style="color:white;">${{tran.amount}}</p>
+          <p style="color:white;font-weight: 500;">${{tran.amount}}</p>
           <i class="icon"> ${{tran.remainder}}</i>
         </a>
       </div>
@@ -30,7 +30,7 @@
         <a class="item item-icon-left item-icon-right no-border" ng-repeat="tran in list2">
           <i class="icon fa fa-money"></i>
           <h2 style="color:white;">{{tran.type}}</h2>
-          <p style="color:white;">{{tran.subType}}</p>
+          <p style="color:white; font-weight: 500;">{{tran.subType}}</p>
           <i class="icon"> ${{tran.amount}}</i>
         </a>
       </div>

@@ -1,62 +1,70 @@
-<ion-view view-title="Subscriptions" ng-controller="SubscriptionsCtrl">
+<ion-view view-title="Deposit" ng-controller="SubscriptionsCtrl" class="bg-color">
+  <ion-content>
 
-  <ion-tabs class="tabs-positive tabs-icon-top">
+    <div class="button-bar" style="margin-top: 5px; margin-bottom:10px; width: 40%; margin-left: 30%;">
+      <a class="button button-small button-outline button-light" ng-repeat="type in subTypeArr"
+         ng-class="{'active':type.active}" ng-click="clickTypett(type)">
+        <span style="font-weight: 500;" ng-class="{'button-clicked':type.active,'button-no-clicked':!type.active}">{{type.title}}</span></a>
+    </div>
 
-    <ion-tab title="Onetime" icon-on="ion-ios-pricetag" icon-off="ion-ios-pricetag-outline">
-
+    <div ng-show="subTypeArr[0].active">
       <div style="height: 65%;">
-        <button class="button button-balanced  button-block button-outline" style="margin-bottom:50px;margin-top: 70px;padding-top: 25px;
+        <button class="button button-light  button-block button-outline" style="margin-bottom:50px;margin-top: 20px;padding-top: 25px;
       padding-bottom: 25px; width: 50%;margin-left:25%;">
-          <span style="text-align:center;font-size:38px;">${{money.value}}</span>
+          <span style="text-align:center;font-size:38px;color: white;">${{money.value}}</span>
         </button>
 
         <div class="button-bar" style="border-radius: 5px;width: 94%; margin-left: 3%;">
-          <a class="button button-outline button-stable" ng-click="add()">
+          <a class="button button-outline button-light" ng-click="add()">
           <span class="ion-plus-round"
-                style="color:#373737;"></span></a>
-          <a class="button button-outline button-stable" ng-click="sub()">
+                style="color:white;"></span></a>
+          <a class="button button-outline button-light" ng-click="sub()">
           <span class="ion-minus-round"
-                style="color:#373737;"></span></a>
+                style="color:white;"></span></a>
         </div>
       </div>
 
-      <button class="button button-block button-positive" style="width:94%;margin-left: 3%;" ng-click="submit()">
+      <button class="button button-block button-light button-outline"
+              style="width:94%;margin-left: 3%; color: white;margin-top: 230px;"
+              ng-click="submit()">
         Submit
       </button>
+    </div>
 
-    </ion-tab>
-
-    <!--tab 2-->
-    <ion-tab title="Recurring" icon-on="ion-ios-pricetags" icon-off="ion-ios-pricetags-outline">
+    <div ng-show="subTypeArr[1].active">
 
       <div style="height: 65%;">
-        <button class="button button-balanced  button-block button-outline" style="margin-bottom:50px;margin-top: 70px;padding-top: 25px;
+        <button class="button button-light  button-block button-outline" style="margin-bottom:50px;margin-top: 20px;padding-top: 25px;
       padding-bottom: 25px; width: 50%;margin-left:25%;">
-          <span style="text-align:center;font-size:38px;">${{money.value}}</span>
+          <span style="text-align:center;font-size:38px;color: white;">${{money.value}}</span>
         </button>
 
         <div class="button-bar" style="border-radius: 5px;width: 94%; margin-left: 3%;">
-          <a class="button button-outline button-stable" ng-click="add()">
+          <a class="button button-outline button-light" ng-click="add()">
           <span class="ion-plus-round"
-                style="color:#373737;"></span></a>
-          <a class="button button-outline button-stable" ng-click="sub()">
+                style="color:white;"></span></a>
+          <a class="button button-outline button-light" ng-click="sub()">
           <span class="ion-minus-round"
-                style="color:#373737;"></span></a>
+                style="color:white;"></span></a>
         </div>
 
         <div class="button-bar" style="margin-top: 20px;width: 94%; margin-left: 3%;">
-          <a class="button button-small button-outline button-positive" ng-repeat="type in subTypes"
-             ng-class="{'active':type.active}" ng-click="clickType(type)">{{type.title}}</a>
+          <a class="button button-small button-outline button-light" ng-repeat="type in subTypes"
+             ng-class="{'active':type.active}" ng-click="clickType(type)">
+            <span style="font-weight: 500;" ng-class="{'button-clicked':type.active,'button-no-clicked':!type.active}">{{type.title}}</span></a>
         </div>
       </div>
 
-      <button class="button button-block button-positive" style="width:94%; margin-left: 3%;" ng-click="submit()">
-        Submit
-      </button>
+    </div>
 
+    <button class="button button-block button-light button-outline"
+            style="width:94%;margin-left: 3%; color: white;margin-top: 180px;"
+            ng-click="submit()">
+      Submit
+    </button>
 
-    </ion-tab>
+    </div>
 
-  </ion-tabs>
+  </ion-content>
 
 </ion-view>

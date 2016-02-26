@@ -59,3 +59,7 @@ body {
 .button-no-clicked{
   color: #fff;
 }
+
+.bg-color{
+  background: linear-gradient(#21c5f4, #5586d7);
+}
