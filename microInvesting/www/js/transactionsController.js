@@ -13,7 +13,7 @@ angular.module('starter.controllers').controller('TransactionsCtrl', function ($
     {description: 'Whole Foods, Inc', amount: '$123.36', spareChange: '$0.64'}
   ];
 
-  function processData(datain){
+  function processData(datain) {
 
     $scope.dateData = {};
     var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', "Oct", 'Nov', 'Dec'];
@@ -39,6 +39,11 @@ angular.module('starter.controllers').controller('TransactionsCtrl', function ($
         case "Travel":
           item.icon = 'fa-plane';
           break;
+        case "Entertainment":
+          item.icon = 'fa-ticket';
+          break;
+        default :
+          item.icon = 'fa-money';
       }
 
       list.push(item);
