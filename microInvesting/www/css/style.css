@@ -97,4 +97,16 @@ body {
     overflow: visible !important;
 }
 
+.transaction-divider{
+  border-bottom: 1px solid rgba(232,232,232,0.5);width: 96%;margin-left:2%;
+  padding-bottom: 6px;
+  padding-top: 6px;
 
+}
+
+.transaction-divider-last{
+  width: 96%;
+  margin-left:2%;
+  padding-bottom: 6px;
+  padding-top: 6px;
+}

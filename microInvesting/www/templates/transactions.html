@@ -5,32 +5,32 @@
 
   <ion-content class="bg-color">
 
-    <div class="button-bar" style="margin-top: 5px; margin-bottom:10px; width: 40%; margin-left: 30%;">
+    <div class="button-bar" style="margin-top: 5px; margin-bottom:10px; width: 80%; margin-left: 10%;">
       <a class="button button-small button-outline button-light" ng-repeat="type in subTypes"
          ng-class="{'active':type.active}" ng-click="clickType(type)">
-        <span style="font-weight: 500;" ng-class="{'button-clicked':type.active,'button-no-clicked':!type.active}">{{type.title}}</span></a>
+        <span style="font-weight: 500;" ng-class="{'button-clicked':type.active,'button-no-clicked':!type.active}">
+          {{type.title}}</span></a>
     </div>
 
     <div class="list" ng-show="subTypes[0].active" style="color:white;">
       <div ng-repeat=" (date, list) in  dateData">
-        <div style="color:white;" class="item item-divider no-border">
+        <div style=" color:white; background-color:rgba(232,232,232,0.3) !important; padding-bottom: 4px;padding-top: 4px; " class="item item-divider no-border">
           {{date}}
         </div>
-        <a class="item item-icon-left item-icon-right no-border" ng-repeat="tran in list">
-          <i class="icon fa " ng-class="tran.icon"></i>
-          <h2 style="color: white;">{{tran.merchantName}}</h2>
-          <p style="color:white;font-weight: 500;">${{tran.amount}}</p>
-          <i class="icon" style="color:white;font-weight: 500;"> ${{tran.remainder}}</i>
+        <a class="item item-icon-left item-icon-right no-border" ng-repeat="tran in list" ng-class="$last ? 'transaction-divider-last': 'transaction-divider'" >
+          <i class="icon fa " style="font-size:18px;" ng-class="tran.icon"></i>
+          <h2 style="color: white; font-weight: 200;">{{tran.merchantName}}</h2>
+          <i class="icon" style="color:white;font-weight: 200; font-size: 18px;"> ${{tran.remainder}}</i>
         </a>
       </div>
     </div>
 
     <div class="list" ng-show="subTypes[1].active" style="color:white;">
       <div ng-repeat=" (date2, list2) in  subData">
-        <div class="item item-divider no-border" style="color:white;">
+        <div class="item item-divider no-border" style="color:white;background-color:rgba(232,232,232,0.3) !important; padding-bottom: 4px;padding-top: 4px;">
           {{date2}}
         </div>
-        <a class="item item-icon-left item-icon-right no-border" ng-repeat="tran in list2">
+        <a class="item item-icon-left item-icon-right no-border" ng-repeat="tran in list2" >
           <i class="icon fa fa-money"></i>
           <h2 style="color:white;">{{tran.type}}</h2>
           <p style="color:white; font-weight: 500;">{{tran.subType}}</p>
