@@ -54,12 +54,12 @@ angular.module('starter.controllers').controller('TransactionsCtrl', function ($
 
   $scope.init = function () {
 
-    //$http.get('http://localhost:8080/getTransactions')
-    //  .success(function(data) {
-    //      processData(data);
-    //  });
+    $http.get('http://localhost:8080/getTransactions')
+      .success(function(data) {
+          processData(data);
+      });
 
-    processData($scope.data);
+    //processData($scope.data);
 
   };
 

@@ -73,7 +73,8 @@ body {
 }
 
 .bg-nav-color{
-  background: #21c5f4;
+  background-color: #21c5f4;
+  background-image: url('img/icon.png')
 }
 
 .ionic .item-text-wrap { /* negate the nowrap CSS from .ionic .item */
