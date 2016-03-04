@@ -1,7 +1,7 @@
 angular.module('starter.controllers').controller('SummaryCtrl', function($scope, $http, LoginService) {
 
 	$scope.init = function () {
-	    $http.get('http://localhost:8080/linkBankAccount')
+	    $http.get('http://vishal-2.local:8080/linkBankAccount')
 	    	.success(function(data) {
 	    	$scope.fastLinkURL = data;
 	    	}

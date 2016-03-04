@@ -54,7 +54,7 @@ angular.module('starter.controllers').controller('TransactionsCtrl', function ($
 
   $scope.init = function () {
 
-    $http.get('http://localhost:8080/getTransactions')
+    $http.get('http://vishal-2.local:8080/getTransactions')
       .success(function(data) {
           processData(data);
       });
