@@ -20,7 +20,7 @@
         <a class="item item-icon-left item-icon-right no-border" ng-repeat="tran in list" ng-class="$last ? 'transaction-divider-last': 'transaction-divider'" >
           <i class="icon fa " style="font-size:18px;" ng-class="tran.icon"></i>
           <h2 style="color: white; font-weight: 200;">{{tran.merchantName}}</h2>
-          <i class="icon" style="color:white;font-weight: 200; font-size: 18px;"> ${{tran.remainder}}</i>
+          <i class="icon" style="color:white;font-weight: 300; font-size: 18px;"> ${{tran.remainder}}</i>
         </a>
       </div>
     </div>
@@ -30,11 +30,11 @@
         <div class="item item-divider no-border" style="color:white;background-color:rgba(232,232,232,0.3) !important; padding-bottom: 4px;padding-top: 4px;">
           {{date2}}
         </div>
-        <a class="item item-icon-left item-icon-right no-border" ng-repeat="tran in list2" >
-          <i class="icon fa fa-money"></i>
-          <h2 style="color:white;">{{tran.type}}</h2>
+        <a class="item item-icon-left item-icon-right no-border" ng-repeat="tran in list2" ng-class="$last ? 'transaction-divider-last': 'transaction-divider'" >
+          <i class="icon fa fa-money" style="font-size:18px;"></i>
+          <h2 style="color:white;  font-weight: 200;">{{tran.type}}</h2>
           <p style="color:white; font-weight: 500;">{{tran.subType}}</p>
-          <i class="icon" style="color:white;font-weight: 500;"> ${{tran.amount}}</i>
+          <i class="icon" style="color:white;font-weight: 300; font-size:18px;"> ${{tran.amount}}</i>
         </a>
       </div>
     </div>
