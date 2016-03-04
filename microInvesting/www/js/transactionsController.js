@@ -16,13 +16,13 @@ angular.module('starter.controllers').controller('TransactionsCtrl', function ($
   function processData(datain) {
 
     $scope.dateData = {};
-    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', "Oct", 'Nov', 'Dec'];
+    var months = ['January', 'February', 'March', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', "Oct", 'Nov', 'Dec'];
     datain.forEach(function (item) {
       var dateTime = new Date(item.postDate);
       var month = months[dateTime.getMonth()];
-      var date = dateTime.getDate();
+      var date = dateTime.getDate() + 'th';
       var year = dateTime.getFullYear();
-      var dateStr = month + '-' + date + '-' + year;
+      var dateStr = month + ' ' + date + ', ' + year;
 
       var list = $scope.dateData[dateStr] || [];
 
@@ -73,7 +73,8 @@ angular.module('starter.controllers').controller('TransactionsCtrl', function ($
 
   $scope.subTypes = [
     {title: 'Change', active: true},
-    {title: 'Deposit', active: false}
+    {title: 'Deposit', active: false},
+    {title: 'Withdrawals',active:false}
   ];
 
   $scope.subData = {
