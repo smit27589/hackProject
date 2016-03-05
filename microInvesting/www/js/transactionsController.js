@@ -16,7 +16,7 @@ angular.module('starter.controllers').controller('TransactionsCtrl', function ($
   function processData(datain) {
 
     $scope.dateData = {};
-    var months = ['January', 'February', 'March', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', "Oct", 'Nov', 'Dec'];
+    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'Septermber', "Octber", 'November', 'December'];
     datain.forEach(function (item) {
       var dateTime = new Date(item.postDate);
       var month = months[dateTime.getMonth()];
@@ -78,14 +78,14 @@ angular.module('starter.controllers').controller('TransactionsCtrl', function ($
   ];
 
   $scope.subData = {
-    'Jan-12-2016': [{type: 'One time', amount: 50}],
-    'Dec-20-2015': [{type: 'Recurring', subType: 'monthly', amount: 20}],
-    'Nov-20-2015': [{type: 'Recurring', subType: 'monthly', amount: 20}],
-    'Nov-07-2015': [{type: 'One time', amount: 15}],
-    'Oct-20-2015': [{type: 'Recurring', subType: 'monthly', amount: 20}],
-    'Sep-20-2015': [{type: 'Recurring', subType: 'monthly', amount: 20}],
-    'Aug-20-2015': [{type: 'Recurring', subType: 'monthly', amount: 20}],
-    'Jul-20-2015': [{type: 'Recurring', subType: 'monthly', amount: 20}]
+    'January 12th, 2016': [{type: 'One time', amount: 50}],
+    'December 20th, 2015': [{type: 'Recurring', subType: 'monthly', amount: 20}],
+    'November 20th, 2015': [{type: 'Recurring', subType: 'monthly', amount: 20}],
+    'November 07th, 2015': [{type: 'One time', amount: 15}],
+    'Octber 20th, 2015': [{type: 'Recurring', subType: 'monthly', amount: 20}],
+    'September 20th, 2015': [{type: 'Recurring', subType: 'monthly', amount: 20}],
+    'August 20th, 2015': [{type: 'Recurring', subType: 'monthly', amount: 20}],
+    'July 20th, 2015': [{type: 'Recurring', subType: 'monthly', amount: 20}]
   };
 
   $scope.data = [{
