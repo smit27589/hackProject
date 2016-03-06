@@ -1,11 +1,11 @@
-angular.module('starter.controllers').controller('SummaryCtrl', function($scope, $state, LoginService) {
+angular.module('starter.controllers').controller('SummaryCtrl', function($scope, LoginService, $state) {
 
     $scope.isNewUser = function(){
     	return LoginService.getNewUser();
     };
     
-    $scope.loadiFrame = function() {
-        $state.go('app.bankAccount');
-    }
+    $scope.loadBankAccount = function() {
+	  $state.go('app.bankAccount');
+    };
 	
 })

@@ -18,9 +18,14 @@
     <ion-content>
       <ion-list >
         <div id="logo" style="margin-top:18%;">
+              <div ng-show="!isNewUser()">
               <center><img src="img/profile.png" style="width: 100px;height: 100px;"></center>
               <center><h3 style="color:white; font-weight: 200; font-size: 30px;">Vishal Shah</h3></center>
-
+              </div>
+              <div ng-show="isNewUser()">
+              <center><img src="img/new_profile.png" style="width: 100px;height: 100px;"></center>
+              <center><h3 style="color:white; font-weight: 200; font-size: 30px;">John Doe</h3></center>
+              </div>
         </div>
         <ion-item class="tran-menu" menu-close href="#/app/summary" style="color: white;font-weight: 200;font-size:30px;">
           <i class="fa fa-university fa-fw fa-inverse" style="font-size: 20px;"></i> &nbsp;Home<br>

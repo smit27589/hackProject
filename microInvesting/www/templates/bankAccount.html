@@ -1,19 +1,21 @@
-<ion-view ng-controller="BankAccountCtrl">
-    <ion-nav-title>
-        <span style="color:white; font-size:20px;font-weight: 500;">Link Bank Account</span>
-    </ion-nav-title>
-    
-    <ion-content class="bg-color">
-    <div ng-model="fastLinkURL">
-            <form action="https://node.developer.yodlee.com/authenticate/restserver/" method="post" id="rsessionPost" target="yodlee_iframe">
-                RSession : <input type='text' name='rsession' placeholder='rsession' value='{{fastLinkURL.rsession}}' id='rsession'/>
-                FinappId : <input type='text' name='app' placeholder='FinappId' value='{{fastLinkURL.finAppId}}' id='finappId'/>
-                Redirect : <input type='text' name='redirectReq' placeholder='true/false' value='{{fastLinkURL.redirectReq}}' />
-                Token : <input type='text' name='token' placeholder='token' value='{{fastLinkURL.token}}' id='token'/>
-                Extra Params : <input type='text' name='extraParams' placeholer='Extra Params' value="" id='extraParams'/>
-            </form>
+<ion-view ng-controller="BankAccountCtrl" hide-nav-bar="true">
+  <ion-content class="bg-color">
+  <ion-header-bar align-title="center" class="bar bar-light" style="background-color: #003B72">
+    <button style="color:white !important;" ng-click="goToSummary()" class="button button-clear icon-left ion-chevron-left">Back</button>
+    <h1 class="title" style="color:white;font-size:20px;font-weight: 500;">Link Account</h1>
+  </ion-header-bar>
+    <div style="display: none;">
+       <form name="yodleeForm" action="https://node.developer.yodlee.com/authenticate/restserver/" 
+           target="yodlee_page" method="post" id="rsessionPost">
+           RSession : <input type='text' name='rsession' placeholder='rsession' ng-model="fastLinkURL.rsession" id='rsession'/>
+           FinappId : <input type='text' name='app' placeholder='FinappId' ng-model="fastLinkURL.finAppId" id='finappId'/>
+           Redirect : <input type='text' name='redirectReq' placeholder='true/false' ng-model="fastLinkURL.redirectReq" />
+           Token : <input type='text' name='token' placeholder='token' ng-model="fastLinkURL.token" id='token'/>
+           Extra Params : <input type='text' name='extraParams' placeholer='Extra Params' value="" id='extraParams'/>
+       </form>
     </div>
-    
-    <iframe name="yodlee_iframe "src="test.html"></iframe>
+    <div ng-show="showFrame">
+        <iframe name="yodlee_page" src="not_yet.html" style="width:100%; min-height:100% "></iframe>
+    </div>
     </ion-content>
 </ion-view>

@@ -1,20 +1,12 @@
-<ion-view ng-controller="SummaryCtrl" ng-init="init()">
- <ion-nav-bar class="nav-title-slide-ios7 bar-light transparent-nav" style="background: blue">
-     <img src="img/icon.png" style="width: 60px;height: 46px;">
-    <!-- <span style="color:white; font-size:20px;font-weight: 500;">Home</span> -->
-  </ion-nav-bar>
- <img src="img/icon.png" style="width: 89px;height: 67px;">
-  <div id="logo" style="margin-top:18%;">
-      <img src="img/icon.png" style="width: 87px;height: 66px;">
-  </div>
+<ion-view ng-controller="SummaryCtrl">
   <ion-nav-buttons side="left">
     <button class="button button-icon button-clear ion-navicon" style="color:white;" menu-toggle="left">
     </button>
   </ion-nav-buttons>
 
   <ion-content class="bg-color">
-    <br/>
-    <div ng-show="isNewUser() == false" style="">
+    <div ng-show="!isNewUser()">
+        <br/>
         <div >
             <h3 style="text-align:center;color:white;">Amount Invested</h3>
         </div>
@@ -29,11 +21,13 @@
             <img src="img/circle.png" style="width: 200px;height: 190px;">
         </div>
     </div>
-    <div ng-show="isNewUser() == true" style="">
-        <h4 style="text-align:center;color:white;font-weight: 500;">Start Investing Today</h4>
-        <div class="button-bar" style="width:40%;margin-left:30%;margin-bottom:3%;">
-        <a class="button" ng-class="button-positive" ng-click="loadiFrame()">Link Bank Account/Credit Card</a>
-        </div>
+    <div ng-show="isNewUser()" >
+      <br/>
+      <h4 style="text-align:center;color:white;font-weight: 500;">Start Investing Today</h4>
+      <h4 style="text-align:center;color:white;font-weight: 500;">By Adding Bank Account or Credit Card</h4>
+      <div class="button-bar" style="width:40%;margin-left:30%;margin-bottom:3%;">
+        <a class="button" ng-class="button-positive" ng-click="loadBankAccount()">Link Account</a>
+      </div>
     </div>
   </ion-content>
 

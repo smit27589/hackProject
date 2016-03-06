@@ -53,6 +53,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
   })
 
   .state('app.signUpSlide', {
+	cache: false,
     url: '/signUpSlide',
     views: {
       'menuContent': {
