@@ -1,18 +1,11 @@
-angular.module('starter.controllers').controller('SummaryCtrl', function($scope, $http, LoginService) {
+angular.module('starter.controllers').controller('SummaryCtrl', function($scope, $state, LoginService) {
 
-	$scope.init = function () {
-	    $http.get('http://vishal-2.local:8080/linkBankAccount')
-	    	.success(function(data) {
-	    	$scope.fastLinkURL = data;
-	    	}
-    	)};
-	    
     $scope.isNewUser = function(){
     	return LoginService.getNewUser();
     };
     
     $scope.loadiFrame = function() {
-    	document.getElementById('rsessionPost').submit();
+        $state.go('app.bankAccount');
     }
 	
 })

@@ -130,6 +130,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
       }
     }
   })
+
+  .state('app.bankAccount', {
+    url: '/bankAccount',
+    views: {
+      'menuContent': {
+         templateUrl: 'templates/bankAccount.html',
+         controller:'BankAccountCtrl'
+      }
+    }
+  })
 	  ;
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/intro');

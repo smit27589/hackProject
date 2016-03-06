@@ -13,37 +13,28 @@
   </ion-nav-buttons>
 
   <ion-content class="bg-color">
-  <br/>
-  <br/>
-  <br/>
-    <div >
-      <h3 style="text-align:center;color:white;">Account Balance</h3>
+    <br/>
+    <div ng-show="isNewUser() == false" style="">
+        <div >
+            <h3 style="text-align:center;color:white;">Amount Invested</h3>
+        </div>
+        <div style="text-align:center;font-size:38px;margin-bottom:3%;color:white;font-weight: 500;">$ 329.53</div>
+        <br/>
+        <h4 style="text-align:center;color:white;font-weight: 500;">Invested Last Month</h4>
+        <div style="text-align:center;font-size:28px;margin-bottom:3%;color:white;font-weight: 500;">$ 58.38</div>
+        <br/>
+        <h4 style="text-align:center;color:white;font-weight: 500;">Total Gain Since Inception</h4>
+        <div style="text-align:center;font-size:28px;margin-bottom:3%;color:white;font-weight: 500;">+ 4.2%</div>
+        <div id="circle" style="margin-bottom:90%; margin-left:25%">
+            <img src="img/circle.png" style="width: 200px;height: 190px;">
+        </div>
     </div>
-    <div style="text-align:center;font-size:38px;margin-bottom:3%;color:white;font-weight: 500;">$ 329.53</div>
-    <br/>
-    <h4 style="text-align:center;color:white;font-weight: 500;">Invested Last Month</h4>
-    <div style="text-align:center;font-size:28px;margin-bottom:3%;color:white;font-weight: 500;">$ 58.38</div>
-    <br/>
-    <h4 style="text-align:center;color:white;font-weight: 500;">Total Gain Since Inception</h4>
-    <div style="text-align:center;font-size:28px;margin-bottom:3%;color:white;font-weight: 500;">+ 4.2%</div>
-  
-  <div ng-show="isNewUser() == true" style="">
-      <div class="button-bar" style="width:40%;margin-left:30%;margin-bottom:3%;">
-          <a class="button" ng-class="button-positive" ng-click="loadiFrame()">Link Bank Account/Credit Card</a>
-      </div>
-      
-      <div ng-model="fastLinkURL">
-          <form action="https://node.developer.yodlee.com/authenticate/restserver/" method="post" id="rsessionPost">
-              RSession : <input type='text' name='rsession' placeholder='rsession' value='{{fastLinkURL.rsession}}' id='rsession'/>
-              FinappId : <input type='text' name='app' placeholder='FinappId' value='{{fastLinkURL.finAppId}}' id='finappId'/>
-              Redirect : <input type='text' name='redirectReq' placeholder='true/false' value='{{fastLinkURL.redirectReq}}' />
-              Token : <input type='text' name='token' placeholder='token' value='{{fastLinkURL.token}}' id='token'/>
-              Extra Params : <input type='text' name='extraParams' placeholer='Extra Params' value="" id='extraParams'/>
-          </form>
-      </div>
-  </div>
-  
+    <div ng-show="isNewUser() == true" style="">
+        <h4 style="text-align:center;color:white;font-weight: 500;">Start Investing Today</h4>
+        <div class="button-bar" style="width:40%;margin-left:30%;margin-bottom:3%;">
+        <a class="button" ng-class="button-positive" ng-click="loadiFrame()">Link Bank Account/Credit Card</a>
+        </div>
+    </div>
   </ion-content>
-
 
 </ion-view>
