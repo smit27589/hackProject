@@ -14,11 +14,11 @@ angular.module('starter.controllers').controller('SubscriptionsCtrl', function (
     $scope.money.value -= 1;
   };
 
-  $scope.subTypes = [
+  /* $scope.subTypes = [
     {title: 'Weekly', active: true},
     {title: 'Monthly', active: false},
     {title: 'Quaterly', active: false}
-  ];
+  ]; */
 
   $scope.clickType = function (type) {
     $scope.subTypes.forEach(function (itype) {
@@ -41,8 +41,10 @@ angular.module('starter.controllers').controller('SubscriptionsCtrl', function (
   };
 
   $scope.subTypeArr = [
-    {title: 'Onetime', active: true},
-    {title: 'Recurring', active: false}
+    {title: 'One-Time', active: true},
+    {title: 'Weekly', active: false},
+    {title: 'Monthly', active: false}
+
   ];
 
 

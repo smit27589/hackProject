@@ -13,6 +13,10 @@ angular.module('starter.controllers', [])
   // Form data for the login modal
   $scope.loginData = {};
   $scope.userName = LoginService.getUserName();
+  
+  $scope.isNewUser = function () {
+	  return LoginService.getNewUser() == true;
+  }
 
   var updateSideMenuVisibility = function(){
 	  $scope.showSideMenu = LoginService.getSideMenuVisibility();
@@ -62,10 +66,10 @@ angular.module('starter.controllers', [])
 
   .controller('IntroCtrl', function($scope, $state, $ionicSlideBoxDelegate,$location) {
 
-    // Called to navigate to the main app
+   // Called to navigate to the main app
     $scope.login = function () {
       $state.go('app.login');
-  };
+    };
 
     $scope.signup = function () {
       $state.go('app.signUpSlide');
@@ -87,9 +91,20 @@ angular.module('starter.controllers', [])
 .controller('TransferCtrl', function($scope, $stateParams,$state) {
 })
 
-.controller('SignUpCtrl', function($scope, $state, $ionicSlideBoxDelegate, LoginService) {
+.controller('SignUpCtrl', function($scope, $state, $ionicSlideBoxDelegate, LoginService, $http) {
 
 	LoginService.setNewUser(true);
+    
+	var init = function() {
+		$http.get('http://vishal-2.local:8080/linkBankAccount')
+        .success(function(data) {
+                 LoginService.setFastLinkURL(data);
+                 }
+        )
+	}
+	
+	init();
+	
 	$scope.categoryPerformanceMap = {'conservative':[{title:'Year to Date',value :'-0.27'},
 	                                                 {title:'6 Month',value :'-1.37'},
 	                                                 {title:'1 Year',value :'-1.33'},
@@ -228,7 +243,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('LoginCtrl', function($scope,LoginService, $ionicPopup, $state) {
-	$scope.data = {username:'user@gmail.com',password:'secret'};
+	$scope.data = {username:'vishal.shah@nyu.edu',password:'secret'};
 	LoginService.setNewUser(false);
     $scope.login = function() {
         LoginService.loginUser($scope.data.username, $scope.data.password).success(function(data) {
@@ -247,5 +262,36 @@ angular.module('starter.controllers', [])
     }
 
 })
+
+.controller('BankAccountCtrl', function($scope, $state, LoginService, $ionicLoading, $timeout) {
+
+    $scope.fastLinkURL = LoginService.getFastLinkURL();
+    
+    $scope.showFrame = false;
+    
+    $ionicLoading.show({
+        content: 'Loading',
+        animation: 'fade-in',
+        showBackdrop: true,
+        maxWidth: 200,
+        showDelay: 0
+      });
+
+    $timeout(function () {
+        $ionicLoading.hide();
+        $scope.showFrame = true;
+    }, 1500);
+    
+    $timeout(function () {
+        $scope.$apply(function () {
+        	document.forms[0].submit();
+        });
+    }, 500);
+        
+    $scope.goToSummary = function () {
+    	$state.go('app.summary');
+    }
+})
+
 
 ;

@@ -2,9 +2,10 @@ angular.module('starter.services', [])
 
 .factory('LoginService', ['$q', function($q) {
 
-	var user = "Smit Gujarathi";
+	var user = "Vishal Shah";
 	var sideMenuVisibility = false;
 	var newUser = false;
+	var fastLinkURL = {};
 //	 var observerCallbacks = [];
 
 	  //register an observer
@@ -24,7 +25,7 @@ angular.module('starter.services', [])
 	            var deferred = $q.defer();
 	            var promise = deferred.promise;
 	 
-	            if (name == 'user@gmail.com' && pw == 'secret') {
+	            if (name == 'vishal.shah@nyu.edu' && pw == 'secret') {
 	                deferred.resolve('Welcome ' + name + '!');
 	            } else {
 	                deferred.reject('Wrong credentials.');
@@ -56,6 +57,12 @@ angular.module('starter.services', [])
 	        },
 	        getNewUser: function() {
 	        	return newUser;
+	        },
+	        setFastLinkURL:function(value){
+	        	fastLinkURL = value;
+	        },
+	        getFastLinkURL:function(){
+	        	return fastLinkURL;
 	        }
 //	        ,
 //	        registerObserverCallback : function(callback){

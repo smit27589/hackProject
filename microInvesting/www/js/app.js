@@ -53,6 +53,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
   })
 
   .state('app.signUpSlide', {
+	cache: false,
     url: '/signUpSlide',
     views: {
       'menuContent': {
@@ -127,6 +128,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
       'menuContent': {
         templateUrl: 'templates/whatIf.html',
         controller:'WhatIfCtrl'
+      }
+    }
+  })
+
+  .state('app.bankAccount', {
+    url: '/bankAccount',
+    views: {
+      'menuContent': {
+         templateUrl: 'templates/bankAccount.html',
+         controller:'BankAccountCtrl'
       }
     }
   })

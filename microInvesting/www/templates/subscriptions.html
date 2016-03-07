@@ -5,7 +5,7 @@
 
   <ion-content>
 
-    <div class="button-bar" style="margin-top: 5px; margin-bottom:10px; width: 40%; margin-left: 30%;">
+    <div class="button-bar" style="margin-top: 5px; margin-bottom:10px; width: 80%; margin-left: 10%;">
       <a class="button button-small button-outline button-light" ng-repeat="type in subTypeArr"
          ng-class="{'active':type.active}" ng-click="clickTypett(type)">
         <span style="font-weight: 500;" ng-class="{'button-clicked':type.active,'button-no-clicked':!type.active}">{{type.title}}</span></a>
@@ -18,54 +18,95 @@
           <span style="text-align:center;font-size:38px;color: white;">${{money.value}}</span>
         </button>
 
-        <div class="button-bar" style="border-radius: 5px;width: 94%; margin-left: 3%;">
+       <!-- <div class="button-bar" style="border-radius: 5px;width: 94%; margin-left: 3%;">
           <a class="button button-outline button-light" ng-click="add()">
           <span class="ion-plus-round"
                 style="color:white;"></span></a>
           <a class="button button-outline button-light" ng-click="sub()">
           <span class="ion-minus-round"
                 style="color:white;"></span></a>
-        </div>
+        </div> -->
+      </div>
+      
+      <div id="numberPad" style="margin-left:10%; margin-bottom:0%;">
+          <img src="img/number_pad.png" style="width: 283px;height: 349.5px;">
       </div>
 
-      <button class="button button-block button-light button-outline"
+     <!-- <button class="button button-block button-light button-outline"
               style="width:60%;margin-left:20%; color: white;margin-top: 230px;font-size:20px;font-weight: 500;"
               ng-click="submit()">
         Invest
-      </button>
+      </button> -->
     </div>
 
     <div ng-show="subTypeArr[1].active">
 
-      <div style="height: 65%;">
-        <button class="button button-light  button-block button-outline" style="margin-bottom:50px;margin-top: 20px;padding-top: 25px;
-      padding-bottom: 25px; width: 50%;margin-left:25%;">
-          <span style="text-align:center;font-size:38px;color: white;">${{money.value}}</span>
-        </button>
+<div style="height: 65%;">
+    <button class="button button-light  button-block button-outline" style="margin-bottom:50px;margin-top: 20px;padding-top: 25px;
+        padding-bottom: 25px; width: 50%;margin-left:25%;">
+        <span style="text-align:center;font-size:38px;color: white;">${{money.value}}</span>
+    </button>
+    
+    <!-- <div class="button-bar" style="border-radius: 5px;width: 94%; margin-left: 3%;">
+     <a class="button button-outline button-light" ng-click="add()">
+     <span class="ion-plus-round"
+     style="color:white;"></span></a>
+     <a class="button button-outline button-light" ng-click="sub()">
+     <span class="ion-minus-round"
+     style="color:white;"></span></a>
+     </div> -->
+</div>
 
-        <div class="button-bar" style="border-radius: 5px;width: 94%; margin-left: 3%;">
-          <a class="button button-outline button-light" ng-click="add()">
-          <span class="ion-plus-round"
-                style="color:white;"></span></a>
-          <a class="button button-outline button-light" ng-click="sub()">
-          <span class="ion-minus-round"
-                style="color:white;"></span></a>
+<div id="numberPad" style="margin-left:10%; margin-bottom:0%;">
+    <img src="img/number_pad.png" style="width: 283px;height: 349.5px;">
         </div>
 
-        <div class="button-bar" style="margin-top: 20px;width: 94%; margin-left: 3%;">
-          <a class="button button-small button-outline button-light" ng-repeat="type in subTypes"
-             ng-class="{'active':type.active}" ng-click="clickType(type)">
-            <span style="font-weight: 500;" ng-class="{'button-clicked':type.active,'button-no-clicked':!type.active}">{{type.title}}</span></a>
-        </div>
-      </div>
-
+<!-- <button class="button button-block button-light button-outline"
+ style="width:60%;margin-left:20%; color: white;margin-top: 230px;font-size:20px;font-weight: 500;"
+ ng-click="submit()">
+ Invest
+ </button> -->
     </div>
 
+    </div>
+<!--
     <button class="button button-block button-light button-outline"
             style="width:60%;margin-left:20%; color: white;margin-top: 180px;font-size:20px;font-weight: 500;"
             ng-click="submit()">
       Invest
-    </button>
+    </button> -->
+
+<div ng-show="subTypeArr[2].active">
+    
+    <div style="height: 65%;">
+        <button class="button button-light  button-block button-outline" style="margin-bottom:50px;margin-top: 20px;padding-top: 25px;
+            padding-bottom: 25px; width: 50%;margin-left:25%;">
+            <span style="text-align:center;font-size:38px;color: white;">${{money.value}}</span>
+        </button>
+        
+        <!-- <div class="button-bar" style="border-radius: 5px;width: 94%; margin-left: 3%;">
+         <a class="button button-outline button-light" ng-click="add()">
+         <span class="ion-plus-round"
+         style="color:white;"></span></a>
+         <a class="button button-outline button-light" ng-click="sub()">
+         <span class="ion-minus-round"
+         style="color:white;"></span></a>
+         </div> -->
+    </div>
+    
+    <div id="numberPad" style="margin-left:10%; margin-bottom:0%;">
+        <img src="img/number_pad.png" style="width: 283px;height: 349.5px;">
+            </div>
+    
+    <!-- <button class="button button-block button-light button-outline"
+     style="width:60%;margin-left:20%; color: white;margin-top: 230px;font-size:20px;font-weight: 500;"
+     ng-click="submit()">
+     Invest
+     </button> -->
+</div>
+
+</div>
+
 
     </div>
 

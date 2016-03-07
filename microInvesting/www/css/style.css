@@ -21,6 +21,10 @@ body {
 #logo {
   margin: 30px 0px;
 }
+#circle {
+    margin: 30px 0px;
+    z-index: -1;
+}
 
 #list {
   width: 170px;
@@ -76,7 +80,8 @@ body {
 }
 
 .bg-nav-color{
-  background: #21c5f4;
+  background-color: #21c5f4;
+  background-image: url('img/icon.png')
 }
 
 .ionic .item-text-wrap { /* negate the nowrap CSS from .ionic .item */
