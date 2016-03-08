@@ -1,26 +1,26 @@
 angular.module('starter.controllers').controller('PerformanceCtrl', function ($scope, $stateParams, $state) {
 
-	$scope.investmentStartegyDollarData = [
-	                               		{categoryName:'Conservative',value:'25.25'},
-	                               	{categoryName:'Moderate',value:'115.25'},
-	                               	{categoryName:'Growth',value:'124.50'},
-	                               	{categoryName:'Aggresive',value:'64.53'}		
-	                               	];
-	                               	
-	                               	$scope.investmentStartegyPercentageData = [
-	                               	                               		{categoryName:'Conservative',value:'7.7'},
-	                               	                               	{categoryName:'Moderate',value:'35'},
-	                               	                               	{categoryName:'Growth',value:'37.8'},
-	                               	                               	{categoryName:'Aggresive',value:'19.5'}		
-	                               	                               	];
-	                               	
-	                               	$scope.selected = "percentage";
-	                               	$scope.setSelected = function(type) {
-	                                       $scope.selected = type;
-	                                   };
-	                                   $scope.isSelected = function(type) {
-	                                       return type === $scope.selected;
-	                                   };
+  $scope.investmentStartegyDollarData = [
+    {categoryName: 'Conservative', value: '25.25'},
+    {categoryName: 'Moderate', value: '115.25'},
+    {categoryName: 'Growth', value: '124.50'},
+    {categoryName: 'Aggresive', value: '64.53'}
+  ];
+
+  $scope.investmentStartegyPercentageData = [
+    {categoryName: 'Conservative', value: '7.7'},
+    {categoryName: 'Moderate', value: '35'},
+    {categoryName: 'Growth', value: '37.8'},
+    {categoryName: 'Aggresive', value: '19.5'}
+  ];
+
+  $scope.selected = "percentage";
+  $scope.setSelected = function (type) {
+    $scope.selected = type;
+  };
+  $scope.isSelected = function (type) {
+    return type === $scope.selected;
+  };
 
   $scope.pieLabels = ["Download Sales", "In-Store Sales", "Mail-Order Sales", "test 1", "test 2"];
   $scope.pieData = [300, 100, 200, 400, 150];
@@ -103,6 +103,8 @@ angular.module('starter.controllers').controller('PerformanceCtrl', function ($s
         bottom: 5,
         left: 5
       },
+      donut: true,          //Turn on Donut mode. Makes pie chart look tasty!
+      donutRatio: 0.35,
       showLabels: false,
       duration: 500,
       labelThreshold: 0.01,
@@ -141,8 +143,64 @@ angular.module('starter.controllers').controller('PerformanceCtrl', function ($s
     }
   ];
 
+
+  $scope.vmoptions2 = {
+    chart: {
+      type: 'pieChart',
+      height: 250,
+      color: color,
+      x: function (d) {
+        return d.key;
+      },
+      y: function (d) {
+        return d.y;
+      },
+      margin: {
+        top: 5,
+        right: 5,
+        bottom: 5,
+        left: 5
+      },
+      donut: true,          //Turn on Donut mode. Makes pie chart look tasty!
+      donutRatio: 0.35,
+      showLabels: false,
+      duration: 500,
+      labelThreshold: 0.01,
+      labelSunbeamLayout: true,
+      legend: {
+        margin: {
+          top: 5,
+          right: 25,
+          bottom: 5,
+          left: 0
+        }
+      }
+    }
+  };
+
+  $scope.vmdata2 = [
+    {
+      key: "Conservative",
+      y: 25.25
+    },
+    {
+      key: 'Moderate',
+      y: 115.25
+    },
+    {
+      key: 'Groth',
+      y: 124.5
+    },
+    {
+      key: 'Aggressive',
+      y: 64.53
+    }
+  ];
+
+
+
   var convertXValue = function (d) {
-    var months = ['Jun','Jul','Aug','Sep','Oct', 'Nov', 'Dec', 'Jan', 'Feb'];
+    var months = ['Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb'];
     return months[d];
   };
 
