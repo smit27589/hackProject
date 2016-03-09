@@ -131,6 +131,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
       }
     }
   })
+  .state('app.leaderboard', {
+    url: '/leaderboard',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/leaderboard.html',
+        controller:'LeaderboardCtrl'
+      }
+    }
+  })
 
   .state('app.bankAccount', {
     url: '/bankAccount',
