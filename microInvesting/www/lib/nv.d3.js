@@ -14822,8 +14822,8 @@
 
                 //------------------------------------------------------------
                 // Controls
-
-                if (showControls) {
+//debug
+                if (false) {
                     var controlsData = [
                         {
                             key: controlLabels.stacked || 'Stacked',

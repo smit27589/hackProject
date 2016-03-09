@@ -1,4 +1,4 @@
-angular.module('starter.controllers').controller('TransactionsCtrl', function ($scope, $http, $ionicLoading) {
+angular.module('starter.controllers').controller('TransactionsCtrl', function ($scope, $http, $ionicLoading,$timeout) {
 
   $scope.transactionData = [{description: 'Whole Foods, Inc', amount: '$33.25', spareChange: '$0.75'},
     {description: 'Sunac Natural Food', amount: '$13.85', spareChange: '$0.15'},

@@ -375,7 +375,7 @@ angular.module('starter.controllers').controller('PerformanceCtrl', function ($s
 
   $scope.lineOption = {
     chart: {
-      type: 'lineChart',
+      type: 'stackedAreaChart',
       height: 450,
       color: colorBar,
       clipEdge: true,
@@ -413,7 +413,7 @@ angular.module('starter.controllers').controller('PerformanceCtrl', function ($s
 
   $scope.lineData = [
     {
-      key: 'Vishal',
+      key: 'Average',
       values: [
         {
           x: 0,
@@ -454,7 +454,7 @@ angular.module('starter.controllers').controller('PerformanceCtrl', function ($s
       ]
     },
     {
-      key: 'Avg',
+      key: 'Vishal',
       values: [
         {
           x: 0,
