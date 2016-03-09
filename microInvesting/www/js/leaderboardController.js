@@ -8,5 +8,13 @@ angular.module('starter.controllers').controller('LeaderboardCtrl', function($sc
 	                     {name:'Ravi Malhotra',coins:'270',image:'img/ravi.jpg'},
 	                     {name:'Michael Francis',coins:'210',image:'img/michael.jpg'},
 	                     {name:'Vlad Rav',coins:'180',image:'img/vlad.jpg'}];
+	
+	 $scope.selected = "leaderboard";
+	  $scope.setSelected = function (type) {
+	    $scope.selected = type;
+	  };
+	  $scope.isSelected = function (type) {
+	    return type === $scope.selected;
+	  };
 
 });

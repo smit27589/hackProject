@@ -4,8 +4,24 @@
   </ion-nav-title>
 
  <ion-content class="bg-color">
-  <div class="list">
-          <ion-item ng-click="signOut()" class="item " ng-repeat=" item in friendsData" ng-class="$odd ? 'stripLine' : ''">
+ <div>
+          <div class="button-bar" style="margin-top: 5px; margin-bottom:10px; width: 40%; margin-left: 30%;">
+            <a class="button button-small button-outline button-light"
+               ng-class="{'active':isSelected('leaderboard')}" ng-click="setSelected('leaderboard')">
+              <span
+                ng-class="{'button-clicked':isSelected('leaderboard'),'button-no-clicked':!isSelected('leaderboard')}"><i class="fa fa-fort-awesome"></i></span></a>
+            <a class="button button-small button-outline button-light"
+               ng-class="{'active':isSelected('badges')}" ng-click="setSelected('badges')">
+              <span
+                ng-class="{'button-clicked':isSelected('badges'),'button-no-clicked':!isSelected('badges')}"><i class="fa fa-gift"></i></span></a>
+          </div>
+
+        </div>
+
+        <div ng-show="selected == 'leaderboard'" style="">
+
+            <div class="list">
+          <ion-item  class="item no-border" ng-repeat=" item in friendsData" ng-class="$odd ? 'stripLine' : ''">
             <div style="width:100%;">
             <span style="color:white; float: left;font-size:20px;font-weight: 500;margin-right:30%;width:25%;"><img src="{{item.image}}" style="width: 20px;height: 20px;margin-right:4%;">{{item.name}}</span>
             <span  style="color:white; font-size:24px;font-weight: 500;margin-right:3%;"><img src="img/coins.png" style="width: 20px;height: 20px;margin-right:1%"> {{item.coins}} </span>
@@ -14,6 +30,16 @@
             </div>
           </ion-item>
         </div>
+
+        </div>
+
+        <div ng-show="selected == 'badges'">
+        
+
+        </div>
+ 
+ 
+
   </ion-content>
   
 </ion-view>
