@@ -286,7 +286,7 @@ angular.module('starter.controllers', [])
         $scope.$apply(function () {
         	document.forms[0].submit();
         });
-    }, 1000);
+    }, 1500);
         
     $scope.goToSummary = function () {
     	$state.go('app.summary');
