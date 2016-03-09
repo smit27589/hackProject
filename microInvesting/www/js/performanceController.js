@@ -369,7 +369,133 @@ angular.module('starter.controllers').controller('PerformanceCtrl', function ($s
         }
       ]
     }
-  ]
+  ];
+
+
+
+  $scope.lineOption = {
+    chart: {
+      type: 'lineChart',
+      height: 450,
+      color: colorBar,
+      clipEdge: true,
+      staggerLabels: true,
+      rotateLabels: 45,
+      reduceXTicks: false,
+      transitionDuration: 500,
+      stacked: true,
+      margin: {
+        top: 10,
+        right: 20,
+        bottom: 30,
+        left: 25
+      },
+      xAxis: {
+        tickFormat: function (d) {
+          return convertXValue(d);
+        }
+      },
+      yAxis: {
+        tickFormat: function (d) {
+          return d;
+        }
+      },
+      legend: {
+        margin: {
+          top: 5,
+          right: 25,
+          bottom: 5,
+          left: -10
+        }
+      }
+    }
+  };
+
+  $scope.lineData = [
+    {
+      key: 'Vishal',
+      values: [
+        {
+          x: 0,
+          y: 60
+        },
+        {
+          x: 1,
+          y: 60
+        },
+        {
+          x: 2,
+          y: 130
+        },
+        {
+          x: 3,
+          y: 160
+        },
+        {
+          x: 4,
+          y: 170
+        },
+        {
+          x: 5,
+          y: 220
+        },
+        {
+          x: 6,
+          y: 180
+        },
+        {
+          x: 7,
+          y: 270
+        },
+        {
+          x: 8,
+          y: 330
+        }
+      ]
+    },
+    {
+      key: 'Avg',
+      values: [
+        {
+          x: 0,
+          y: 60
+        },
+        {
+          x: 1,
+          y: 20
+        },
+        {
+          x: 2,
+          y: 70
+        },
+        {
+          x: 3,
+          y: 30
+        },
+        {
+          x: 4,
+          y: 20
+        },
+        {
+          x: 5,
+          y: 50
+        },
+        {
+          x: 6,
+          y: 20
+        },
+        {
+          x: 7,
+          y: 90
+        },
+        {
+          x: 8,
+          y: 60
+        }
+      ]
+    }
+  ];
+
 
 
 });
