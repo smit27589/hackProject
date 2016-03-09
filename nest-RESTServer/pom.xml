@@ -26,7 +26,7 @@ Copyright 2015 Google Inc. All Rights Reserved.
     <groupId>com.google.cloud</groupId>
     <artifactId>doc-samples</artifactId>
     <version>1.0.0</version>
-    <relativePath>../..</relativePath>
+    <relativePath>parent-pom.xml</relativePath>
   </parent>
   <dependencies>
     <dependency>
