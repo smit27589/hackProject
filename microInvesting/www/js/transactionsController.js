@@ -1,4 +1,4 @@
-angular.module('starter.controllers').controller('TransactionsCtrl', function ($scope, $http) {
+angular.module('starter.controllers').controller('TransactionsCtrl', function ($scope, $http, $ionicLoading) {
 
   $scope.transactionData = [{description: 'Whole Foods, Inc', amount: '$33.25', spareChange: '$0.75'},
     {description: 'Sunac Natural Food', amount: '$13.85', spareChange: '$0.15'},
@@ -54,15 +54,28 @@ angular.module('starter.controllers').controller('TransactionsCtrl', function ($
 
   $scope.init = function () {
 
-    $http.get('http://vishal-2.local:8080/getTransactions')
+    $http.get('https://nest-backend.appspot.com/getTransactions')
       .success(function(data) {
           processData(data);
+          $ionicLoading.hide();
       });
 
     //processData($scope.data);
 
   };
 
+  $ionicLoading.show({
+      content: 'Loading',
+      animation: 'fade-in',
+      showBackdrop: true,
+      maxWidth: 200,
+      showDelay: 0
+    });
+
+  $timeout(function () {
+      $ionicLoading.hide();
+  }, 5000);
+  
   $scope.clickType = function (type) {
     $scope.subTypes.forEach(function (itype) {
       itype.active = false;
