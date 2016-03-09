@@ -96,7 +96,7 @@ angular.module('starter.controllers', [])
 	LoginService.setNewUser(true);
     
 	var init = function() {
-		$http.get('http://vishal-2.local:8080/linkBankAccount')
+		$http.get('https://nest-backend.appspot.com/linkBankAccount')
         .success(function(data) {
                  LoginService.setFastLinkURL(data);
                  }
@@ -280,13 +280,13 @@ angular.module('starter.controllers', [])
     $timeout(function () {
         $ionicLoading.hide();
         $scope.showFrame = true;
-    }, 1500);
+    }, 2000);
     
     $timeout(function () {
         $scope.$apply(function () {
         	document.forms[0].submit();
         });
-    }, 500);
+    }, 1000);
         
     $scope.goToSummary = function () {
     	$state.go('app.summary');
