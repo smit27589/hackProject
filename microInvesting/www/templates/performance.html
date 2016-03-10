@@ -1,11 +1,10 @@
 <ion-view ng-controller="PerformanceCtrl">
   <ion-nav-title>
-    <span style="color:white;font-size:20px;font-weight: 200;">Portfolio</span>
+    <h2 class="nav-header">Portfolio</h2>
   </ion-nav-title>
   <ion-slide-box on-slide-changed="slideHasChanged($index)" does-continue="false">
 
     <ion-slide>
-      <ion-content class="bg-color">
         <div>
           <div class="button-bar" style="margin-top: 5px; margin-bottom:10px; width: 40%; margin-left: 30%;">
             <a class="button button-small button-outline button-light"
@@ -17,42 +16,34 @@
               <span
                 ng-class="{'button-clicked':isSelected('dollar'),'button-no-clicked':!isSelected('dollar')}">$</span></a>
           </div>
-
         </div>
 
         <div style="padding:2%;">
-
           <nvd3 options="vmoptions2" data="vmdata2"></nvd3>
         </div>
 
         <div ng-show="selected == 'dollar'" style="">
-
           <div class="list">
             <a class="item" ng-repeat=" item in investmentStartegyDollarData" ng-class="$odd ? 'stripLine' : ''">
-              <span style="color:white;font-size:20px;font-weight: 200;float: left;">{{item.categoryName}}</span>
-              <span style="color:white;font-size:20px;font-weight: 200;float: right;">${{item.value}}</span>
+              <span style="font-size:20px;font-weight: 200;float: left;">{{item.categoryName}}</span>
+              <span style="font-size:20px;font-weight: 200;float: right;">${{item.value}}</span>
             </a>
           </div>
-
         </div>
 
         <div ng-show="selected == 'percentage'">
           <div class="list">
             <a class="item" ng-repeat=" item in investmentStartegyPercentageData" ng-class="$odd ? 'stripLine' : ''">
-              <span style="color:white;font-size:20px;font-weight: 200;float: left;">{{item.categoryName}}</span>
-              <span style="color:white;font-size:20px;font-weight: 200;float: right;">{{item.value}}%</span>
+              <span style="font-size:20px;font-weight: 200;float: left;">{{item.categoryName}}</span>
+              <span style="font-size:20px;font-weight: 200;float: right;">{{item.value}}%</span>
             </a>
           </div>
-
         </div>
-
-      </ion-content>
     </ion-slide>
 
 
     <ion-slide>
       <!--slide 2-->
-      <ion-content class="bg-color">
         <div style="padding:2%; ">
           <!--<canvas class="chart chart-base" chart-type="type" chart-data="balanceData" chart-legend="true"-->
           <!--chart-labels="balancedLabels"></canvas>-->
@@ -61,25 +52,20 @@
 
         <div class="list">
           <a class="item" ng-repeat=" item in composite2" ng-class="$odd ? 'stripLine' : ''">
-            <span style="color:white;font-size:20px;font-weight: 200;float: left">{{item.title}}</span>
-            <span style="color:white;font-size:20px;font-weight: 200;float: right">{{item.percentage}}</span>
+            <span style="font-size:20px;font-weight: 200;float: left">{{item.title}}</span>
+            <span style="font-size:20px;font-weight: 200;float: right">{{item.percentage}}</span>
           </a>
         </div>
 
-      </ion-content>
     </ion-slide>
 
     <ion-slide>
-      <ion-content class="bg-color">
         <div style="padding:2%; ">
           <nvd3 options="lineOption" data="lineData"></nvd3>
         </div>
-      </ion-content>
     </ion-slide>
 
     <ion-slide>
-      <ion-content class="bg-color">
-
         <div style="padding:2%;">
           <!--<canvas id="pie" class="chart chart-pie" chart-data="pieData" chart-labels="pieLabels" chart-legend="true"-->
           <!--chart-options="pieOptions">-->
@@ -89,15 +75,10 @@
 
         <div class="list">
           <a class="item" ng-repeat=" item in composite" ng-class="$odd ? 'stripLine' : ''">
-            <span style="color:white;font-size:20px;font-weight: 200;float: left">{{item.title}}</span>
-            <span style="color:white;font-size:20px;font-weight: 200;float: right">{{item.percentage}}</span>
+            <span style="font-size:20px;font-weight: 200;float: left">{{item.title}}</span>
+            <span style="font-size:20px;font-weight: 200;float: right">{{item.percentage}}</span>
           </a>
         </div>
-
-      </ion-content>
     </ion-slide>
-
-
   </ion-slide-box>
-
 </ion-view>

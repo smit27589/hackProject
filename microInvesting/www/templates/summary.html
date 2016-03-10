@@ -1,37 +1,41 @@
 <ion-view ng-controller="SummaryCtrl">
+  <ion-nav-title>
+    <h2 class="nav-header">Home</h2>
+  </ion-nav-title>
   <ion-nav-buttons side="left">
     <button class="button button-icon button-clear ion-navicon" style="color:white;" menu-toggle="left">
     </button>
   </ion-nav-buttons>
 
-  <ion-content class="bg-color">
+  <ion-content>
     <div ng-show="!isNewUser()">
         <br/>
         <div >
-            <h3 style="text-align:center;color:white;">Amount Invested</h3>
+            <h3 style="text-align:center;">Amount Invested</h3>
         </div>
-        <div style="text-align:center;font-size:38px;margin-bottom:3%;color:white;font-weight: 500;">$ 329.53</div>
+        <div style="text-align:center;font-size:38px;margin-bottom:3%;font-weight: 500;">$ 329.53</div>
         <br/>
-        <h4 style="text-align:center;color:white;font-weight: 500;">Invested Last Month</h4>
-        <div style="text-align:center;font-size:28px;margin-bottom:3%;color:white;font-weight: 500;">$ 58.38</div>
+        <h4 style="text-align:center;">Invested Last Month</h4>
+        <div style="text-align:center;font-size:28px;margin-bottom:3%;font-weight: 500;">$ 58.38</div>
         <br/>
-        <h4 style="text-align:center;color:white;font-weight: 500;">Total Gain Since Inception</h4>
-        <div style="text-align:center;font-size:28px;margin-bottom:3%;color:white;font-weight: 500;">+ 4.2%</div>
-        <div id="circle" style="margin-left:35%">
+        <h4 style="text-align:center;">Total Gain Since Inception</h4>
+        <div style="text-align:center;font-size:28px;margin-bottom:3%;font-weight: 500;">+ 4.2%</div>
+        <div id="circle" style="margin-left:30%; width:40%">
             <img src="img/chart_home.png" style="width: 150px;height: 150px;">
         </div>
         <div>
             <h4 style="text-align:center;color:white;font-weight: 500;">30 Points till Next Badge</h4>
         </div>
     </div>
-    <div ng-show="isNewUser()" >
-      <br/>
-      <h4 style="text-align:center;color:white;font-weight: 500;">Start Investing Today</h4>
-      <h4 style="text-align:center;color:white;font-weight: 500;">By Adding Bank Account or Credit Card</h4>
-      <div class="button-bar" style="width:40%;margin-left:30%;margin-bottom:3%;">
+    <div ng-show="isNewUser()">
+      <br>
+      <h3 style="text-align:center">Start Investing Today</h3>
+      <h4 style="text-align:center">By Adding Bank Account</h4>
+      <h4 style="text-align:center">or Credit Card</h4>
+      <br>
+      <div class="button-bar" style="width:40%;margin-left:30%;">
         <a class="button" ng-class="button-positive" ng-click="loadBankAccount()">Link Account</a>
       </div>
     </div>
   </ion-content>
-
 </ion-view>
