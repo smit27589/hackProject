@@ -195,7 +195,9 @@ angular.module('starter.controllers', [])
 			'aggresive': etfs
 	};
 
-	$scope.data = {firstName:'John',lastName:'Doe',email:'john.doe@gmail.com',confirmEmail:'john.doe@gmail.com',dob:'01/01/1983',password:'manchesterUnited',conservative: '10%', moderate: '25%', growth: '50%', aggresive: '15%'}
+	$scope.data = {firstName:'John',lastName:'Doe',email:'john.doe@gmail.com',confirmEmail:'john.doe@gmail.com',
+			dob:new Date('01/01/1993'), password:'manchesterUnited', ssn:"xxxxxxxxx",
+			conservative: '10%', moderate: '25%', growth: '50%', aggresive: '15%'}
 
 	$scope.agree = function () {
 		$state.go('app.summary');
@@ -244,8 +246,9 @@ angular.module('starter.controllers', [])
 
 .controller('LoginCtrl', function($scope,LoginService, $ionicPopup, $state) {
 	$scope.data = {username:'vishal.shah@nyu.edu',password:'secret'};
-	LoginService.setNewUser(false);
+	
 	$scope.login = function() {
+		LoginService.setNewUser(false);
 		LoginService.loginUser($scope.data.username, $scope.data.password).success(function(data) {
 			$state.go('app.summary');
 			LoginService.setSideMenuVisibility(true);
@@ -258,6 +261,7 @@ angular.module('starter.controllers', [])
 	};
 
 	$scope.signUp = function(){
+		LoginService.setNewUser(true);
 		$state.go('app.signUpSlide');
 	}
 

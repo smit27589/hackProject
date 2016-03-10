@@ -2,25 +2,63 @@
 body {
   cursor: url('http://ionicframework.com/img/finger.png'), auto;
 }
+
+ion-nav-view, ion-view, ion-slide-box, ion-slide {
+  background: linear-gradient(#3293a0, #5586e7);
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;	
+  font-weight: 300;
+  color: #fff;
+}
+
+p, h1, h2, h3, h4, h5, span, input {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  color: #fff;
+}
+
+.text {
+	margin-left: 10px;
+  float: left;
+}
+
+.menu-text {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: #fff;
+  font-weight: 200;
+  font-size:30px;
+}
+
+.nav-header {
+  font-size: 24px;	
+}
+
+.gray-text {
+  color: #d2d2e0;
+}
+
+.nv-legend-text, .nv-axislabel, .tick text, .nv-axisMaxMin text, .nvd3 .nv-axis path{
+  fill: #fff;
+}
+
+nvd3 .nv-axis path{
+  stroke: #fff;
+}
+
 .slider {
   height: 100%;
 }
+
 .slider-slide {
   padding-top: 80px;
-  color: #9f0;
-  background-color: #9f0;
   text-align: center;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
-}
-.slider-pager
-{
-    stroke: #9f0 !important;
 }
 
 #logo {
   margin: 30px 0px;
 }
+
 #circle {
     margin: 30px 0px;
     z-index: -1;
@@ -31,6 +69,7 @@ body {
   margin: 30px auto;
   font-size: 20px;
 }
+
 #list ol {
   margin-top: 30px;
 }
@@ -56,32 +95,21 @@ body {
   background: transparent !important;
   border: 0;
 }
+
 .no-border{
   border: 0;
 }
+
 .button-clicked{
-  color:#3293b0
+  color:#3293a0
 }
 
 .button-no-clicked{
   color: #fff;
 }
 
-.button-clicked-dark{
-  color:#3293b0
-}
-
-.button-no-clicked-dark{
-  color: #a6a6a6;
-}
-
-.bg-color{
-  background: linear-gradient(#21c5f4, #5586d7);
-}
-
 .bg-nav-color{
-  background-color: #21c5f4;
-  background-image: url('img/icon.png')
+  background-color: #3293a0;
 }
 
 .ionic .item-text-wrap { /* negate the nowrap CSS from .ionic .item */
@@ -89,14 +117,11 @@ body {
     text-overflow: initial;
     white-space: initial;
 }
-.slider-pager .slider-pager-page
-{
-    color: #fff !important;
+
+.slider-pager-page {
+  color: #fff !important;
 }
 
-.bar.bar-light {
-    background-color: #21c5f4;
-}
 .scroll-content {
     overflow: visible !important;
 }
@@ -115,4 +140,6 @@ body {
   padding-top: 6px;
 }
 
-.tick line {display: none;}
+.tick line {
+	display: none;
+}

@@ -1,62 +1,51 @@
 <ion-side-menus enable-menu-with-back-views="false">
+  
   <ion-side-menu-content>
-    <ion-nav-bar class="bg-nav-color tran-header-bar" ng-show="showHeaderBar">
+  
+    <ion-nav-bar class="bg-nav-color" ng-show="showHeaderBar">
       <ion-nav-buttons side="left">
-        <button style="color:white !important;"class="button button-icon button-clear ion-navicon" menu-toggle="left">
-        </button>
+        <button style="color:white !important;"class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
       </ion-nav-buttons>
     </ion-nav-bar>
-
-
+  
     <ion-nav-view name="menuContent"></ion-nav-view>
+  
   </ion-side-menu-content>
 
-  <ion-side-menu side="left" style="background: linear-gradient(#5685d8, #717cf6,#8677f6)">
-    <!-- <ion-header-bar class="bar-stable tran-menu">
-      <!-- <h1  style="color: white;font-size:23px;font-weight: 500;" class="title">{{userName}}</h1> -->
-    <!-- </ion-header-bar> -->
+  <ion-side-menu side="left" style="background: linear-gradient(#5685d8, #717cea,#8f70ff)">
     <ion-content>
       <ion-list >
         <div id="logo" style="margin-top:18%;">
-              <div ng-show="!isNewUser()">
-              <center><img src="img/profile.png" style="width: 100px;height: 100px;"></center>
-              <center><h3 style="color:white; font-weight: 200; font-size: 30px;">Vishal Shah</h3></center>
-              </div>
-              <div ng-show="isNewUser()">
-              <center><img src="img/new_profile.png" style="width: 100px;height: 100px;"></center>
-              <center><h3 style="color:white; font-weight: 200; font-size: 30px;">John Doe</h3></center>
-              </div>
+          <div ng-show="!isNewUser()">
+            <center><img src="img/profile.png" style="width: 100px;height: 100px;"></center>
+            <center><h3 style="font-weight: 200; font-size: 30px;">Vishal Shah</h3></center>
+          </div>
+          <div ng-show="isNewUser()">
+            <center><img src="img/new_profile.png" style="width: 100px;height: 100px;"></center>
+            <center><h3 style="font-weight: 200; font-size: 30px;">John Doe</h3></center>
+          </div>
         </div>
-        <ion-item class="tran-menu" menu-close href="#/app/summary" style="color: white;font-weight: 200;font-size:30px;">
+        <ion-item class="tran-menu menu-text" menu-close href="#/app/summary">
           <i class="fa fa-university fa-fw fa-inverse" style="font-size: 20px;"></i> &nbsp;Home<br>
         </ion-item>
-        <ion-item class="tran-menu"  menu-close href="#/app/performance" style="color: white;font-weight: 200;font-size:30px;">
+        <ion-item class="tran-menu menu-text" menu-close href="#/app/performance">
           <i class="fa fa-bar-chart fa-fw fa-inverse" style="font-size: 20px;"></i> &nbsp;Portfolio<br>
         </ion-item>
-        <ion-item class="tran-menu"  menu-close href="#/app/subscriptions" style="color: white;font-weight: 200;font-size:30px;">
+        <ion-item class="tran-menu menu-text" menu-close href="#/app/subscriptions">
           <i class="fa fa-exchange fa-fw fa-inverse" style="font-size: 20px;"></i> &nbsp;Deposit<br>
         </ion-item>
-        <ion-item class="tran-menu"  menu-close href="#/app/transactions" style="color: white;font-weight: 200;font-size:30px;">
+        <ion-item class="tran-menu menu-text" menu-close href="#/app/transactions">
           <i class="fa fa-money fa-fw fa-inverse" style="font-size: 20px;"></i> &nbsp;Transactions<br>
         </ion-item>
-<!--        <ion-item class="tran-menu"  menu-close href="#/app/whatIf" style="color: white; font-weight: 100;font-size:35px;">
-          <i class="fa fa-calculator fa-fw fa-inverse" style="font-size: 20px;"></i> &nbsp;iRetire
-        </ion-item> -->
-<!--         <ion-item class="tran-menu"  menu-close href="#/app/inviteFriends" style="color: white; font-weight: 200;font-size:30px;"> -->
-<!--           <i class="fa fa-users fa-fw fa-inverse" style="font-size: 20px;"></i> &nbsp;Invite Friends<br> -->
-<!--         </ion-item> -->
-        <ion-item class="tran-menu"  menu-close href="#/app/leaderboard" style="color: white; font-weight: 200;font-size:30px;">
+        <ion-item class="tran-menu menu-text" menu-close href="#/app/leaderboard">
           <i class="fa fa-users fa-fw fa-inverse" style="font-size: 20px;"></i> &nbsp;Leaderboard<br>
         </ion-item>
-<!--         <ion-item menu-close href="#/app/transfer">
-          Transfer to Bank
-        </ion-item> -->
-        <ion-item class="tran-menu"  menu-close href="#/app/settings" style="color: white; font-weight: 200;font-size:30px;">
+        <ion-item class="tran-menu menu-text" menu-close href="#/app/settings">
+          <i class="fa fa-sliders fa-fw fa-inverse" style="font-size: 20px;"></i> &nbsp;Simulator
+        </ion-item>
+        <ion-item class="tran-menu menu-text" menu-close href="#/app/settings">
           <i class="fa fa-cog fa-fw fa-inverse" style="font-size: 20px;"></i> &nbsp;Settings
         </ion-item>
-<!--         <ion-item menu-close ng-click="logout()">
-          Sign out
-        </ion-item> -->
       </ion-list>
 
       <div style="margin-top:70px; margin-left: 15px;">
