@@ -25,7 +25,7 @@ angular.module('starter.controllers').controller('PerformanceCtrl', function ($s
   $scope.pieLabels = ["Download Sales", "In-Store Sales", "Mail-Order Sales", "test 1", "test 2"];
   $scope.pieData = [300, 100, 200, 400, 150];
   $scope.pieOptions = {
-    showTooltips: true,
+    showTooltips: false,
     segmentShowStroke: true,
     segmentStrokeColor: "#fff",
     segmentStrokeWidth: 2
@@ -109,6 +109,7 @@ angular.module('starter.controllers').controller('PerformanceCtrl', function ($s
       duration: 500,
       labelThreshold: 0.01,
       labelSunbeamLayout: true,
+      tooltips: false,
       legend: {
         margin: {
           top: 5,
@@ -167,6 +168,7 @@ angular.module('starter.controllers').controller('PerformanceCtrl', function ($s
       duration: 500,
       labelThreshold: 0.01,
       labelSunbeamLayout: true,
+      tooltips: false,
       legend: {
         margin: {
           top: 5,
@@ -188,7 +190,7 @@ angular.module('starter.controllers').controller('PerformanceCtrl', function ($s
       y: 115.25
     },
     {
-      key: 'Groth',
+      key: 'Growth',
       y: 124.5
     },
     {
@@ -233,6 +235,7 @@ angular.module('starter.controllers').controller('PerformanceCtrl', function ($s
           return d;
         }
       },
+      tooltips: false,
       legend: {
         margin: {
           top: 5,
@@ -399,6 +402,7 @@ angular.module('starter.controllers').controller('PerformanceCtrl', function ($s
           return d;
         }
       },
+      tooltips: false,
       legend: {
         margin: {
           top: 5,
@@ -412,7 +416,7 @@ angular.module('starter.controllers').controller('PerformanceCtrl', function ($s
 
   $scope.lineData = [
     {
-      key: 'Average',
+      key: 'Age Group 20-25',
       values: [
         {
           x: 0,

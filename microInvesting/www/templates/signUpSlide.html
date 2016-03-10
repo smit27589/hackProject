@@ -1,233 +1,158 @@
 <ion-view>
   <ion-nav-title>
-    <span style="color:white; font-size:20px;font-weight: 500;">Get Started</span>
+    <h2 class="nav-header">Get Started</h2>
   </ion-nav-title>
 
-        <ion-slide-box on-slide-changed="slideChanged(index)" class="bg-color">
-        
-<!--         slide1 -->
-          <ion-slide class="bg-color">
-          <ion-content>
-           <div class="list" style="color:white;">
-        <label class="item no-border">
-          <h2 class="title" style="color:white;float:left;font-size:20px;font-weight: 500;">Follow these steps to open a Nest account.</h2>
+  <ion-slide-box on-slide-changed="slideChanged(index)">
+    
+    <ion-slide>
+	    <h4 class="text">Follow these steps to open a Nest account</h4>
+	    <br>
+	    <br>
+	    <h4 class="text">Step 1 - Create your Profile</h4>
+	    <h4 class="text">Step 2 - Choose your Investment Strategy</h4>
+    </ion-slide>
+    
+    <ion-slide>
+      <h3>User Details</h3>
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label light">First Name</span>
+          <input type="text" style="color: white;" ng-model="data.firstName">
         </label>
-        <label class="item no-border">
-          <span class="input-label" style="color:white;font-size:20px;font-weight: 500;">Step 1 - Create your Profile</span>
+        <label class="item item-input">
+          <span class="input-label light">Last Name</span>
+          <input type="text" style="color: white;" ng-model="data.lastName">
         </label>
-        <label class="item no-border">
-          <span class="input-label" style="color:white;font-size:20px;font-weight: 500;">Step 2 - Choose your Investment Strategy</span>
+        <label class="item item-input">
+          <span class="input-label light">Email</span>
+          <input type="email" style="color: white;" ng-model="data.email">
         </label>
-<!--         <label class="item"> -->
-<!--           <button class="button button-block button-positive" ng-click="goToStep1()">Continue</button> -->
-<!--         </label> -->
+        <label class="item item-input">
+          <span class="input-label light">Confirm Email</span>
+          <input type="email" style="color: white;" ng-model="data.confirmEmail">
+        </label>
+        <label class="item item-input">
+          <span class="input-label light">Date of Birth</span>
+          <input type="date" style="color: white;" ng-model="data.dob">
+        </label>
+        <label class="item item-input">
+          <span class="input-label light">SSN</span>
+          <input type="password" style="color: white;" ng-model="data.ssn">
+        </label>
+        <label class="item item-input">
+          <span class="input-label light">Password</span>
+          <input type="password" style="color: white;" ng-model="data.password">
+        </label>
       </div>
-      <ion-content>
-          </ion-slide class="bg-color">
-          
-<!--           slide2 -->
-          <ion-slide class="bg-color">
-             <h3 style="color:white;">User Details</h3>
-           <div class="list">
-        <label class="item item-input">
-          <span class="input-label" style="color:white;">First Name</span>
-          <input type="text" style="color:white;" ng-model="data.firstName">
-        </label>
-        <label class="item item-input">
-          <span class="input-label" style="color:white;">Last Name</span>
-          <input type="text" style="color:white;" ng-model="data.lastName">
-        </label>
-        <label class="item item-input">
-          <span class="input-label" style="color:white;">Email</span>
-          <input type="email" style="color:white;" ng-model="data.email">
-        </label>
-        <label class="item item-input">
-          <span class="input-label" style="color:white;">Confirm Email</span>
-          <input type="email" style="color:white;"  ng-model="data.confirmEmail">
-        </label>
-        <label class="item item-input">
-          <span class="input-label" style="color:white;">Date of Birth</span>
-          <input type="date" style="color:white;" ng-model="data.dob">
-        </label>
-        <label class="item item-input">
-          <span class="input-label" style="color:white;">Password</span>
-          <input type="password" style="color:white;" ng-model="data.password">
-        </label>
-<!--         <label class="item"> -->
-<!--         <div class="buttons"> -->
-<!--       		<button class="button button-assertive" style="float:left;" ng-click="goToSignUp()">Back</button> -->
-<!--       		<button class="button button-positive" style="float:right;" ng-click="goToStep2()">Next</button> -->
-<!--     	</div> -->
-<!--     	</label> -->
-      </div>
-          </ion-slide >
-          <!--           slide3 -->
-<!--                 <ion-slide class="bg-color"> -->
-                
-                
-<!--            <div class="list"> -->
-<!--         <label class="item no-border"> -->
-<!--           <h2 class="title;" style="color:white;">What is your Investment horizon?</h2> -->
-<!--         </label> -->
-<!--         <label class="item" ng-click="next()"> -->
-<!--           <h3 class="title" style="color:white;">6 months</h3> -->
-<!--         </label> -->
-<!--          <label class="item" ng-click="next()"> -->
-<!--           <h3 class="title" style="color:white;">1-2 Years</h3> -->
-<!--         </label> -->
-<!--          <label class="item" ng-click="next()"> -->
-<!--           <h3 class="title" style="color:white;">2+ Years</h3> -->
-<!--         </label> -->
-
-<!--       </div> -->
-<!--           </ion-slide> -->
-          
-<!--           slide4 -->
-                <ion-slide class="bg-color">
-                
-                
-           <div class="list">
-        <label class="item no-border">
-          <h2 class="title;" style="color:white;">What kind of an Investor are you?</h2>
-        </label>
+    </ion-slide >
+    
+    <ion-slide>
+      <h3>What kind of an Investor are you?</h3><br>
+      <div class="list">
         <label class="item" ng-click="next()">
-          <h3 class="title" style="color:white;">Stingy</h3>
+          <span class="light" style="font-size: 18px;">Stingy</span>
         </label>
          <label class="item" ng-click="next()">
-          <h3 class="title" style="color:white;">Average Joe</h3>
+          <span class="light" style="font-size: 18px;">Average Joe</span>
         </label>
          <label class="item" ng-click="next()">
-          <h3 class="title" style="color:white;">Opportunist</h3>
+          <span class="light" style="font-size: 18px;">Opportunist</span>
         </label>
          <label class="item" ng-click="next()">
-          <h3 class="title" style="color:white;">Adrenaline Junkie</h3>
+          <span class="light" style="font-size: 18px;">Adrenaline Junkie</span>
         </label>
-
       </div>
-          </ion-slide>
-          
-          
-          <!--           slide5 -->
-                <ion-slide class="bg-color">
-                
-                
-           <div class="list">
-        <label class="item no-border">
-          <h2 class="title;" style="color:white;">I plan to take money from my investments in ...</h2>
-        </label>
+    </ion-slide>
+    
+    <ion-slide>
+      <h3>I plan to take money out from my investments in ...</h3>
+      <div class="list">
         <label class="item" ng-click="next()">
-          <h3 class="title" style="color:white;">6 months</h3>
+          <span class="light" style="font-size: 18px;">6 months</span>
         </label>
          <label class="item" ng-click="next()">
-          <h3 class="title" style="color:white;">1-2 Years</h3>
+          <span class="light" style="font-size: 18px;">1-2 Years</span>
         </label>
          <label class="item" ng-click="next()">
-          <h3 class="title" style="color:white;">2+ Years</h3>
+          <span class="light" style="font-size: 18px;">2+ Years</span>
         </label>
-
       </div>
-          </ion-slide>
-          
-<!--           slide6 -->
-          <ion-slide class="bg-color">
-      <ion-content>
-     <div class="button-bar" style="margin-top: 5px; margin-bottom:10px; width: 90%; margin-left: 5%;">
-      <a class="button button-small button-outline button-light"
+    </ion-slide>
+    
+    <ion-slide>
+      <div class="button-bar" style="margin-top: 5px; margin-bottom:10px; width: 96%; margin-left: 2%;">
+        <a class="button button-small button-outline button-light"
          ng-class="{'active':isSelected('conservative')}" ng-click="setSelected('conservative')">
-        <span ng-class="{'button-clicked':isSelected('conservative'),'button-no-clicked':!isSelected('conservative')}">Conservative</span></a>
+          <span style="font-size: 10px;" ng-class="{'button-clicked':isSelected('conservative'),'button-no-clicked':!isSelected('conservative')}">Conservative</span></a>
         
          <a class="button button-small button-outline button-light"
          ng-class="{'active':isSelected('moderate')}" ng-click="setSelected('moderate')">
-        <span ng-class="{'button-clicked':isSelected('moderate'),'button-no-clicked':!isSelected('moderate')}">Moderate</span></a>
+          <span style="font-size: 10px;" ng-class="{'button-clicked':isSelected('moderate'),'button-no-clicked':!isSelected('moderate')}">Moderate</span></a>
         
         <a class="button button-small button-outline button-light"
          ng-class="{'active':isSelected('growth')}" ng-click="setSelected('growth')">
-        <span ng-class="{'button-clicked':isSelected('growth'),'button-no-clicked':!isSelected('growth')}">Growth</span></a>
+          <span style="font-size: 10px;" ng-class="{'button-clicked':isSelected('growth'),'button-no-clicked':!isSelected('growth')}">Growth</span></a>
         
         <a class="button button-small button-outline button-light"
          ng-class="{'active':isSelected('aggresive')}" ng-click="setSelected('aggresive')">
-        <span ng-class="{'button-clicked':isSelected('aggresive'),'button-no-clicked':!isSelected('aggresive')}">Aggresive</span></a>
-    </div>
+          <span style="font-size: 10px;" ng-class="{'button-clicked':isSelected('aggresive'),'button-no-clicked':!isSelected('aggresive')}">Aggresive</span></a>
+      </div>
     
-    
-    <div class="list" style="margin-top:4%;">
-    	<div class="item no-border item-text-wrap" >
-    	<span style="float:left;color:white;">{{textMap[selectedCategory]}}</span>
-    	
-    	</div>
-    
-    <div class="item no-border">
-    	<h2 style="float:left;color:white;">Underlying ETF's are  </h2>
-    	<div class="list ">
-          <a class="item no-border"  ng-class="$odd ? 'stripLine' : ''">
-            <span style="float: left;color:white;">IXUS, EMB, ITOT, AGG</span>
-          </a>
+      <div class="list" style="margin-top:4%;">
+        <div class="item no-border item-text-wrap" >
+          <span class="light" style="float:left;">{{textMap[selectedCategory]}}</span>
+        </div>  
+        <div class="item no-border">
+          <span class="light" style="float:left;">Underlying ETF's are IXUS, EMB, ITOT, AGG</span>
         </div>
-    	
-    </div>
-    
-    </div>
+      </div>
+      
       <div ng-show="active == 'performance'">
-      <div class="list">
+        <div class="list">
           <a class="item" ng-repeat=" item in categoryPerformanceMap[selectedCategory]" ng-class="$odd ? 'stripLine' : ''">
-            <span style="float: left;color:white;">{{item.title}}</span>
-            <span style="float: right;color:white;">{{item.value}}%</span>
+            <span class="light" style="float: left;">{{item.title}}</span>
+            <span class="light" style="float: right;">{{item.value}}%</span>
           </a>
         </div>
       </div>
-      </ion-content>
-      
-          </ion-slide>
+    </ion-slide>
           
-          <!--           slide7 -->
-         <ion-slide class="bg-color">
-                
-       
-           <div class="list">
-         <label class="item no-border">
-          	<h2 class="title" style="color:white;">Recommended Strategy</h2>
-        </label>
+    <ion-slide>
+      <h3>Recommended Strategy</h3>
+      <div class="list">
         <label class="item item-input">
-          <span class="input-label" style="color:white;">Conservative</span>
+          <span class="input-label light">Conservative</span>
           <input type="text" style="color:white;" ng-model="data.conservative">
         </label><label class="item item-input">
-          <span class="input-label" style="color:white;">Moderate</span>
+          <span class="input-label light">Moderate</span>
           <input type="text" style="color:white;" ng-model="data.moderate">
         </label><label class="item item-input">
-          <span class="input-label" style="color:white;">Growth</span>
+          <span class="input-label light">Growth</span>
           <input type="text" style="color:white;" ng-model="data.growth">
         </label><label class="item item-input">
-          <span class="input-label" style="color:white;">Aggresive</span>
+          <span class="input-label light">Aggresive</span>
           <input type="text" style="color:white;" ng-model="data.aggresive">
         </label>
       </div>
       
-       <button class="button button-block button-positive" style="width:50%;margin-left: 25%;color:#33ffb;" ng-click="next()">
+       <button class="button button-block button-stable" style="width:50%;margin-left: 25%;" ng-click="next()">
         Start Investing
       </button>
-          </ion-slide >
-          
-          
-          <!--           slide8 -->
-         <ion-slide class="bg-color"> 
-                <div class="list">
-                <label class="item no-border">
-          <h2 class="title" style="color:white;">Terms and Conditions Apply</h2>
-          
-        </label>
-        </div>
-           <div>
-        		<p style="color:white;">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-      	   </div>
+    </ion-slide >
+    
+    <ion-slide class="bg-color"> 
+      <h3>Terms and Conditions Apply</h3>
+      <div>
+        <p style="color:white;">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+ 	   </div>
       
-       <button class="button button-block button-positive" style="width:50%;margin-left: 25%;" ng-click="agree()">
-        I Agree
+     <button class="button button-block" style="width:50%;margin-left: 25%;" ng-click="agree()">
+      I Agree
       </button>
-      
-      <button class="button button-block button-positive" style="width:50%;margin-left: 25%%;" ng-click="disagree()">
-        I Disagree
+      <button class="button button-block" style="width:50%;margin-left: 25%%; background-color:#d2d2e0;" ng-click="disagree()">
+      I Disagree
       </button>
-          </ion-slide>
-          
-        </ion-slide-box>
-      </ion-view>
+    </ion-slide>
+  </ion-slide-box>
+</ion-view>

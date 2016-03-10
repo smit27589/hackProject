@@ -1,29 +1,20 @@
 <ion-view >
-<!-- <ion-nav-title>
-<!--<span style="color:white;font-size:20px;font-weight:500;">This is the header</span> -->
-<!-- </ion-nav-title>
-<!--   <ion-header-bar> -->
-<!--     <h1 class="title">Login</h1> -->
-<!--     <div class="buttons"> -->
-<!--       <button class="button button-clear" ng-click="closeLogin()">Close</button> -->
-<!--     </div> -->
-<!--   </ion-header-bar> -->
-<div id="logo2" style="margin-top:20%;">
-    <img src="img/icon.png" style="width: 87px;height: 66px;">
-</div>
-  <ion-content class="bg-color">
+  <ion-nav-title>
+    <h2 class="nav-header">Sign In</h2>
+  </ion-nav-title>
+  <ion-content>
     <form >
       <div class="list">
         <label class="item item-input no-border">
-          <span class="input-label" style="color:white;">Email</span>
-          <input type="email" style="color:white;"ng-model="data.username">
+          <span class="input-label light">Email</span>
+          <input type="email" style="color:white;" ng-model="data.username">
         </label>
         <label class="item item-input no-border">
-          <span class="input-label" style="color:white;">Password</span>
+          <span class="input-label light">Password</span>
           <input type="password" style="color:white;" ng-model="data.password">
         </label>
         <label class="item">
-          <button class="button button-block button-positive" ng-click="login()">Log in</button>
+          <button class="button button-block button-stable" ng-click="login()">Sign In</button>
         </label>
       </div>
     </form>
