@@ -198,7 +198,6 @@ angular.module('starter.controllers').controller('PerformanceCtrl', function ($s
   ];
 
 
-
   var convertXValue = function (d) {
     var months = ['Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb'];
     return months[d];
@@ -372,11 +371,10 @@ angular.module('starter.controllers').controller('PerformanceCtrl', function ($s
   ];
 
 
-
   $scope.lineOption = {
     chart: {
       type: 'stackedAreaChart',
-      height: 450,
+      height: 500,
       color: colorBar,
       clipEdge: true,
       staggerLabels: true,
@@ -396,6 +394,7 @@ angular.module('starter.controllers').controller('PerformanceCtrl', function ($s
         }
       },
       yAxis: {
+        axisLabel: 'Market Value',
         tickFormat: function (d) {
           return d;
         }
@@ -495,7 +494,6 @@ angular.module('starter.controllers').controller('PerformanceCtrl', function ($s
       ]
     }
   ];
-
 
 
 });
