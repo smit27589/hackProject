@@ -3,15 +3,30 @@
       <h2 class="nav-header">Settings</h2>
   </ion-nav-title>
 
- <ion-content class="bg-color">
-  <div class="list">
-          <ion-item ng-click="signOut()" class="item no-border" ng-repeat=" item in settingsData" ng-class="$odd ? 'stripLine' : ''">
-            <div style="width:100%;">
-            <span style="color:white; float: left;font-size:20px;font-weight: 500;">{{item.settingDescription}}</span>
-            <span style="color:white; float: right;font-size:24px;font-weight: 500;"> > </span>
-            </div>
-          </ion-item>
+  <ion-content>
+    <ul class="list">
+      <ion-item ng-click="signOut()" class="item no-border" ng-repeat=" item in settingsData1" ng-class="$odd ? 'stripLine' : ''">
+        <div class="setting-text" style="width:100%; font-size:20px">
+          <i class="{{item.icon}}" style="font-size: 20px;"></i>&nbsp;{{item.settingDescription}}
+          <i class="fa fa-chevron-right fa-fw fa-inverse" style="float:right; font-size: 20px;"></i>
         </div>
+      </ion-item>
+      <li class="item item-toggle" ng-repeat=" item in settingsData2" ng-class="$odd ? 'stripLine' : ''">
+        <div class="setting-text" style="width:100%; font-size:20px">
+          <i class="{{item.icon}}" style="font-size: 20px;"></i>&nbsp;{{item.settingDescription}}
+          <label class="toggle toggle-dark">
+            <input type="checkbox">
+              <div class="track"><div class="handle"></div></div>
+            </label>
+        </div>
+      </li>
+      <ion-item ng-click="signOut()" class="item no-border" ng-repeat=" item in settingsData3" ng-class="$odd ? 'stripLine' : ''">
+        <div class="setting-text" style="width:100%; font-size:20px">
+          <i class="{{item.icon}}" style="font-size: 20px;"></i>&nbsp;{{item.settingDescription}}
+          <i class="fa fa-chevron-right fa-fw fa-inverse" style="float:right; font-size: 20px;"></i>
+        </div>
+      </ion-item>
+    </ul>
   </ion-content>
   
 </ion-view>
